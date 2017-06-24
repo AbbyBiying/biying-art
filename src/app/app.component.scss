@@ -1,0 +1,78 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.logo {
+  color: rgb(236, 0, 140);
+  font-family:Calibre,sans-serif;
+  margin:0;
+  font-size:16px;
+ }
+
+.page-about {
+  color: #333;
+  font-family: TiemposText,serif;
+  font-size: 16px;
+  padding:0 30px 0 34px;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width:320px){
+  .logo {
+    float:left;
+  }
+}
+
+.example-container {
+  height: 100vh;
+}
+
+.menu-button {
+  list-style: none;
+  padding-top: 80px;
+  margin-left: 40px;
+}
+
+.menu-button button {
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 3.5px;
+}
+
+.example-sidenav {
+  background: black;
+  color: white;
+  width: 350px;
+  max-width: 100%;
+}
+
+.close-button {
+/*  color: white;
+  background: black;*/
+}
+
+footer {
+  background: #1c1b1b;
+  font-family: 'Raleway', sans-serif;
+}
+
+.copy-right {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 0 15px;
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+.footer-section {
+  padding: 20px 0 135px 0;
+  margin: 0 15px;
+}
+
+.update {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
