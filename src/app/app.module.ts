@@ -10,14 +10,26 @@ import { MdMenuModule} from '@angular/material';
 import { HttpModule} from '@angular/http';
 import { MdSidenavModule} from '@angular/material';
 import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { RouterModule, Routes } from '@angular/router';
 
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
+const appRoutes: Routes = [
+  { path: 'about', component: AboutComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'contact', component: ContactComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AboutComponent,
+    ContactComponent,
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -27,9 +39,11 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     MaterialModule,
     MdNativeDateModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

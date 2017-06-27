@@ -5,28 +5,26 @@
 
 <md-sidenav-container class="example-container">
   <md-sidenav #sidenav class="example-sidenav">
-    <button md-button class="close-button" (click)="sidenav.close()">
+    <button md-button class="close-button" (click)="sidenav.toggle()">
       <md-icon>clear</md-icon>
     </button>
     <ul class="menu-button">
-      <li><button md-button>About</button></li>
-      <li><button md-button>Portfolio</button></li>
-      <li><button md-button>Exhibition</button></li>
-      <li><button md-button>Contact</button></li>
+
+      <li><button md-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()">Portfolio</button></li>
+      <li><button md-button routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">About</button></li>
+      <li><button md-button (click)="sidenav.toggle()">Exhibition</button></li>
+      <li><button md-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li>
     </ul>
   </md-sidenav>
 
   <span class="example-sidenav-content">
-    <button md-button class="example-fab" (click)="sidenav.open()">
+    <button md-button class="example-fab" (click)="sidenav.toggle()">
       <md-icon>menu</md-icon>
     </button>
   </span>
 
-  <p class="page-about">
-      Zhang was born in Guangzhou, China in 1984. She received her BFA from the Central Academy of Fine Arts in Beijing, and her MFA from the School of the Museum of Fine Arts, Boston. Zhang is a painter and also works in film/video, sound art and mixed media. Zhang's work has been widely exhibited internationally at the Museum of Fine Arts, Boston, the National Art Museum of China, the Beijing International Art Biennial, the Art In Embassies Program, and in film festivals, galleries and at various special events. I have been awarded a fellowship at the Jentel Residency, a scholarship from Harvard University, the Karsh Prize in photography, and other scholarships from S.M.F.A. Boston and The Central Academy of Fine Art, China. Zhang lives and works in California.
-  </p>
+  <router-outlet></router-outlet>
 </md-sidenav-container>
-
 <footer>
   <div class="footer-section">
     <p class="update">Want to get updates on my news?</p>
