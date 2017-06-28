@@ -5,6 +5,7 @@
   	line-height: 2;
   	letter-spacing: 2.5px;
   }
+
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 200;
@@ -15,7 +16,7 @@
   line-height:1.5;
   margin: 40px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   clear: both;
 }
 
@@ -40,4 +41,47 @@
   width: 70%;
   margin-left: 15%;
   font-weight: 300;
+}
+
+.year .schools {
+	margin-top: -10px;
+}
+
+/*for ipad and ipad pro*/
+@media screen and (max-width: 1100px) {
+	#about-content {
+	  width: 100%;
+  	margin-left: 0;
+  }
+}
+/*for iphone 6 plus*/
+@media screen and (max-width: 420px) {
+	.bio {
+    font-size: 13px;
+	}
+
+	.year {
+	  p {
+	    font-size: 13px;
+	  }
+	}
+
+	.section-text {
+		width:100%;
+	}
+
+	.section-title {
+		width: 100%;
+		margin-bottom: 10px;
+  	font-weight: 500;
+	}
+
+	.about-section {
+		margin: 0;
+	}
+
+	#about-content {
+ 	  width: 100%;
+    margin-left: 0;
+  }
 }
