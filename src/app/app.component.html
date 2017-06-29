@@ -1,10 +1,12 @@
-<!-- <link href="../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css" rel="stylesheet"> -->
-<!-- <link href="https://unpkg.com/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+<div class="header-button-container" [hidden]="sidenav.opened">
+  <button md-button class="header-burger example-fab" (click)="sidenav.toggle()">
+    <md-icon>menu</md-icon>
+  </button>
+</div>
 
-<md-sidenav-container class="example-container">
-  <md-sidenav #sidenav class="example-sidenav">
+<md-sidenav-container class="container">
+
+  <md-sidenav #sidenav class="sidenav">
     <button md-button class="close-button" (click)="sidenav.toggle()">
       <md-icon>clear</md-icon>
     </button>
@@ -17,21 +19,12 @@
     </ul>
   </md-sidenav>
 
-  <span class="example-sidenav-content">
-    <button md-button class="example-fab" (click)="sidenav.toggle()">
-      <md-icon>menu</md-icon>
-    </button>
-  </span>
-
   <router-outlet></router-outlet>
 </md-sidenav-container>
+
 <footer>
   <div class="footer-section">
     <p class="update">Want to get updates on my news?</p>
     <p class="copy-right">© 2017 Biying Zhang</p>
   </div>
 </footer>
-<!-- <h1 class="logo"> Welcome to {{title}}!!</h1> -->
-
-
-

@@ -1,4 +1,7 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.mat-button.active { 
+  color: blue;
+  opacity: 50%;
+}
 
 .logo {
   color: rgb(236, 0, 140);
@@ -6,13 +9,20 @@
   font-size:16px;
  }
 
+.header-button-container {
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  background: white;
+}
+
 @media only screen and (min-width:320px){
   .logo {
     float:left;
   }
 }
 
-.example-container {
+.container {
   height: 100vh;
 }
 
@@ -30,15 +40,15 @@
   letter-spacing: 3.5px;
 }
 
-.example-sidenav {
-  background: black;
+.sidenav {
+  background: rgb(28, 27, 27);
   color: white;
   width: 350px;
   max-width: 100%;
 }
 
 .close-button {
-  background: black;
+  background: rgb(28, 27, 27);
 }
 
 footer {
@@ -67,3 +77,5 @@ footer {
   opacity: 0.4;
   font-weight: 300;
 }
+
+
