@@ -15,11 +15,34 @@ import { RouterModule, Routes } from '@angular/router';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { PaintingComponent } from './painting/painting.component';
+import { CeramicComponent } from './ceramic/ceramic.component';
+import { VideoComponent } from './video/video.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'portfolio', 
+    component: PortfolioComponent,
+    children: [
+      {
+        path: 'painting',
+        component: PaintingComponent,
+      }, 
+      {
+        path: 'ceramic',
+        component: CeramicComponent,
+      },
+      {
+        path: 'video',
+        component: VideoComponent,
+      }, 
+    ]
+  },
+  { path: 'contact', component: ContactComponent },
+  { path: '**',
+    redirectTo: '/about',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
@@ -28,6 +51,9 @@ const appRoutes: Routes = [
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
+    PaintingComponent,
+    CeramicComponent,
+    VideoComponent,
   ],
 
   imports: [

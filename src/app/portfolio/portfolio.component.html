@@ -1,9 +1,12 @@
-<div id="portfolio-container">
-  <section id="painting">
-  	<img src="/assets/painting/Alienation_No.13.JPG">
-  	<img src="/assets/painting/Alienation_No.9.JPG">
-  	<img src="/assets/painting/Alienation_No.2.jpg">
-  	<img src="/assets/painting/Firework_No.3.jpg">
-
-  </section>
+<div id="portfolio-container">  
+  <router-outlet></router-outlet>
 </div>
+
+<div id="portfolio-menu">
+	<ul>
+		<li><a routerLink="/portfolio/painting" routerLinkActive="active">Painting</a></li>
+		<li><a routerLink="/portfolio/ceramic" routerLinkActive="active">Ceramic</a></li>
+		<li><a routerLink="/portfolio/video" routerLinkActive="active">Video</a></li>
+	</ul>
+</div>
+

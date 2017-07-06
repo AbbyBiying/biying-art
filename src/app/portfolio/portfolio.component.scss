@@ -1,5 +1,28 @@
+#portfolio-menu {
+	margin-left: 10px;
+	a {
+		color: rgba(0, 0, 0, 0.87);
+  }
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 33%;
+
+  li {
+  	list-style-type: none;
+  	cursor: pointer;	
+  	font-size: 24px;
+	  font-family: 'Raleway', sans-serif;
+	  margin-bottom: 30px;
+	  font-weight: 300;
+	  letter-spacing: 3.5px;
+  }
+}
+
 #portfolio-container {
-	margin-top: 10px;
+	margin-top: 40px;
 	margin-bottom: 10px;
 	padding: 0 10px;
+	position: absolute;
 }
+
