@@ -4,7 +4,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 
-import { MatIconModule, MatTabsModule, MatSidenavModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule, MatToolbarModule} from '@angular/material';
+import { MatSelectModule, MatIconModule, MatTabsModule, MatSidenavModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule, MatToolbarModule} from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule} from '@angular/http';
@@ -23,20 +23,20 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', 
     component: PortfolioComponent,
-    children: [
-      {
-        path: 'painting',
-        component: PaintingComponent,
-      }, 
-      {
-        path: 'ceramic',
-        component: CeramicComponent,
-      },
-      {
-        path: 'video',
-        component: VideoComponent,
-      }, 
-    ]
+    // children: [
+    //   {
+    //     path: 'painting',
+    //     component: PaintingComponent,
+    //   }, 
+    //   {
+    //     path: 'ceramic',
+    //     component: CeramicComponent,
+    //   },
+    //   {
+    //     path: 'video',
+    //     component: VideoComponent,
+    //   }, 
+    // ]
   },
   { path: 'contact', component: ContactComponent },
   { path: '**',
@@ -71,7 +71,8 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatToolbarModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
