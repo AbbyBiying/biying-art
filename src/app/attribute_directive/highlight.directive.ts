@@ -8,10 +8,12 @@ export class HighlightDirective {
 	
 	@Input('artHighlight') highlightColor: string;
 
+	@Input() defaultColor: string;
+
   constructor(private el: ElementRef) { }
   
   @HostListener('mouseenter') onMouseEnter() {
- 		this.highlight(this.highlightColor || 'gold');
+ 		this.highlight(this.highlightColor || this.defaultColor || 'red');
   }
  
   @HostListener('mouseleave') onMouseLeave() {
