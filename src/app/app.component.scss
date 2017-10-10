@@ -1,6 +1,13 @@
-.mat-button.active { 
-  color: blue;
-  opacity: 50%;
+.mat-button {
+  background-color: rgb(28, 27, 27);
+
+  &.active { 
+    color: gold;
+   }
+}
+
+.menu {
+  background-color: transparent;
 }
 
 .logo {
