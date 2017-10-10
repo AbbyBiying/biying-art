@@ -1,5 +1,10 @@
 .painting-img {
-	margin: 50px;
+	margin: 50px 2%;
 	box-shadow: 0px 10px 10px #BEBEBE;
-	/*width: 200px;*/
-}	
+	width: 40%;
+}
+
+md-grid-tile img {
+	max-width: 100%;
+	max-height: 100%;
+}

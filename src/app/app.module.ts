@@ -12,12 +12,14 @@ import { MdSidenavModule} from '@angular/material';
 import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HighlightDirective } from './attribute_directive/highlight.directive'
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
+import { MdGridListModule} from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -48,6 +50,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    HighlightDirective,
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
@@ -66,7 +69,8 @@ const appRoutes: Routes = [
     MdNativeDateModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MdGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
