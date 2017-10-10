@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { MdButtonModule, MdCheckboxModule} from '@angular/material';
 import 'hammerjs';
-import { MaterialModule, MdNativeDateModule} from '@angular/material';
+
+import { MatSidenavModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule, MatToolbarModule} from '@angular/material';
+
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MdMenuModule} from '@angular/material';
 import { HttpModule} from '@angular/http';
-import { MdSidenavModule} from '@angular/material';
 import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -19,7 +18,6 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
-import { MdGridListModule} from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -62,15 +60,16 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
+    MatButtonModule, 
+    MatCheckboxModule,
     HttpModule,
-    MaterialModule,
-    MdNativeDateModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    MdGridListModule
+    MatSidenavModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

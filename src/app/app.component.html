@@ -1,26 +1,29 @@
 <div class="header-button-container" [hidden]="sidenav.opened">
-  <button md-button class="header-burger example-fab" (click)="sidenav.toggle()">
-    <md-icon>menu</md-icon>
+  <button mat-button class="header-burger example-fab" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
   </button>
 </div>
+<mat-tab-group>
+  <mat-tab label="Tab 1">Content 1</mat-tab>
+  <mat-tab label="Tab 2">Content 2</mat-tab>
+</mat-tab-group>
+<mat-sidenav-container class="container">
 
-<md-sidenav-container class="container">
-
-  <md-sidenav #sidenav class="sidenav">
-    <button md-button class="close-button" (click)="sidenav.toggle()">
-      <md-icon>clear</md-icon>
+  <mat-sidenav #sidenav class="sidenav">
+    <button mat-button class="close-button" (click)="sidenav.toggle()">
+      <mat-icon>clear</mat-icon>
     </button>
     <ul class="menu-button">
 
-      <li><button md-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()" >Portfolio</button></li>
-      <li><button md-button routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">About</button></li>
-      <!-- <li><button md-button (click)="sidenav.toggle()">Exhibition</button></li> -->
-      <li><button md-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li>
+      <li><button mat-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()" >Portfolio</button></li>
+      <li><button mat-button routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">About</button></li>
+      <!-- <li><button mat-button (click)="sidenav.toggle()">Exhibition</button></li> -->
+      <li><button mat-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li>
     </ul>
-  </md-sidenav>
+  </mat-sidenav>
 
   <router-outlet></router-outlet>
-</md-sidenav-container>
+</mat-sidenav-container>
 
 <footer>
   <div class="footer-section">
