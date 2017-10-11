@@ -12,6 +12,12 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+  "filesGlob": [
+    "node_modules/angular2/typings/browser.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],    
     "lib": [
       "es2016",
       "dom"

@@ -1,15 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import 'hammerjs';
-
-import { MatTooltipModule, MatSelectModule, MatIconModule, MatTabsModule, MatSidenavModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule, MatToolbarModule} from '@angular/material';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule} from '@angular/http';
 import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { RouterModule, Routes } from '@angular/router';
+
+import { 
+  MatTooltipModule, 
+  MatSelectModule, 
+  MatIconModule, 
+  MatTabsModule, 
+  MatSidenavModule, 
+  MatMenuModule, 
+  MatButtonModule, 
+  MatCheckboxModule, 
+  MatGridListModule, 
+  MatDatepickerModule, 
+  MatNativeDateModule, 
+  MatToolbarModule} from '@angular/material';
 
 import { HighlightDirective } from './attribute_directive/highlight.directive'
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -18,10 +37,12 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
+import { HeroListBasicComponent } from './portfolio/hero-list-basic.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
-  { path: 'portfolio', 
+  { 
+    path: 'portfolio', 
     component: PortfolioComponent,
     // children: [
     //   {
@@ -55,6 +76,7 @@ const appRoutes: Routes = [
     PaintingComponent,
     CeramicComponent,
     VideoComponent,
+    HeroListBasicComponent
   ],
 
   imports: [
@@ -75,7 +97,8 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatTooltipModule
   ],
-  providers: [],
+  exports: [BrowserModule],
+  //providers: BROWSER_ANIMATIONS_PROVIDERS,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

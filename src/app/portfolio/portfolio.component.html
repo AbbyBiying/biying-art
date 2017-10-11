@@ -12,11 +12,12 @@
 	    </mat-option>
 	  </mat-select>
 	</mat-form-field>
-</div>
-
+</div> 
 <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
 <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
 <app-video *ngIf="artType.value == 'Video'"></app-video>
+
+<hero-list-basic></hero-list-basic>
 
 <!-- <div id="portfolio-menu">
 	<ul>
