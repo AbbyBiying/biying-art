@@ -4,7 +4,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 
-import { MatSelectModule, MatIconModule, MatTabsModule, MatSidenavModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule, MatToolbarModule} from '@angular/material';
+import { MatTooltipModule, MatSelectModule, MatIconModule, MatTabsModule, MatSidenavModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule, MatToolbarModule} from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule} from '@angular/http';
@@ -72,7 +72,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatTabsModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

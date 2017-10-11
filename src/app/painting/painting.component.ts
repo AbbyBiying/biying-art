@@ -12,5 +12,4 @@ export class PaintingComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
