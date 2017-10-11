@@ -8,7 +8,8 @@ import {
   state,
   style,
   animate,
-  transition
+  transition,
+  keyframes
 } from '@angular/animations';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -37,7 +38,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
-import { HeroListBasicComponent } from './portfolio/hero-list-basic.component';
+import { artListBasicComponent } from './portfolio/art-list-basic.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -76,7 +77,7 @@ const appRoutes: Routes = [
     PaintingComponent,
     CeramicComponent,
     VideoComponent,
-    HeroListBasicComponent
+    artListBasicComponent
   ],
 
   imports: [

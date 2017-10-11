@@ -1,4 +1,4 @@
-export class Hero {
+export class art {
   constructor(public name: string, public state = 'inactive') { }
 
   toggleState() {
