@@ -38,7 +38,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
-import { artListBasicComponent } from './portfolio/art-list-basic.component';
+import { artListAnimationComponent } from './portfolio/art-list-animation.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -77,7 +77,7 @@ const appRoutes: Routes = [
     PaintingComponent,
     CeramicComponent,
     VideoComponent,
-    artListBasicComponent
+    artListAnimationComponent
   ],
 
   imports: [
