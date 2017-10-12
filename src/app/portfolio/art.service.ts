@@ -1,7 +1,7 @@
 export class art {
   constructor(public name: string, public state = 'inactive') { }
 
-  toggleState() {
+  animateMe() {
     this.state = this.state === 'active' ? 'inactive' : 'active';
   }
 }
