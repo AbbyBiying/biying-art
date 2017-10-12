@@ -12,7 +12,6 @@ import { Art } from './art.service';
  
 @Component({
   selector: 'art-list-animation',
-  //templateUrl: './portfolio.component.html',
   template: `
   <ul>here are arts:
     <li *ngFor="let art of arts"
@@ -23,8 +22,8 @@ import { Art } from './art.service';
   </ul>
     <p [@myAwesomeAnimation]='state' (click)="animateActive()">active or not</p>
     <p [@flyInOut]='state' (click)="animateflyInOut()">in and out animation</p>
-    <p [@mySecondAnimation]='state' (click)="animateSize()">small and large</p>
     <p [@shrinkOut]='state' (click)="animateShrink()">shrink!!!</p>
+    <p [@mySecondAnimation]='state' (click)="animateSize()">small and large</p>
   `,
 
   styles: [`
@@ -134,6 +133,33 @@ import { Art } from './art.service';
         style({opacity: 1, transform: 'translateX(25%)',     offset: 1.0})
       ]))),
     ]),
+    
+    // trigger('parallelFlyInOut', [
+    //   state('in', style({width: 120, transform: 'translateX(0)', opacity: 1})),
+    //   transition('void => *', [
+    //     style({width: 10, transform: 'translateX(50px)', opacity: 0}),
+    //     group([
+    //       animate('0.3s 0.1s ease', style({
+    //         transform: 'translateX(0)',
+    //         width: 120
+    //       })),
+    //       animate('0.3s ease', style({
+    //         opacity: 1
+    //       }))
+    //     ])
+    //   ]),
+    //   transition('* => void', [
+    //     group([
+    //       animate('0.3s ease', style({
+    //         transform: 'translateX(50px)',
+    //         width: 10
+    //       })),
+    //       animate('0.3s 0.2s ease', style({
+    //         opacity: 0
+    //       }))
+    //     ])
+    //   ])
+    // ]),
 
     trigger('shrinkOut', [
       state('in', style({height: '*'})),
@@ -146,8 +172,10 @@ import { Art } from './art.service';
   ]
 })
 
+//export group(steps: AnimationMetadata[]) : AnimationGroupMetadata
 export class artListAnimationComponent {
   arts: Art[] = [ new Art("Painting", "active"), new Art("Ceramic", "inactive")];
+
   state: string = 'inactive';
   animateSize() {
     this.state = this.state === 'small' ? 'large' : 'small';
@@ -160,5 +188,8 @@ export class artListAnimationComponent {
   };
   animateShrink() {
     this.state = this.state === 'void' ? 'in' : 'void';
+  }
+  parallelAnimation() {
+    this.state = this.state === '*' ? 'void' : '*';
   }
 }
