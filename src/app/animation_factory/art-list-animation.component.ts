@@ -34,6 +34,10 @@ import { Art } from './art.service';
     <p [@flyInOut]='state' (click)="animateflyInOut()">in and out animation</p>
     <p [@shrinkOut]='state' (click)="animateShrink()">shrink!!!</p>
     <p [@mySecondAnimation]='state' (click)="animateSize()">small and large</p>
+    <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">parallelAnimation</p>
+    <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">parallelAnimation</p>
+    <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">parallelAnimation</p>
+
   `,
 
   styles: [`
@@ -91,23 +95,23 @@ import { Art } from './art.service';
        ])
      ]),
     
-      trigger('flyInOut', [
-        state('in', style({opacity: 1, transform: 'translateX(0)'})),
-        transition('void => *', [
-          style({
-            opacity: 0,
-            transform: 'translateX(-100%)'
-          }),
-          animate('0.2s ease-in')
-        ]),
-        transition('* => void', [
-          animate('0.2s 0.1s ease-out', style({
-            backgroundColor:'blue',
-            opacity: 0,
-            transform: 'translateX(100%)'
-          }))
-        ])
-      ]),
+      // trigger('flyInOut', [
+      //   state('in', style({opacity: 1, transform: 'translateX(0)'})),
+      //   transition('void => *', [
+      //     style({
+      //       opacity: 0,
+      //       transform: 'translateX(-100%)'
+      //     }),
+      //     animate('0.2s ease-in')
+      //   ]),
+      //   transition('* => void', [
+      //     animate('0.2s 0.1s ease-out', style({
+      //       backgroundColor:'blue',
+      //       opacity: 0,
+      //       transform: 'translateX(100%)'
+      //     }))
+      //   ])
+      // ]),
 
      trigger('flyInOut', [
        state('in', style({transform: 'translateX(0)'})),
@@ -127,8 +131,8 @@ import { Art } from './art.service';
        ])
      ]),
 
-     trigger('mySecondAnimation', [
-       state('small', style({
+      trigger('mySecondAnimation', [
+        state('small', style({
            backgroundColor: 'blue',
            transform: 'scale(1)',
        })),
@@ -147,17 +151,18 @@ import { Art } from './art.service';
       trigger('parallelFlyInOut', [
         state('in', style({width: 120, transform: 'translateX(0)', opacity: 1})),
         transition('void => *', [
-          style({width: 10, transform: 'translateX(50px)', opacity: 0}),
+          style({width: 100, transform: 'translateX(50px)', opacity: 0}),
           group([
             animate('0.3s 0.1s ease', style({
               transform: 'translateX(0)',
-              width: 120
+              width: 1200
             })),
             animate('0.3s ease', style({
               opacity: 1
             }))
           ])
         ]),
+
         transition('* => void', [
           group([
             animate('0.3s ease', style({
