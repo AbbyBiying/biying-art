@@ -17,25 +17,3 @@
 <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
 <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
 <app-video *ngIf="artType.value == 'Video'"></app-video>
- 
-   
-<ul>here are arts:
- <li *ngFor="let art of arts"
-    [@artState]="art.state"
-    (click)="art.toggleState()">
-  {{art.name}}
-  </li>
-</ul>
- <p [@myAwesomeAnimation]='state' (click)="animateActive()">active or not</p>
- <p [@flyInOut]='state' (click)="animateflyInOut()">in and out animation</p>
- <p [@shrinkOut]='state' (click)="animateShrink()">shrink!!!</p>
- <p [@mySecondAnimation]='state' (click)="animateSize()">small and large</p>
-
-<!-- <div id="portfolio-menu">
-	<ul>
-		<li><a routerLink="/portfolio/painting" routerLinkActive="active" [artHighlight]="color" defaultColor="gold">Painting</a></li>
-		<li><a routerLink="/portfolio/ceramic" routerLinkActive="active" [artHighlight]="color" defaultColor="gold">Ceramic</a></li>
-		<li><a routerLink="/portfolio/video" routerLinkActive="active" [artHighlight]="color" defaultColor="gold">Video</a></li>
-	</ul>
-</div> -->
-

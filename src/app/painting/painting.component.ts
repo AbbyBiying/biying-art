@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
+
 import {
   AnimationBuilder,
   AnimationAnimateMetadata,
@@ -17,12 +16,14 @@ import {
   keyframes,
   group
 } from '@angular/animations';
+
 import { artAnimations } from '../animations/art-animations';
 
 @Component({
   selector: 'app-painting',
   templateUrl: './painting.component.html',
-  styleUrls: ['./painting.component.scss']
+  styleUrls: ['./painting.component.scss'],
+  animations: artAnimations
 })
 
 export class PaintingComponent implements OnInit {
@@ -30,5 +31,22 @@ export class PaintingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  state: string = 'inactive';
+  animateSize() {
+    this.state = this.state === 'small' ? 'large' : 'small';
+  };
+  animateActive() {
+    this.state = this.state === 'active' ? 'inactive' : 'active';
+  };
+  animateflyInOut() {
+    this.state = this.state === '*' ? 'void' : '*';
+  };
+  animateShrink() {
+    this.state = this.state === 'void' ? 'in' : 'void';
+  }
+  parallelAnimation() {
+    this.state = this.state === '*' ? 'void' : '*';
   }
 }

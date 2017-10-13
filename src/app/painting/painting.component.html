@@ -1,39 +1,20 @@
-<!-- <div>
-  <mat-tab-group>
-    <mat-tab label="Tab 1">Content 1</mat-tab>
-    <mat-tab label="Tab 2">Content 2</mat-tab>
-  </mat-tab-group>
-</div> -->
-
+ 
 <mat-grid-list cols="5" rowHeight="100px">
-<!--     <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
-    <img matTooltip="Big Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.7.jpg">
-    </p> -->
-
-     <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
-     <img matTooltip="Alienation_No.5" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.5.jpg">
-     </p>
-     <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
-     <img matTooltip="Alienation_No.6" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.6.jpg">
-     </p>
-     <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
-     <img matTooltip="Alienation_No.7" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.7.jpg">
-     </p>
  
   <mat-grid-tile colspan="4" rowspan="4">
-    <img matTooltip="Big Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/bigtunnel.jpg">
+    <img [@myAwesomeAnimation]='state' (click)="animateActive()"   matTooltip="Big Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/bigtunnel.jpg">
   </mat-grid-tile>
 
   <mat-grid-tile colspan="1" rowspan="5">
-    <img matTooltip="Alienation No.13" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.13.JPG">
+    <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation No.13" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.13.JPG">
   </mat-grid-tile>
 
   <mat-grid-tile colspan="3" rowspan="3">
-    <img matTooltip="Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/tunnel.jpg">
+    <img [@mySecondAnimation]='state' (click)="animateSize()"matTooltip="Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/tunnel.jpg">
   </mat-grid-tile>
 
   <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation No.9" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.9.JPG">
+    <img [@shrinkOut]='state' (click)="animateShrink()" matTooltip="Alienation No.9" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.9.JPG">
   </mat-grid-tile>
 
   <mat-grid-tile colspan="2" rowspan="3">
