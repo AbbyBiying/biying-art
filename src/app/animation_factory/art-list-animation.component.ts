@@ -34,9 +34,15 @@ import { Art } from './art.service';
     <p [@flyInOut]='state' (click)="animateflyInOut()">in and out animation</p>
     <p [@shrinkOut]='state' (click)="animateShrink()">shrink!!!</p>
     <p [@mySecondAnimation]='state' (click)="animateSize()">small and large</p>
-    <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">parallelAnimation</p>
-    <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">parallelAnimation</p>
-    <p [@parallelFlyInOut]='state' (click)="parallelAnimation()">parallelAnimation</p>
+<p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
+<img matTooltip="Alienation_No.5" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.5.jpg">
+</p>
+<p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
+<img matTooltip="Alienation_No.6" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.6.jpg">
+</p>
+<p [@parallelFlyInOut]='state' (click)="parallelAnimation()">
+<img matTooltip="Alienation_No.7" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.7.jpg">
+</p>
 
   `,
 
@@ -49,6 +55,9 @@ import { Art } from './art.service';
       text-align:center;
       padding:20px;
       font-size:1.5em;
+    }
+    img {
+      width:500px;
     }
   `],
 
