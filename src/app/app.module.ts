@@ -3,22 +3,7 @@ import { NgModule, AnimationKeyframe } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import 'hammerjs';
-import {
-  AnimationBuilder,
-  AnimationAnimateMetadata,
-  AnimationFactory,
-  AnimationMetadata, 
-  AnimationMetadataType, 
-  AnimationPlayer,
-  useAnimation, 
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  keyframes,
-  group
-} from '@angular/animations';
+
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule} from '@angular/http';
@@ -46,7 +31,6 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
-import { artListAnimationComponent } from './animation_factory/art-list-animation.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -85,7 +69,6 @@ const appRoutes: Routes = [
     PaintingComponent,
     CeramicComponent,
     VideoComponent,
-    artListAnimationComponent
   ],
 
   imports: [
