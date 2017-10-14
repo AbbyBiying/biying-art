@@ -113,11 +113,21 @@
 }
 /*for iphone 6 plus*/
 @media screen and (max-width: 420px) {
-	.bio {
-    font-size: 13px;
-    margin:0;
+
+  .about-page {
+
+  	.bio {
+      font-size: 13px;
+      margin:0;    
+      width:100%;
+    }
 	}
 
+  #hello-name {
+ 
+    font-size: 85px;
+     
+  }
 	.year {
 	  p {
 	    font-size: 13px;
