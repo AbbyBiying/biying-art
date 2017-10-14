@@ -32,6 +32,10 @@ export class PaintingComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onScroll() {
+    console.log("SCROLLED");
+  }
   
   state: string = 'inactive';
   animateSize() {

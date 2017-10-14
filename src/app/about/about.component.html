@@ -1,12 +1,17 @@
-<div class="about-page">
-  <p class="bio">
-	Zhang was born in Guangzhou, China in 1984. She received her BFA from the Central Academy of Fine Arts in Beijing, and her MFA from the School of the Museum of Fine Arts, Boston. Zhang is a painter and also works in film/video, sound art and mixed media. Zhang's work has been widely exhibited internationally at the Museum of Fine Arts, Boston, the National Art Museum of China, the Beijing International Art Biennial, the Art In Embassies Program, and in film festivals, galleries and at various special events. I have been awarded a fellowship at the Jentel Residency, a scholarship from Harvard University, the Karsh Prize in photography, and other scholarships from S.M.F.A. Boston and The Central Academy of Fine Art, China. Zhang lives and works in California.
-  <br><i class="material-icons">arrow_downward</i>
+<div class="bio-img">
+ 	<img [@bioimgAnimation]='state' (click)="animateActive()" class="painting-img" src="/assets/painting/detail9.png">
+</div>
+ 
+<!-- <span [@bionameAnimation]='state' (click)="animateActive()" class="bio-name">您好，我是张碧莹</span> -->
 
+<div class="about-page">
+  <p [@bioAnimation]='state' (click)="animateActive()" class="bio">
+	Zhang was born in Guangzhou, China in 1984. She received her BFA from the Central Academy of Fine Arts in Beijing, and her MFA from the School of the Museum of Fine Arts, Boston. Zhang is a painter and also works in film/video, sound art and mixed media. Zhang's work has been widely exhibited internationally at the Museum of Fine Arts, Boston, the National Art Museum of China, the Beijing International Art Biennial, the Art In Embassies Program, and in film festivals, galleries and at various special events. I have been awarded a fellowship at the Jentel Residency, a scholarship from Harvard University, the Karsh Prize in photography, and other scholarships from S.M.F.A. Boston and The Central Academy of Fine Art, China. Zhang lives and works in California.
+
+  <!-- <br><i class="material-icons">arrow_downward</i> -->
   </p>
 
-
-  <section id="about-content">
+  <section [@cvAnimation]='state' (click)="animateActive()" id="about-content">
   	<section class="about-section">
   	  <div class="section-title">Education</div>
 	    <div class="section-text">
@@ -172,4 +177,5 @@
 		  </div>
 		</section>
   </section>
+   
 </div>

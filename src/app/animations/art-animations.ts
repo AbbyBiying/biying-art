@@ -16,7 +16,55 @@ import {
 } from '@angular/animations'; 
 
 export const artAnimations = [
+  trigger('statementAnimation', [   
+    transition('void => inactive', [
+     style({ backgroundColor: 'gold', transform: 'translateX(40%) scale(1)'}),
+     animate('4000ms ease-in')
+    ]),   
+  ]),
+
+  trigger('bioimgAnimation', [ 
+    state('inactive', style({transform: 'translateX(0) scale(1)'})),
+    state('active',   style({transform: 'translateX(0) scale(1)'})),
+    transition('inactive => active', animate('1000ms ease-in')),
+    transition('active => inactive', animate('1000ms ease-out')),
+    transition('void => inactive', [
+     style({ transform: 'translateX(40%) scale(1)'}),
+     animate('1000ms ease-in')
+    ]),   
+  ]),
+
+  trigger('bionameAnimation', [ 
+    state('inactive', style({transform: 'translateX(0) scale(1)'})),
+    state('active',   style({transform: 'translateX(0) scale(1)'})),
+    transition('inactive => active', animate('100ms ease-in')),
+    transition('active => inactive', animate('1000ms ease-out')),
+    transition('void => inactive', [
+     style({ transform: 'translateY(500%) scale(1)'}),
+     animate('1000ms ease-in')
+    ]),   
+  ]),
+
+  trigger('bioAnimation', [
+    state('inactive', style({transform: 'translateX(0) scale(1)'})),
+    state('active',   style({transform: 'translateX(0) scale(1.1)'})),
+    transition('inactive => active', animate('1000ms ease-in')),
+    transition('active => inactive', animate('1000ms ease-out')),
+    transition('void => inactive', [
+     style({ transform: 'translateX(-40%) scale(1)'}),
+     animate('1000ms ease-in')
+    ]),
+  ]),
  
+  trigger('cvAnimation', [
+    transition('inactive => active', animate('100ms ease-in')),
+    transition('active => inactive', animate('1000ms ease-out')),
+    transition('void => inactive', [
+     style({ transform: 'translateX(-20%) scale(1)'}),
+     animate('1000ms ease-in')
+    ]),
+  ]),
+
   trigger('artState', [
     state('inactive', style({color: 'white', backgroundColor: 'blue', transform: 'translateX(0) scale(1)'})),
     state('active',   style({color: 'red', backgroundColor: 'yellow', transform: 'translateX(0) scale(4.1)'})),
@@ -62,19 +110,13 @@ export const artAnimations = [
   trigger('flyInOut', [
     state('in', style({transform: 'translateX(0)'})),
     transition('void => *', [
-     animate(300, keyframes([
-       style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
-       style({opacity: 1, transform: 'translateX(15px)',  offset: 0.3}),
-       style({opacity: 1, transform: 'translateX(0)',     offset: 1.0})
+     animate(3000, keyframes([
+       style({opacity: 0, transform: 'translateX(-120%)', offset: 0}),
+       style({opacity: 1, transform: 'translateX(15px) scale(1.2)',  offset: 0.3}),
+       style({opacity: 1, transform: 'translateX(0) scale(1.1)',     offset: 1.0})
      ]))
     ]),
-    transition('* => void', [
-     animate(300, keyframes([
-       style({opacity: 1, transform: 'translateX(0)',     offset: 0}),
-       style({opacity: 1, transform: 'translateX(-15px)', offset: 0.7}),
-       style({opacity: 0, transform: 'translateX(100%)',  offset: 1.0})
-     ]))
-    ])
+     
   ]),
 
   trigger('mySecondAnimation', [

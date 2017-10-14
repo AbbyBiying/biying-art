@@ -1,129 +1,175 @@
- 
-<mat-grid-list cols="5" rowHeight="100px">
- 
-  <mat-grid-tile colspan="4" rowspan="4">
-    <img [@myAwesomeAnimation]='state' (click)="animateActive()"   matTooltip="Big Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/bigtunnel.jpg">
-  </mat-grid-tile>
+<div id="alienation-painting">
+  <mat-grid-list cols="5" rowHeight="100px">
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation_No.3" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.3.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="1" rowspan="5">
-    <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation No.13" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.13.JPG">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation_No.1" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.1.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="3" rowspan="3">
-    <img [@mySecondAnimation]='state' (click)="animateSize()"matTooltip="Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/tunnel.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation_No.10" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.10.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img [@shrinkOut]='state' (click)="animateShrink()" matTooltip="Alienation No.9" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.9.JPG">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation_No.11" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.11.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Eye" matTooltipPosition="above" class="painting-img" src="/assets/painting/eye.JPG">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation_No.12" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.12.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="3" rowspan="5">
-    <img matTooltip="White Bed" matTooltipPosition="above" class="painting-img" src="/assets/painting/whitebed.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.15" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.15.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Head" matTooltipPosition="above" class="painting-img" src="/assets/painting/head.JPG">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.17" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.17.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="1" rowspan="5">
-    <img matTooltip="Alienation No.2" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.2.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.16" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.16.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="4" rowspan="4">
-    <img  matTooltip="The Biggest Blue" matTooltipPosition="above" class="painting-img" src="/assets/painting/thebiggestblue.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.20" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.20.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="3" rowspan="3">
-    <img  matTooltip="Smoke" matTooltipPosition="above" class="painting-img" src="/assets/painting/smoke.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.21" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.21.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="3" rowspan="3">
-    <img matTooltip="Sick" matTooltipPosition="above" class="painting-img" src="/assets/painting/sick.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.22" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.22.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="3" rowspan="3">
-    <img matTooltip="The Harder You Fall" matTooltipPosition="above" class="painting-img" src="/assets/painting/theharderyoufall.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.23" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.23.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="3" rowspan="3">
-    <img matTooltip="Big Dream" matTooltipPosition="above" class="painting-img" src="/assets/painting/bigdream.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.24" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.24.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Firework_No.3" matTooltipPosition="above" class="painting-img" src="/assets/painting/Firework_No.3.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.3" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.3.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.1" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.1.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.10" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.10.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.11" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.11.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.12" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.12.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.15" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.15.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.17" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.17.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.16" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.16.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.20" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.20.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.21" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.21.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.22" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.22.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.23" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.23.jpg">
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.24" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.24.jpg">
-  </mat-grid-tile>
-
-      <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.26" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.26.jpg">
-  </mat-grid-tile>
+        <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.26" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.26.jpg">
+    </mat-grid-tile>
 
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.30" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.30.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.30" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.30.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.31" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.31.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.31" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.31.jpg">
+    </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3">
-    <img matTooltip="Alienation_No.34" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.34.jpg">
-  </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Alienation_No.34" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.34.jpg">
+    </mat-grid-tile>
+  </mat-grid-list>
+   
 
-</mat-grid-list>
+<p id="statement"[@statementAnimation]='state' (click)="animateActive()" >
+  My work is intended to address public awareness and encourage discussion about
+the relationship between individuals and their physical environment. Does our
+place of habitation shape our state of being? To what extent?  I am fascinated to
+study the perceptions we hold that align us with mainstream vs. peripheral
+consciousness in the face of schematic frameworks. I continually explore the
+intersection of comfort, despair, place, and purpose. Ultimately, I hope the
+audience will find resonances of their own experience, values, and sense of
+belonging within my work. I hope my work can be a starting point for discussion
+about who we are and how we fit into a world that is both hopeful and alien. The
+audience is free to analyze and draw their own conclusions.
+
+ <!-- 
+    I am interested in the ways that history and personal memory intersect in
+    visual narratives. I paint pictures of emotional situations. My paintings
+    explore a zone that fuses familiar landscapes with a sense of alienation. My
+    paintings explore loss, displacement, and anxiety. In my current series, I am
+    also interested in the energy and power of medium and color. I use bright
+    colors like neon orange, pink, and blood reds.
+    I paint landscapes and cityscapes with mattresses as a central theme. In my
+    work, the mattresses become characters with personal memory and a social
+    history. They are set in public and private worlds simultaneously. The beds
+    are sometimes placed in front of old temples, sculptures, demolished
+    machines, highways and sewage tunnels. It's my hope that the viewer can
+    identify with the mattresses as though they were living beings. They are
+    fragile and must make their way through a landscape of threatening events.
+    In several paintings, the beds appear as if they were pulled from a private
+    bedroom and exposed to the freezing night highway. I am interested in the
+    relationship between comfort, despair, and purpose.
+    I hope the audience can relate to my work while considering their own
+    experience and values. I hope my work can be a starting point for discussion
+    about who we are and how we fit into a world that is forever entangled in
+    conflict, contrast, comfort, despair, and an enduring hope for the future.     -->
+  </p>
+</div>
+
+  
+<div id="bed-painting">
+  <mat-grid-list cols="5" rowHeight="100px">
+    <mat-grid-tile colspan="1" rowspan="5">
+      <img [@flyInOut]='state' (click)="animateflyInOut()" matTooltip="Alienation No.13" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.13.JPG">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@shrinkOut]='state' (click)="animateShrink()" matTooltip="Alienation No.9" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.9.JPG">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="5">
+      <img matTooltip="Alienation No.2" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.2.jpg">
+    </mat-grid-tile> 
+
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img [@myAwesomeAnimation]='state' (click)="animateActive()" matTooltip="Firework_No.4" matTooltipPosition="above" class="painting-img" src="/assets/painting/Firework_No.4.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="4">
+      <img [@myAwesomeAnimation]='state' (click)="animateActive()" matTooltip="Big Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/bigtunnel.jpg">
+    </mat-grid-tile>
+
+    
+    <mat-grid-tile colspan="3" rowspan="3">
+      <img [@mySecondAnimation]='state' (click)="animateSize()"matTooltip="Tunnel" matTooltipPosition="above" class="painting-img" src="/assets/painting/tunnel.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Eye" matTooltipPosition="above" class="painting-img" src="/assets/painting/eye.JPG">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3" rowspan="5">
+      <img matTooltip="White Bed" matTooltipPosition="above" class="painting-img" src="/assets/painting/whitebed.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Head" matTooltipPosition="above" class="painting-img" src="/assets/painting/head.JPG">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="4">
+      <img  matTooltip="The Biggest Blue" matTooltipPosition="above" class="painting-img" src="/assets/painting/thebiggestblue.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3" rowspan="3">
+      <img  matTooltip="Smoke" matTooltipPosition="above" class="painting-img" src="/assets/painting/smoke.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3" rowspan="3">
+      <img matTooltip="Sick" matTooltipPosition="above" class="painting-img" src="/assets/painting/sick.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3" rowspan="3">
+      <img matTooltip="The Harder You Fall" matTooltipPosition="above" class="painting-img" src="/assets/painting/theharderyoufall.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3" rowspan="3">
+      <img matTooltip="Big Dream" matTooltipPosition="above" class="painting-img" src="/assets/painting/bigdream.jpg">
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" rowspan="3">
+      <img matTooltip="Firework_No.4" matTooltipPosition="above" class="painting-img" src="/assets/painting/Firework_No.4.jpg">
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
