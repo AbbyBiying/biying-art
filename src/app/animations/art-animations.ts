@@ -41,7 +41,7 @@ export const artAnimations = [
     transition('active => inactive', animate('3000ms ease-out')),
     transition('void => inactive', [
      style({ transform: 'translateY(500%) scale(1)'}),
-     animate('3000ms ease-in')
+     animate('2500ms ease-in')
     ]),   
   ]),
 
