@@ -34,14 +34,25 @@ export const artAnimations = [
     ]),   
   ]),
 
-  trigger('bionameAnimation', [ 
+  trigger('bionameupAnimation', [ 
     state('inactive', style({transform: 'translateX(0) scale(1)'})),
     state('active',   style({transform: 'translateX(0) scale(1)'})),
-    transition('inactive => active', animate('100ms ease-in')),
-    transition('active => inactive', animate('1000ms ease-out')),
+    transition('inactive => active', animate('3000ms ease-in')),
+    transition('active => inactive', animate('3000ms ease-out')),
     transition('void => inactive', [
      style({ transform: 'translateY(500%) scale(1)'}),
-     animate('1000ms ease-in')
+     animate('2000ms ease-in')
+    ]),   
+  ]),
+
+  trigger('bionamedownAnimation', [ 
+    state('inactive', style({  transform: 'translateX(0) scale(1)'})),
+    state('active',   style({ transform: 'translateX(0) scale(1)'})),
+    transition('inactive => active', animate('3000ms ease-in')),
+    transition('active => inactive', animate('3000ms ease-out')),
+    transition('void => inactive', [
+     style({ color:'white',transform: 'translateY(-500%) scale(1)'}),
+     animate('2000ms ease-in')
     ]),   
   ]),
 
@@ -111,9 +122,9 @@ export const artAnimations = [
     state('in', style({transform: 'translateX(0)'})),
     transition('void => *', [
      animate(3000, keyframes([
-       style({opacity: 0, transform: 'translateX(-120%)', offset: 0}),
-       style({opacity: 1, transform: 'translateX(15px) scale(1.2)',  offset: 0.3}),
-       style({opacity: 1, transform: 'translateX(0) scale(1.1)',     offset: 1.0})
+       style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+       style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+       style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
      ]))
     ]),
      
