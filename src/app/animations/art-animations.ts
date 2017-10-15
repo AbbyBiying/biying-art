@@ -30,31 +30,26 @@ export const artAnimations = [
     transition('active => inactive', animate('1000ms ease-out')),
     transition('void => inactive', [
      style({ transform: 'translateX(40%) scale(1)'}),
-     animate('1000ms ease-in')
+     animate('2000ms ease-in')
     ]),   
   ]),
 
   trigger('bionameupAnimation', [ 
-    state('down', style({transform: 'translateX(0) scale(1)'})),
-    state('up',   style({transform: 'translateX(0) scale(1)'})),
-    transition('down => up', animate('3000ms ease-in')),
-    transition('up => down', animate('3000ms ease-out')),
-    transition('void => down', [
-     style({ transform: 'translateY(200%) scale(1)'}),
-     animate('1800ms ease-in')
-    ]),   
+    state('together', style({transform: 'translateY(0)'})),
+    state('apart',   style({transform: 'translateY(-200%)'})),
+    transition('together => apart', animate('1800ms ease-in')),
+    transition('apart => together', animate('1800ms ease-out')),
+    transition('void => together', animate('1800ms ease-in')),   
   ]),
 
   trigger('bionamedownAnimation', [ 
-    state('up', style({  transform: 'translateX(0) scale(1)'})),
-    state('down',   style({ transform: 'translateX(0) scale(1)'})),
-    transition('down => up', animate('3000ms ease-in')),
-    transition('up => down', animate('3000ms ease-out')),
-    transition('void => down', [
-     style({ color:'white',transform: 'translateY(-200%) scale(1)'}),
-     animate('1800ms ease-in')
-    ]),   
-  ]),
+    state('together', style({transform: 'translateY(0)'})),
+    state('apart',   style({transform: 'translateY(200%)'})),
+    transition('together => apart', animate('3000ms ease-in')),
+    transition('apart => together', animate('3000ms ease-out')),
+    transition('void => together', animate('1800ms ease-in')),   
+  ]),   
+
 
   trigger('bioAnimation', [
     state('inactive', style({transform: 'translateX(0) scale(1)'})),
@@ -68,11 +63,11 @@ export const artAnimations = [
   ]),
  
   trigger('cvAnimation', [
-    transition('inactive => active', animate('1000ms ease-in')),
-    transition('active => inactive', animate('1000ms ease-out')),
-    transition('void => inactive', [
-     style({ transform: 'translateX(-20%) scale(1)'}),
-     animate('1000ms ease-in')
+    transition('cvbefore => cvafter', animate('1000ms ease-in')),
+    transition('cvafter => cvbefore', animate('1000ms ease-out')),
+    transition('void => cvbefore', [
+     style({ color:'white', transform: 'translateX(-20%) scale(1)'}),
+     animate('10000ms ease-in')
     ]),
   ]),
 

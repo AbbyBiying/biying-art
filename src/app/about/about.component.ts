@@ -32,14 +32,25 @@ export class AboutComponent implements OnInit {
   }
   
   state: string = 'inactive';
-  nameState: string = 'down';
+  nameState: string = 'apart';
+  cvState: string = "cvbefore";
+  bioState: string = "biosmall"
+
   nameUpDown() {
-    this.nameState = this.nameState === 'up' ? 'down' : 'up';
+    this.nameState = this.nameState === 'apart' ? 'together' : 'apart';
     console.log(this.nameState);
   };  
-  animateSize() {
-    this.state = this.state === 'small' ? 'large' : 'small';
+
+  bioActive() {
+    this.bioState = this.bioState === 'biosmall' ? 'biobig' : 'biosmall';
+    console.log(this.bioState);
   };
+
+  cvActive() {
+    this.cvState = this.cvState === 'cvbefore' ? 'cvafter' : 'cvbefore';
+    console.log(this.cvState);
+  };
+    
   animateActive() {
     this.state = this.state === 'active' ? 'inactive' : 'active';
   };
