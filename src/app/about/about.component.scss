@@ -3,6 +3,7 @@
     height: 500px;
     z-index: 1;
   }
+  height: 500px;
 }
 
 #hello-name {
@@ -50,11 +51,10 @@
   /*left: 1116px;*/
   /*top: -1200px;*/
 }
-
-
  
 .bio {
-  background: #1c1b1b;
+  background: rgba(27,25,25,0.98);
+  /*background: #1c1b1b;*/
   color: white;
 	/*background-color:rgb(250,250,250); */
 	/*color: #202020; */
