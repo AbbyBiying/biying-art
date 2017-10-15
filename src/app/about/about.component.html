@@ -1,34 +1,36 @@
 <div id="hello-name">
-	<div [@bionameupAnimation]='state' (click)="animateActive()" class="bio-name-up" id="nihao">您好
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">您好
 	</div>
 
-	<div [@bionamedownAnimation]='state' (click)="animateActive()" class="bio-name-down" id="wo">我
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">我
 	</div>
 
-	<div [@bionameupAnimation]='state' (click)="animateActive()" class="bio-name-up" id="shi">是
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">是
 	</div>
 
-	<div [@bionamedownAnimation]='state' (click)="animateActive()" class="bio-name-down" id="zhang">张
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">张
 	</div>
 
-	<div [@bionameupAnimation]='state' (click)="animateActive()" class="bio-name-up" id="bi">碧
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">碧
 	</div>
 
-	<div [@bionamedownAnimation]='state' (click)="animateActive()" class="bio-name-down" id="ying">莹
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">莹
 	</div> 
 </div>
 
 <div class="bio-img">
- 	<img [@bioimgAnimation]='state' (click)="animateActive()" class="painting-img" src="/assets/painting/detail9.png">
+ 	<img [@bioimgAnimation]='state' (click)="nameUpDown()" class="painting-img" src="/assets/painting/detail9.png">
 </div>
 
-<div class="about-page">
-  <p [@bioAnimation]='state' (click)="animateActive()" class="bio">
+<div class="bio">
+  <p [@bioAnimation]='state' (click)="animateActive()">
 	Zhang was born in Guangzhou, China in 1984. She received her BFA from the Central Academy of Fine Arts in Beijing, and her MFA from the School of the Museum of Fine Arts, Boston. Zhang is a painter and also works in film/video, sound art and mixed media. Zhang's work has been widely exhibited internationally at the Museum of Fine Arts, Boston, the National Art Museum of China, the Beijing International Art Biennial, the Art In Embassies Program, and in film festivals, galleries and at various special events. I have been awarded a fellowship at the Jentel Residency, a scholarship from Harvard University, the Karsh Prize in photography, and other scholarships from S.M.F.A. Boston and The Central Academy of Fine Art, China. Zhang lives and works in California.
 
   <!-- <br><i class="material-icons">arrow_downward</i> -->
   </p>
+</div>
 
+<div>
   <section [@cvAnimation]='state' (click)="animateActive()" id="about-content">
   	<section class="about-section">
   	  <div class="section-title">Education</div>

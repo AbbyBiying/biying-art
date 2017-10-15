@@ -35,22 +35,22 @@ export const artAnimations = [
   ]),
 
   trigger('bionameupAnimation', [ 
-    state('inactive', style({transform: 'translateX(0) scale(1)'})),
-    state('active',   style({transform: 'translateX(0) scale(1)'})),
-    transition('inactive => active', animate('3000ms ease-in')),
-    transition('active => inactive', animate('3000ms ease-out')),
-    transition('void => inactive', [
+    state('down', style({transform: 'translateX(0) scale(1)'})),
+    state('up',   style({transform: 'translateX(0) scale(1)'})),
+    transition('down => up', animate('3000ms ease-in')),
+    transition('up => down', animate('3000ms ease-out')),
+    transition('void => down', [
      style({ transform: 'translateY(500%) scale(1)'}),
      animate('2500ms ease-in')
     ]),   
   ]),
 
   trigger('bionamedownAnimation', [ 
-    state('inactive', style({  transform: 'translateX(0) scale(1)'})),
-    state('active',   style({ transform: 'translateX(0) scale(1)'})),
-    transition('inactive => active', animate('3000ms ease-in')),
-    transition('active => inactive', animate('3000ms ease-out')),
-    transition('void => inactive', [
+    state('up', style({  transform: 'translateX(0) scale(1)'})),
+    state('down',   style({ transform: 'translateX(0) scale(1)'})),
+    transition('down => up', animate('3000ms ease-in')),
+    transition('up => down', animate('3000ms ease-out')),
+    transition('void => down', [
      style({ color:'white',transform: 'translateY(-500%) scale(1)'}),
      animate('2500ms ease-in')
     ]),   

@@ -32,6 +32,11 @@ export class AboutComponent implements OnInit {
   }
   
   state: string = 'inactive';
+  nameState: string = 'down';
+  nameUpDown() {
+    this.nameState = this.nameState === 'up' ? 'down' : 'up';
+    console.log(this.nameState);
+  };  
   animateSize() {
     this.state = this.state === 'small' ? 'large' : 'small';
   };
