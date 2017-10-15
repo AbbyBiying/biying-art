@@ -40,8 +40,8 @@ export const artAnimations = [
     transition('down => up', animate('3000ms ease-in')),
     transition('up => down', animate('3000ms ease-out')),
     transition('void => down', [
-     style({ transform: 'translateY(500%) scale(1)'}),
-     animate('2500ms ease-in')
+     style({ transform: 'translateY(200%) scale(1)'}),
+     animate('1800ms ease-in')
     ]),   
   ]),
 
@@ -51,8 +51,8 @@ export const artAnimations = [
     transition('down => up', animate('3000ms ease-in')),
     transition('up => down', animate('3000ms ease-out')),
     transition('void => down', [
-     style({ color:'white',transform: 'translateY(-500%) scale(1)'}),
-     animate('2500ms ease-in')
+     style({ color:'white',transform: 'translateY(-200%) scale(1)'}),
+     animate('1800ms ease-in')
     ]),   
   ]),
 
@@ -68,7 +68,7 @@ export const artAnimations = [
   ]),
  
   trigger('cvAnimation', [
-    transition('inactive => active', animate('100ms ease-in')),
+    transition('inactive => active', animate('1000ms ease-in')),
     transition('active => inactive', animate('1000ms ease-out')),
     transition('void => inactive', [
      style({ transform: 'translateX(-20%) scale(1)'}),
