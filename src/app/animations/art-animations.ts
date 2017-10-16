@@ -23,40 +23,52 @@ export const artAnimations = [
     ]),   
   ]),
 
+  // trigger('bioimgAnimation', [ 
+  //   state('inactive', style({transform: 'translateX(0) scale(1)'})),
+  //   state('active',   style({transform: 'translateX(0) scale(1)'})),
+  //   transition('inactive => active', animate('1000ms ease-in')),
+  //   transition('active => inactive', animate('1000ms ease-out')),
+  //   transition('void => inactive', [
+  //    style({ transform: 'translateX(40%) scale(1)'}),
+  //    animate('2000ms ease-in')
+  //   ]),   
+  // ]),
+
   trigger('bioimgAnimation', [ 
-    state('inactive', style({transform: 'translateX(0) scale(1)'})),
-    state('active',   style({transform: 'translateX(0) scale(1)'})),
-    transition('inactive => active', animate('1000ms ease-in')),
-    transition('active => inactive', animate('1000ms ease-out')),
-    transition('void => inactive', [
-     style({ transform: 'translateX(40%) scale(1)'}),
-     animate('2000ms ease-in')
-    ]),   
+    state('void',   style({transform: 'translateX(-78%)'})),
+    state('imgin', style({transform: 'translateX(0)'})),
+    state('imgout',   style({transform: 'translateX(-78%)'})),
+    transition('imgin => imgout', animate('1800ms ease-in')),
+    transition('imgout => imgin', animate('1800ms ease-out')),
+    transition('void => imgin', animate('1800ms ease-in')),   
   ]),
 
+
   trigger('bionameupAnimation', [ 
-    state('together', style({transform: 'translateY(0)'})),
-    state('apart',   style({transform: 'translateY(-200%)'})),
+    state('void',   style({color:'transparent',transform: 'translateY(-200%)'})),
+    state('together', style({color:'white',transform: 'translateY(0)'})),
+    state('apart',   style({color:'transparent',transform: 'translateY(-200%)'})),
     transition('together => apart', animate('1800ms ease-in')),
     transition('apart => together', animate('1800ms ease-out')),
     transition('void => together', animate('1800ms ease-in')),   
   ]),
 
   trigger('bionamedownAnimation', [ 
-    state('together', style({transform: 'translateY(0)'})),
-    state('apart',   style({transform: 'translateY(200%)'})),
-    transition('together => apart', animate('3000ms ease-in')),
-    transition('apart => together', animate('3000ms ease-out')),
+    state('void',   style({color:'transparent', transform: 'translateY(200%)'})),
+    state('together', style({color:'white',transform: 'translateY(0)'})),
+    state('apart',   style({color:'transparent',transform: 'translateY(200%)'})),
+    transition('together => apart', animate('1800ms ease-in')),
+    transition('apart => together', animate('1800ms ease-out')),
     transition('void => together', animate('1800ms ease-in')),   
   ]),   
 
 
   trigger('bioAnimation', [
-    state('inactive', style({transform: 'translateX(0) scale(1)'})),
-    state('active',   style({transform: 'translateX(0) scale(1.1)'})),
-    transition('inactive => active', animate('1000ms ease-in')),
-    transition('active => inactive', animate('1000ms ease-out')),
-    transition('void => inactive', [
+    state('biosmall', style({transform: 'translateX(0) scale(1)'})),
+    state('biobig',   style({transform: 'translateX(0) scale(1.1)'})),
+    transition('biosmall => biobig', animate('1000ms ease-in')),
+    transition('biobig => biosmall', animate('1000ms ease-out')),
+    transition('void => biosmall', [
      style({ transform: 'translateX(-40%) scale(1)'}),
      animate('1000ms ease-in')
     ]),

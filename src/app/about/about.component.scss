@@ -1,9 +1,6 @@
 .bio-img {
-  img{
-    height: 500px;
-    z-index: 1;
-  }
-  height: 500px;
+  max-width: 100%;
+  z-index: 1;
 }
 
 #hello-name {
@@ -113,21 +110,17 @@
 }
 /*for iphone 6 plus*/
 @media screen and (max-width: 420px) {
-
-  .about-page {
-
-  	.bio {
-      font-size: 13px;
-      margin:0;    
-      width:100%;
-    }
+	.bio {
+    font-size: 13px;
+    margin:0;    
+    width:100%;
+    padding:30px 10px;
 	}
 
   #hello-name {
- 
-    font-size: 85px;
-     
+    font-size: 85px; 
   }
+  
 	.year {
 	  p {
 	    font-size: 13px;
@@ -151,5 +144,6 @@
 	#about-content {
  	  width: 100%;
     margin-left: 0;
+    padding: 10px;
   }
 }

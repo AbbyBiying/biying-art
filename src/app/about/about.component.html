@@ -18,9 +18,7 @@
 	</div> 
 </div>
 
-<div class="bio-img">
- 	<img [@bioimgAnimation]='state' (click)="nameUpDown()" class="painting-img" src="/assets/painting/detail9.png">
-</div>
+<img class="bio-img" [@bioimgAnimation]='imgState' (click)="imgInOut()" class="painting-img" src="/assets/painting/detail9.png">
 
 <div class="bio">
   <p [@bioAnimation]='bioState' (click)="bioActive()">

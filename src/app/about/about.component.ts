@@ -32,9 +32,15 @@ export class AboutComponent implements OnInit {
   }
   
   state: string = 'inactive';
-  nameState: string = 'apart';
+  nameState: string = 'together';
   cvState: string = "cvbefore";
-  bioState: string = "biosmall"
+  bioState: string = "biosmall";
+  imgState: string = "imgin"
+
+  imgInOut(){
+    this.imgState = this.imgState === 'imgin' ? 'imgout' : 'imgin';
+    console.log(this.imgState);  
+  }
 
   nameUpDown() {
     this.nameState = this.nameState === 'apart' ? 'together' : 'apart';

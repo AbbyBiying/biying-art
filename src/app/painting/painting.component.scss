@@ -18,3 +18,15 @@ md-grid-tile img {
   width: 62%;
   margin: 20px auto;
 }
+
+@media screen and (max-width: 420px) {
+  #statement { 
+  	width: 95%;
+    margin: 10px;
+  }
+
+  .painting-img {
+		margin: 10px 2%;
+		width: 80%;
+	}
+}
