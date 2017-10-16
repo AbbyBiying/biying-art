@@ -24,9 +24,9 @@ export const artAnimations = [
   ]),
 
   trigger('bioimgAnimation', [ 
-    state('void',   style({transform: 'translateX(-78%)'})),
+    state('void',   style({transform: 'translateX(-75%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
-    state('imgout',   style({transform: 'translateX(-78%)'})),
+    state('imgout',   style({transform: 'translateX(-75%)'})),
     transition('imgin => imgout', animate('1800ms ease-in')),
     transition('imgout => imgin', animate('1800ms ease-out')),
     transition('void => imgin', animate('1800ms ease-in')),   
