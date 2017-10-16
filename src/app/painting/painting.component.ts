@@ -36,21 +36,15 @@ export class PaintingComponent implements OnInit {
   onScroll() {
     console.log("SCROLLED");
   }
-  
-  state: string = 'inactive';
-  animateSize() {
-    this.state = this.state === 'small' ? 'large' : 'small';
+    
+  paintingState: string = '*';
+  statementState: string = '*'
+
+  paintingActive() {
+    this.paintingState = this.paintingState === '*' ? 'void' : '*';
   };
-  animateActive() {
-    this.state = this.state === 'active' ? 'inactive' : 'active';
+
+  statementActive() {
+    this.statementState = this.statementState === '*' ? 'void' : '*';
   };
-  animateflyInOut() {
-    this.state = this.state === '*' ? 'void' : '*';
-  };
-  animateShrink() {
-    this.state = this.state === 'void' ? 'in' : 'void';
-  }
-  parallelAnimation() {
-    this.state = this.state === '*' ? 'void' : '*';
-  }
 }

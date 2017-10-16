@@ -23,17 +23,6 @@ export const artAnimations = [
     ]),   
   ]),
 
-  // trigger('bioimgAnimation', [ 
-  //   state('inactive', style({transform: 'translateX(0) scale(1)'})),
-  //   state('active',   style({transform: 'translateX(0) scale(1)'})),
-  //   transition('inactive => active', animate('1000ms ease-in')),
-  //   transition('active => inactive', animate('1000ms ease-out')),
-  //   transition('void => inactive', [
-  //    style({ transform: 'translateX(40%) scale(1)'}),
-  //    animate('2000ms ease-in')
-  //   ]),   
-  // ]),
-
   trigger('bioimgAnimation', [ 
     state('void',   style({transform: 'translateX(-78%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
@@ -42,7 +31,6 @@ export const artAnimations = [
     transition('imgout => imgin', animate('1800ms ease-out')),
     transition('void => imgin', animate('1800ms ease-in')),   
   ]),
-
 
   trigger('bionameupAnimation', [ 
     state('void',   style({color:'transparent',transform: 'translateY(-200%)'})),
@@ -61,7 +49,6 @@ export const artAnimations = [
     transition('apart => together', animate('1800ms ease-out')),
     transition('void => together', animate('1800ms ease-in')),   
   ]),   
-
 
   trigger('bioAnimation', [
     state('biosmall', style({transform: 'translateX(0) scale(1)'})),
@@ -102,7 +89,7 @@ export const artAnimations = [
     transition('active => void', [
      animate(2000, style({transform: 'translateX(0) scale(0)'}))
     ])
-    ]), 
+  ]), 
 
   trigger('myAwesomeAnimation', [
     state('inactive', style({transform: 'translateX(0) scale(1)'})),
@@ -125,16 +112,27 @@ export const artAnimations = [
     ])
   ]),
 
-  trigger('flyInOut', [
-    state('in', style({transform: 'translateX(0)'})),
+  trigger('paintingflyInOut', [
+    state('paintingIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-     animate(3000, keyframes([
-       style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
-       style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
-       style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
-     ]))
-    ]),
-     
+      animate(3000, keyframes([
+        style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
+      ]))
+    ])
+  ]),
+
+
+  trigger('StatementAnimation', [
+    state('statementIn', style({transform: 'translateX(0)'})),
+    transition('void => *', [
+      animate(3000, keyframes([
+        style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
+      ]))
+    ])
   ]),
 
   trigger('mySecondAnimation', [
@@ -188,5 +186,5 @@ export const artAnimations = [
       style({height: '*'}),
       animate(2500, style({height: 0}))
     ])
-  ])
-];
+  ]),
+]

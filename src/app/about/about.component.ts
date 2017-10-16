@@ -56,17 +56,4 @@ export class AboutComponent implements OnInit {
     this.cvState = this.cvState === 'cvbefore' ? 'cvafter' : 'cvbefore';
     console.log(this.cvState);
   };
-    
-  animateActive() {
-    this.state = this.state === 'active' ? 'inactive' : 'active';
-  };
-  animateflyInOut() {
-    this.state = this.state === '*' ? 'void' : '*';
-  };
-  animateShrink() {
-    this.state = this.state === 'void' ? 'in' : 'void';
-  }
-  parallelAnimation() {
-    this.state = this.state === '*' ? 'void' : '*';
-  }
 }
