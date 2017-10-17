@@ -115,7 +115,7 @@ export const artAnimations = [
   trigger('paintingflyInOut', [
     state('paintingIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(3000, keyframes([
+      animate(3500, keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
