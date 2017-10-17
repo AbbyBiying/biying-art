@@ -10,7 +10,7 @@
 
 .aboutimg {
   display: inline-block; 
-  width: 49%;
+  width: 49.5%;
   overflow: hidden;
   height: 390px;
 }
@@ -144,6 +144,16 @@
   #hello-name {
     font-size: 47px; 
     margin-top: 45px;
+  }
+
+  .aboutimg {
+    height: 140px;
+  }
+
+  .bio-img {
+    height: 150px;
+    overflow: hidden;
+    z-index: 1;
   }
 
 	.bio {

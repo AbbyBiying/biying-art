@@ -63,7 +63,7 @@ export const artAnimations = [
  
   trigger('cvAnimation', [
     state('void',   style({color:'transparent', transform: 'translateX(-100%)'})),
-    state('cvbefore', style({color:'black',transform: 'translateX(0)'})),
+    state('cvbefore', style({color:'black',transform: 'translateX(10%)'})),
     state('cvafter',   style({transform: 'translateX(0) scale(1.01)'})),
     transition('cvbefore => cvafter', animate('1800ms ease-in')),
     transition('cvafter => cvbefore', animate('1800ms ease-out')),
