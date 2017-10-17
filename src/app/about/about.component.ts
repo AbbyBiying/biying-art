@@ -36,6 +36,7 @@ export class AboutComponent implements OnInit {
   cvState: string = "cvbefore";
   bioState: string = "biosmall";
   imgState: string = "imgin"
+  statementState: string = '*'
 
   imgInOut(){
     this.imgState = this.imgState === 'imgin' ? 'imgout' : 'imgin';
@@ -56,4 +57,9 @@ export class AboutComponent implements OnInit {
     this.cvState = this.cvState === 'cvbefore' ? 'cvafter' : 'cvbefore';
     console.log(this.cvState);
   };
+
+  statementActive() {
+    this.statementState = this.statementState === '*' ? 'void' : '*';
+    console.log(this.statementState);
+  };  
 }

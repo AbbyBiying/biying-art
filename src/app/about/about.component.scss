@@ -8,10 +8,17 @@
   background: rgba(27,25,25,0.98);
 }
 
+.aboutimg {
+  display: inline-block; 
+  width: 49%;
+  overflow: hidden;
+  height: 390px;
+}
+
 #hello-name {
   position: absolute;
   margin-top: 150px;
-  color: white;
+  rgba: (255,255,255,0.5);
   font-size: 150px;
   z-index: 5;
 }
@@ -23,6 +30,7 @@
 .bio-name-down {
   display: inline-block;  
 }
+
 
 #nihao {
   /*font-size: 150px;*/
@@ -54,19 +62,28 @@
   /*top: -1200px;*/
 }
  
-.bio {
+.bio, .statement {
   background: rgba(27,25,25,0.98);
-  /*background: #1c1b1b;*/
   color: white;
-	/*background-color:rgb(250,250,250); */
-	/*color: #202020; */
-	line-height: 2;
-	letter-spacing: 2.5px;
-  /*width: 62%;*/
-  /*margin: 20px auto;*/
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+}
+
+.statement {
+  letter-spacing: 1.5px;
+  padding: 100px 420px;
+  font-weight: 300;
+  line-height: 2;
+  font-size: 23px;
+}
+
+.second-statement {
+  letter-spacing: 1.2px;
+  font-size: 14px;
   font-weight: 200;
+  line-height: 2;
+}
+
+.bio {
   padding: 30px 230px;
 }
 
@@ -129,17 +146,26 @@
     margin-top: 45px;
   }
 
-  .bio-img {
-    height: 150px;
-    overflow: hidden;
-    z-index: 1;
-  }
-
 	.bio {
     font-size: 13px;
     margin:0;    
     overflow: hidden;
  	}
+
+  .statement {
+    letter-spacing: 1.5px;
+    padding: 50px;
+    font-weight: 300;
+    line-height: 2;
+    font-size: 23px;
+  }
+
+  .second-statement {
+    letter-spacing: 1.2px;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 2;
+  }
 
   #hello-name {
     font-size: 45px; 

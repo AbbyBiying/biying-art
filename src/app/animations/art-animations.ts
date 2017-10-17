@@ -62,12 +62,12 @@ export const artAnimations = [
   ]),
  
   trigger('cvAnimation', [
-    transition('cvbefore => cvafter', animate('1000ms ease-in')),
-    transition('cvafter => cvbefore', animate('1000ms ease-out')),
-    transition('void => cvbefore', [
-     style({ color:'white', transform: 'translateX(-20%) scale(1)'}),
-     animate('10000ms ease-in')
-    ]),
+    state('void',   style({color:'transparent', transform: 'translateX(-100%)'})),
+    state('cvbefore', style({color:'black',transform: 'translateX(0)'})),
+    state('cvafter',   style({transform: 'translateX(0) scale(1.01)'})),
+    transition('cvbefore => cvafter', animate('1800ms ease-in')),
+    transition('cvafter => cvbefore', animate('1800ms ease-out')),
+    transition('void => cvbefore', animate('1800ms ease-in')),   
   ]),
 
   trigger('artState', [
@@ -129,6 +129,28 @@ export const artAnimations = [
     transition('void => *', [
       animate(3000, keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
+      ]))
+    ])
+  ]),
+
+  trigger('leftrightAnimation', [
+    state('left', style({transform: 'translateX(0)'})),
+    transition('void => *', [
+      animate(3000, keyframes([
+        style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
+      ]))
+    ])
+  ]),
+
+  trigger('rightleftAnimation', [
+    state('right', style({transform: 'translateX(0)'})),
+    transition('void => *', [
+      animate(3000, keyframes([
+        style({opacity: 0, transform: 'translateX(120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
       ]))
