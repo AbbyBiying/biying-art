@@ -5,7 +5,7 @@
   color: white;
   z-index: 0;  
   position: absolute;
-  left:330px;
+  left: 330px;
   /*background: rgba(27,25,25,0.98);*/
 }
 
@@ -104,7 +104,7 @@
 .about-section {
   font-family: 'Raleway', sans-serif;
   line-height: 1.7;
-  margin: 40px;
+  margin-top: 40px;
   padding-top: 50px;
   padding-bottom: 30px;
   clear: both;
@@ -119,8 +119,9 @@
 }
 
 .section-text {
-  width: 70%;
+  width: 100%;
   margin-top: -15px;
+  padding:20px;
 }
 
 .show {
@@ -144,8 +145,7 @@
    }
 
   #about-content {
-	  width: 100%;
-  	margin-left: 0;
+   	margin-left: 0;
   }
 
   .bio {
@@ -156,8 +156,9 @@
 /*for iphone 6 plus*/
 @media screen and (max-width: 420px) {
   #hello-name {
-    font-size: 36px; 
-    margin-top: 45px;
+    font-size: 23px; 
+    margin-top: 20px;
+    left: 35px;
   }
 
   .aboutimg {
@@ -212,8 +213,16 @@
 	}
 
 	#about-content {
- 	  width: 90%;
     margin-left: 0;
     padding: 10px;
   }
+
+  .hello-there {
+    padding: 50px;
+    font-size: 10px;
+    color: white;
+    z-index: 0;  
+    position: absolute;
+    left: 90px;
+ }
 }
