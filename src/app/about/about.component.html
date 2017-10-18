@@ -1,50 +1,44 @@
 <div id="hello-name">
 	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
-		Abby
+		I
 	</div>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">likes
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">focus
 	</div>
 
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">building
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">on
 	</div>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">artwork
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">building
 	</div>
 
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">and
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">fun
 	</div>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">software
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">stuff.
 	</div> 
 </div>
 
-<div class="bioimgbg"><div class="hello-there">hello there</div><img class="bio-img" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/painting/detail9.png"></div>
+<div class="bioimgbg"><div class="hello-there">
+	<p>I make painting, film/video, sound and ceramic.</p>
+	<p>I'm passionate about writing clean code and I am committed to finding solutions to complex problems. </p>
+</div><img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png"></div>
 
 <div class="statement">
-  <p [@leftrightAnimation]='statementState' (click)="statementActive()" id="paintingStatement" [@StatementAnimation]='statementState' (click)="statementActive()" >
+  <p [@leftrightAnimation]='statementState' (click)="statementActive()" id="paintingStatement" [@StatementAnimation]='statementState' on-mouseover="statementActive()" >
   	My art work is intended to encourage discussion about
 		the relationship between individuals and their physical environment. </p>
 
   <p class="second-statement" [@rightleftAnimation]='statementState' (click)="statementActive()" id="paintingStatement">Does our
 		place of habitation shape our state of being? I continually explore the
-		intersection of comfort, despair, place, and purpose. 
-		<!-- Ultimately, I hope the
-		audience will find resonances of their own experience, values, and sense of
-		belonging within my work. I hope my work can be a starting point for discussion
-		about who we are and how we fit into a world that is both hopeful and alien. The
-		audience is free to analyze and draw their own conclusions. -->
-  </p>
-<!-- <p>
-	Zhang was born in Guangzhou, China in 1984. She received her BFA from the Central Academy of Fine Arts in Beijing, and her MFA from the School of the Museum of Fine Arts, Boston. Zhang is a painter and also works in film/video, sound art and mixed media. Zhang's work has been widely exhibited internationally at the Museum of Fine Arts, Boston, the National Art Museum of China, the Beijing International Art Biennial, the Art In Embassies Program, and in film festivals, galleries and at various special events. I have been awarded a fellowship at the Jentel Residency, a scholarship from Harvard University, the Karsh Prize in photography, and other scholarships from S.M.F.A. Boston and The Central Academy of Fine Art, China. Zhang lives and works in California.
-  <!-- <br><i class="material-icons">arrow_downward</i> -->
-  <!-- </p> -->  
+		intersection of comfort, despair, place, and purpose.  
+  </p> 
 </div>
 
 
 <div class="bioimgbg">
-	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/painting/detail11.jpg"> 
-	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/painting/detail7.png">
+	<img class="aboutimg" [@bioimgAnimation]='imgState' (mousemove)="imgInOut()" src="/assets/painting/detail11.jpg"> 
+	<img class="aboutimg" [@bioimgAnimation]='imgState' (mousemove)="imgInOut()" src="/assets/painting/detail7.png">
 </div>
 
 <div>

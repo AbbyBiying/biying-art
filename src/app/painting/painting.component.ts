@@ -17,7 +17,10 @@ import {
   group
 } from '@angular/animations';
 
+import { MatDialog } from '@angular/material';
+
 import { artAnimations } from '../animations/art-animations';
+import { PaintingDialogComponent } from './painting-dialog/painting-dialog.component';
 
 @Component({
   selector: 'app-painting',
@@ -27,14 +30,8 @@ import { artAnimations } from '../animations/art-animations';
 })
 
 export class PaintingComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(public dialog: MatDialog) {}
   ngOnInit() {
-  }
-
-  onScroll() {
-    console.log("SCROLLED");
   }
     
   paintingState: string = '*';
@@ -47,4 +44,13 @@ export class PaintingComponent implements OnInit {
   statementActive() {
     this.statementState = this.statementState === '*' ? 'void' : '*';
   };
+
+  openDialog(fileName) {
+    this.dialog.open(PaintingDialogComponent, {
+      height: '95%',
+      width: '95%',
+      data: { fileName: fileName }
+    });     
+  }
+
 }

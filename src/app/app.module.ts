@@ -22,7 +22,10 @@ import {
   MatGridListModule, 
   MatDatepickerModule, 
   MatNativeDateModule, 
-  MatToolbarModule} from '@angular/material';
+  MatToolbarModule,
+  MatDialogModule,
+  // MatDialog
+  } from '@angular/material';
 
 import { HighlightDirective } from './attribute_directive/highlight.directive'
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -31,6 +34,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
+ import { PaintingDialogComponent } from './painting/painting-dialog/painting-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -69,6 +73,7 @@ const appRoutes: Routes = [
     PaintingComponent,
     CeramicComponent,
     VideoComponent,
+    PaintingDialogComponent,
   ],
 
   imports: [
@@ -87,8 +92,14 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatIconModule,
     MatSelectModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule,
   ],
+
+  entryComponents:[
+    PaintingDialogComponent,
+  ],
+
   exports: [BrowserModule],
   //providers: BROWSER_ANIMATIONS_PROVIDERS,
   bootstrap: [AppComponent]

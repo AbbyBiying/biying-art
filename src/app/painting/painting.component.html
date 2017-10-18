@@ -1,11 +1,12 @@
 <div id="alienation-painting">
   <mat-grid-list cols="5" rowHeight="100px">
     <mat-grid-tile colspan="2" rowspan="3">
-      <img [@paintingflyInOut]='paintingState' (click)="paintingActive()" matTooltip="Alienation_No.3" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.3.jpg">
+      <img [@paintingflyInOut]='paintingState' (click)="openDialog('Alienation_No.3.jpg')" matTooltip="Alienation_No.3" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.3.jpg">
     </mat-grid-tile>
 
+
     <mat-grid-tile colspan="2" rowspan="3">
-      <img [@paintingflyInOut]='paintingState' (click)="paintingActive()" matTooltip="Alienation_No.1" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.1.jpg">
+      <img [@paintingflyInOut]='paintingState' (click)="openDialog('Alienation_No.1.jpg')" (click)="paintingActive()" matTooltip="Alienation_No.1" matTooltipPosition="above" class="painting-img" src="/assets/painting/Alienation_No.1.jpg">
     </mat-grid-tile>
 
     <mat-grid-tile colspan="2" rowspan="3">
