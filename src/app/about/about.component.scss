@@ -1,3 +1,14 @@
+.hello-there {
+  font-family: 'Raleway', sans-serif;
+  padding:100px;
+  font-size:100px;
+  color:white;
+  z-index: 0;  
+  position: absolute;
+  left:330px;
+  /*background: rgba(27,25,25,0.98);*/
+}
+
 .bio-img {
   height: 467px;
   overflow: hidden;
@@ -16,10 +27,12 @@
 }
 
 #hello-name {
+  left:50px;
+  font-family: 'Raleway', sans-serif;
   position: absolute;
-  margin-top: 150px;
-  rgba: (255,255,255,0.5);
-  font-size: 150px;
+  margin-top: 200px;
+  color:rgba(255,255,255,0.5);
+  font-size: 110px;
   z-index: 5;
 }
 
@@ -70,7 +83,8 @@
 
 .statement {
   letter-spacing: 1.5px;
-  padding: 100px 420px;
+  padding: 100px;
+  /*padding: 100px 420px;*/
   font-weight: 300;
   line-height: 2;
   font-size: 23px;
@@ -142,7 +156,7 @@
 /*for iphone 6 plus*/
 @media screen and (max-width: 420px) {
   #hello-name {
-    font-size: 47px; 
+    font-size: 36px; 
     margin-top: 45px;
   }
 
@@ -175,10 +189,6 @@
     font-size: 14px;
     font-weight: 200;
     line-height: 2;
-  }
-
-  #hello-name {
-    font-size: 45px; 
   }
   
 	.year {

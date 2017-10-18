@@ -1,28 +1,29 @@
 <div id="hello-name">
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">您好
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
+		Abby
 	</div>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">我
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">likes
 	</div>
 
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">是
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">building
 	</div>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">张
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">artwork
 	</div>
 
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">碧
+	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">and
 	</div>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">莹
+	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">software
 	</div> 
 </div>
 
-<div class="bioimgbg"><img class="bio-img" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/painting/detail9.png"></div>
+<div class="bioimgbg"><div class="hello-there">hello there</div><img class="bio-img" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/painting/detail9.png"></div>
 
 <div class="statement">
   <p [@leftrightAnimation]='statementState' (click)="statementActive()" id="paintingStatement" [@StatementAnimation]='statementState' (click)="statementActive()" >
-  	My work is intended to encourage discussion about
+  	My art work is intended to encourage discussion about
 		the relationship between individuals and their physical environment. </p>
 
   <p class="second-statement" [@rightleftAnimation]='statementState' (click)="statementActive()" id="paintingStatement">Does our

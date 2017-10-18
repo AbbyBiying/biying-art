@@ -14,6 +14,22 @@
 	</mat-form-field>
 </div> 
 
+<div id="art-select">
+	<mat-form-field>
+	  <mat-select #codeType placeholder="code">
+	    <mat-option [artHighlight]="color" defaultColor="gold" value="ABZ-EXCHANGE">
+	    	<a href="https://github.com/AbbyBiying/ABZ_EXCHANGE">ABZ-EXCHANGE</a>
+	    </mat-option>
+	    <mat-option [artHighlight]="color" defaultColor="gold" value="PAIRING">
+	    	<a href="https://github.com/AbbyBiying/pairing">Pairing</a>
+	    </mat-option>
+	    <mat-option [artHighlight]="color" defaultColor="gold" value="BIYING-ART">
+	    	<a href="https://github.com/AbbyBiying/biying-art">Biying-Aart</a>
+	    </mat-option>
+	  </mat-select>
+	</mat-form-field>
+</div> 
+
 <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
 <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
 <app-video *ngIf="artType.value == 'Video'"></app-video>
