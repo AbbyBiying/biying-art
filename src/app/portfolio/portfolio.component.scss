@@ -1,7 +1,18 @@
-#art-select {
-	text-align: center;
+/*#art-select {
+	top: 300px;
+	
+	position: absolute;
+	color: white;
+	z-index: 999;
+	padding: 50px;
+	display: inline-block;
+	left:100px;
 }
+ */
 
+#art-select {
+	text-align: center; 
+}
 a[artHighlight]:active {
 	background-color: green;
 }
@@ -49,4 +60,12 @@ p {
   overflow: hidden;
   z-index: 1;
   width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+	#art-select {
+		top: 30px;
+	 
+		left:35px;
+	}
 }
