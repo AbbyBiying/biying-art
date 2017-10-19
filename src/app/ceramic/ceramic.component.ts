@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { myCeramics } from './ceramics';
 
 @Component({
   selector: 'app-ceramic',
@@ -11,5 +12,5 @@ export class CeramicComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  ceramics: Array<String> = myCeramics;
 }

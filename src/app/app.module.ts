@@ -34,7 +34,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
- import { PaintingDialogComponent } from './painting/painting-dialog/painting-dialog.component';
+import { PaintingDialogComponent } from './painting/painting-dialog/painting-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
