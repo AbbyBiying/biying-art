@@ -21,6 +21,7 @@ import { MatDialog } from '@angular/material';
 
 import { artAnimations } from '../animations/art-animations';
 import { PaintingDialogComponent } from './painting-dialog/painting-dialog.component';
+import { myPaintings } from './paintings';
 
 @Component({
   selector: 'app-painting',
@@ -36,6 +37,7 @@ export class PaintingComponent implements OnInit {
     
   paintingState: string = '*';
   statementState: string = '*'
+  paintings: Array<String> = myPaintings;
 
   paintingActive() {
     this.paintingState = this.paintingState === '*' ? 'void' : '*';
@@ -52,5 +54,4 @@ export class PaintingComponent implements OnInit {
       data: { fileName: fileName }
     });     
   }
-
 }
