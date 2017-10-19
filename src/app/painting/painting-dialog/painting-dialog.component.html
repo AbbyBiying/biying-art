@@ -1,8 +1,8 @@
 <h1 mat-dialog-title>{{data.fileName}}</h1>
-<div mat-dialog-content>
-	<img (click)="openDialog('fileName')" matTooltip="{{data.fileName}}" matTooltipPosition="above" class="painting-img" src="/assets/painting/{{data.fileName}}">
+<mat-dialog-content>
+	<img matTooltip="{{data.fileName}}" matTooltipPosition="above" class="painting-img" src="/assets/painting/{{data.fileName}}">
 
 	<mat-dialog-actions>
 		<button mat-button mat-dialog-close>Close</button>
 	</mat-dialog-actions>
-</div>
+</mat-dialog-content>
