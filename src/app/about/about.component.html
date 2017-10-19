@@ -19,10 +19,13 @@
 	</div> 
 </div>
 
-<div class="bioimgbg"><div class="hello-there">
-	<p>I make painting, film/video, sound and ceramic.</p>
-	<p>I'm passionate about writing clean code and I am committed to finding solutions to problems. </p>
-</div><img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png"></div>
+<div class="bioimgbg">
+	<div class="hello-there">
+		<p>I make painting, film/video, sound and ceramic.</p>
+		<p>I'm passionate about writing clean code and I am committed to finding solutions to problems. </p>
+	</div>
+	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png">
+</div>
 
 <div class="statement">
   <p [@leftrightAnimation]='statementState' (click)="statementActive()" id="paintingStatement" [@StatementAnimation]='statementState' on-mouseover="statementActive()" >
