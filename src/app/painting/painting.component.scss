@@ -18,7 +18,9 @@ md-grid-tile img {
   width: 62%;
   margin: 20px auto;
 }
-
+mat-grid-list {
+	/*rowHeight: 100px;*/
+}
 @media screen and (max-width: 420px) {
   #statement { 
   	width: 95%;

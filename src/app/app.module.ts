@@ -24,6 +24,7 @@ import {
   MatNativeDateModule, 
   MatToolbarModule,
   MatDialogModule,
+  MatDialogRef
   // MatDialog
   } from '@angular/material';
 
@@ -35,6 +36,7 @@ import { PaintingComponent } from './painting/painting.component';
 import { CeramicComponent } from './ceramic/ceramic.component';
 import { VideoComponent } from './video/video.component';
 import { PaintingDialogComponent } from './painting/painting-dialog/painting-dialog.component';
+import { CeramicDialogComponent } from './ceramic/ceramic-dialog/ceramic-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -74,6 +76,7 @@ const appRoutes: Routes = [
     CeramicComponent,
     VideoComponent,
     PaintingDialogComponent,
+    CeramicDialogComponent,
   ],
 
   imports: [
@@ -98,6 +101,7 @@ const appRoutes: Routes = [
 
   entryComponents:[
     PaintingDialogComponent,
+    CeramicDialogComponent
   ],
 
   exports: [BrowserModule],

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-painting-dialog',
@@ -12,5 +12,5 @@ export class PaintingDialogComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }
