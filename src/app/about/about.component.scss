@@ -109,16 +109,32 @@
 
 /*for ipad and ipad pro*/
 @media screen and (max-width: 1150px) {
-  #hello-name {
-    font-size: 120px; 
-   }
+  .statement{
+    padding:135px;
+  }
 
   #about-content {
    	margin-left: 0;
   }
 
+  .bio-img {
+    height: 250px;
+  }
+
   .bio {
     padding: 30px 20px;
+  }
+
+  #hello-name {
+    margin-top:50px;
+  }
+
+  .hello-there {
+    padding: 20px;
+  }
+
+  .aboutimg {
+    height:300px;
   }
 }
 
@@ -195,4 +211,10 @@
     position: absolute;
     left: 90px;
  }
+}
+
+@media screen and (min-width: 1300px) {
+  .aboutimg{
+    height:500px;
+  }
 }
