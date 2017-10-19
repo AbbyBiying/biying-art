@@ -11,24 +11,32 @@
 	    	Video
 	    </mat-option> -->
 	  </mat-select>
-	</mat-form-field> 
- 
+	</mat-form-field>  
+	
 	<mat-form-field>
-	  <mat-select (change)="openLink()" #codeType placeholder="code" 
-	  [(ngModel)]="selectedCodeValue">
-	    <mat-option [artHighlight]="color" defaultColor="gold" value="ABZ-EXCHANGE">
-	    	ABZ-EXCHANGE
-	    </mat-option>
-	    <mat-option [artHighlight]="color" defaultColor="gold" value="PAIRING">
-	    	Pairing
-	    </mat-option>
-	    <mat-option [artHighlight]="color" defaultColor="gold" value="BIYING-ART">
-	    	Biying-Art
-	    </mat-option>
+		<mat-select #codeType placeholder="code"> 
+<!--<mat-select (change)="openLink()" #codeType placeholder="code" 
+	  [(ngModel)]="selectedCodeValue"> -->
+	    <a target="_blank" href="https://github.com/AbbyBiying/ABZ_EXCHANGE">
+				<mat-option [artHighlight]="color" defaultColor="gold" value="ABZ-EXCHANGE">
+		    	ABZ-EXCHANGE
+		  	</mat-option>
+		  </a>
+		    
+		  <a target="_blank" href="https://github.com/AbbyBiying/pairing">
+		 	  <mat-option [artHighlight]="color" defaultColor="gold" value="PAIRING">
+		    	Pairing	    
+		    </mat-option>
+		  </a>
+		  
+		  <a target="_blank" href="https://github.com/AbbyBiying/biying-art">
+		    <mat-option [artHighlight]="color" defaultColor="gold" value="BIYING-ART">  
+		    	Biying-Art
+		    </mat-option>
+			</a>
 	  </mat-select>
 	</mat-form-field>
 </div> 
-
 
 <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
 <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
