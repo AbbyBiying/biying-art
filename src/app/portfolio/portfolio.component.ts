@@ -22,7 +22,7 @@ export class PortfolioComponent implements OnInit {
     if (this.selectedCodeValue == "PAIRING"){
     	window.open("https://github.com/AbbyBiying/pairing","Pairing");
 		};
-    if (this.selectedCodeValue == "Biying-Art"){
+    if (this.selectedCodeValue == "BIYING-ART"){
     	window.open("https://github.com/AbbyBiying/biying-art","Biying-Art");
 		};  
 	}
