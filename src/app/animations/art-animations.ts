@@ -27,27 +27,27 @@ export const artAnimations = [
     state('void',   style({transform: 'translateX(-75%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
     state('imgout',   style({transform: 'translateX(-75%)'})),
-    transition('imgin => imgout', animate('1800ms ease-in')),
-    transition('imgout => imgin', animate('1800ms ease-out')),
-    transition('void => imgin', animate('1800ms ease-in')),   
+    transition('imgin => imgout', animate('2000ms ease-in')),
+    transition('imgout => imgin', animate('2000ms ease-out')),
+    transition('void => imgin', animate('2000ms ease-in')),   
   ]),
 
   trigger('bionameupAnimation', [ 
     state('void',   style({color:'transparent',transform: 'translateY(-200%)'})),
     state('together', style({color:'white',transform: 'translateY(0)'})),
     state('apart',   style({color:'transparent',transform: 'translateY(-200%)'})),
-    transition('together => apart', animate('1800ms ease-in')),
-    transition('apart => together', animate('1800ms ease-out')),
-    transition('void => together', animate('1800ms ease-in')),   
+    transition('together => apart', animate('1.5s 1000ms ease-in')),
+    transition('apart => together', animate('1.5s 1000ms ease-out')),
+    transition('void => together', animate('1.5s 1000ms ease-in')),   
   ]),
 
   trigger('bionamedownAnimation', [ 
     state('void',   style({color:'transparent', transform: 'translateY(200%)'})),
     state('together', style({color:'white',transform: 'translateY(0)'})),
     state('apart',   style({color:'transparent',transform: 'translateY(200%)'})),
-    transition('together => apart', animate('1800ms ease-in')),
-    transition('apart => together', animate('1800ms ease-out')),
-    transition('void => together', animate('1800ms ease-in')),   
+    transition('together => apart', animate('1.5s 1000ms ease-in')),
+    transition('apart => together', animate('1.5s 1000ms ease-out')),
+    transition('void => together', animate('1.5s 1000ms ease-in')),   
   ]),   
 
   trigger('bioAnimation', [
@@ -138,7 +138,7 @@ export const artAnimations = [
   trigger('leftrightAnimation', [
     state('left', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(3000, keyframes([
+      animate(4000, keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
@@ -149,7 +149,7 @@ export const artAnimations = [
   trigger('rightleftAnimation', [
     state('right', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(3000, keyframes([
+      animate(4000, keyframes([
         style({opacity: 0, transform: 'translateX(120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
