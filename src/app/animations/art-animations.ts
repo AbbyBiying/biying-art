@@ -19,7 +19,7 @@ export const artAnimations = [
   trigger('statementAnimation', [   
     transition('void => inactive', [
      style({ backgroundColor: 'gold', transform: 'translateX(40%) scale(1)'}),
-     animate('4000ms ease-in')
+     animate('4s ease-in')
     ]),   
   ]),
 
@@ -27,37 +27,37 @@ export const artAnimations = [
     state('void',   style({transform: 'translateX(-75%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
     state('imgout',   style({transform: 'translateX(-75%)'})),
-    transition('imgin => imgout', animate('2000ms ease-in')),
-    transition('imgout => imgin', animate('2000ms ease-out')),
-    transition('void => imgin', animate('2000ms ease-in')),   
+    transition('imgin => imgout', animate('2s ease-in')),
+    transition('imgout => imgin', animate('2s ease-out')),
+    transition('void => imgin', animate('2s ease-in')),   
   ]),
 
   trigger('bionameupAnimation', [ 
     state('void',   style({color:'transparent',transform: 'translateY(-200%)'})),
     state('together', style({color:'white',transform: 'translateY(0)'})),
     state('apart',   style({color:'transparent',transform: 'translateY(-200%)'})),
-    transition('together => apart', animate('1.5s 1000ms ease-in')),
-    transition('apart => together', animate('1.5s 1000ms ease-out')),
-    transition('void => together', animate('1.5s 1000ms ease-in')),   
+    transition('together => apart', animate('1.5s 1s ease-in')),
+    transition('apart => together', animate('1.5s 1s ease-out')),
+    transition('void => together', animate('1.5s 1s ease-in')),   
   ]),
 
   trigger('bionamedownAnimation', [ 
     state('void',   style({color:'transparent', transform: 'translateY(200%)'})),
     state('together', style({color:'white',transform: 'translateY(0)'})),
     state('apart',   style({color:'transparent',transform: 'translateY(200%)'})),
-    transition('together => apart', animate('1.5s 1000ms ease-in')),
-    transition('apart => together', animate('1.5s 1000ms ease-out')),
-    transition('void => together', animate('1.5s 1000ms ease-in')),   
+    transition('together => apart', animate('1.5s 1s ease-in')),
+    transition('apart => together', animate('1.5s 1s ease-out')),
+    transition('void => together', animate('1.5s 1s ease-in')),   
   ]),   
 
   trigger('bioAnimation', [
     state('biosmall', style({transform: 'translateX(0) scale(1)'})),
     state('biobig',   style({transform: 'translateX(0) scale(1.1)'})),
-    transition('biosmall => biobig', animate('1000ms ease-in')),
-    transition('biobig => biosmall', animate('1000ms ease-out')),
+    transition('biosmall => biobig', animate('1s ease-in')),
+    transition('biobig => biosmall', animate('1s ease-out')),
     transition('void => biosmall', [
      style({ transform: 'translateX(-40%) scale(1)'}),
-     animate('1000ms ease-in')
+     animate('1s ease-in')
     ]),
   ]),
  
@@ -65,57 +65,57 @@ export const artAnimations = [
     state('void',   style({color:'transparent', transform: 'translateX(-100%)'})),
     state('cvbefore', style({color:'black',transform: 'translateX(10%)'})),
     state('cvafter',   style({transform: 'translateX(0) scale(1.01)'})),
-    transition('cvbefore => cvafter', animate('1800ms ease-in')),
-    transition('cvafter => cvbefore', animate('1800ms ease-out')),
-    transition('void => cvbefore', animate('1800ms ease-in')),   
+    transition('cvbefore => cvafter', animate('1.8s ease-in')),
+    transition('cvafter => cvbefore', animate('1.8s ease-out')),
+    transition('void => cvbefore', animate('1.8s ease-in')),   
   ]),
 
   trigger('artState', [
     state('inactive', style({color: 'white', backgroundColor: 'blue', transform: 'translateX(0) scale(1)'})),
     state('active',   style({color: 'red', backgroundColor: 'yellow', transform: 'translateX(0) scale(4.1)'})),
-    transition('inactive => active', animate('100ms ease-in')),
-    transition('active => inactive', animate('100ms ease-out')),
+    transition('inactive => active', animate('1s ease-in')),
+    transition('active => inactive', animate('1s ease-out')),
     transition('void => inactive', [
      style({transform: 'translateX(-100%) scale(1)'}),
-     animate(1000)
+     animate('1s')
     ]),
     transition('inactive => void', [
-     animate(1000, style({transform: 'translateX(100%) scale(1)'}))
+     animate('1s', style({transform: 'translateX(100%) scale(1)'}))
     ]),
     transition('void => active', [
      style({transform: 'translateX(0) scale(0)'}),
-     animate(2000)
+     animate('2s')
     ]),
     transition('active => void', [
-     animate(2000, style({transform: 'translateX(0) scale(0)'}))
+     animate('2s', style({transform: 'translateX(0) scale(0)'}))
     ])
   ]), 
 
   trigger('myAwesomeAnimation', [
     state('inactive', style({transform: 'translateX(0) scale(1)'})),
     state('active',   style({transform: 'translateX(0) scale(2.1)'})),
-    transition('inactive => active', animate('100ms ease-in')),
-    transition('active => inactive', animate('1000ms ease-out')),
+    transition('inactive => active', animate('1s ease-in')),
+    transition('active => inactive', animate('1s ease-out')),
     transition('void => inactive', [
      style({ backgroundColor: 'blue', transform: 'translateX(-100%) scale(1)'}),
-     animate('1000ms ease-in')
+     animate('1s ease-in')
     ]),
     transition('inactive => void', [
-     animate(1000, style({ backgroundColor: 'red',transform: 'translateX(100%) scale(2)'}))
+     animate('1s', style({ backgroundColor: 'red',transform: 'translateX(100%) scale(2)'}))
     ]),
     transition('void => active', [
      style({transform: 'translateX(0) scale(3)'}),
-     animate(7000, style({ backgroundColor: 'green'}))
+     animate('7s', style({ backgroundColor: 'green'}))
     ]),
     transition('active => void', [
-     animate(8000, style({ backgroundColor: 'black', transform: 'translateX(0) scale(5)'}))
+     animate('7s', style({ backgroundColor: 'black', transform: 'translateX(0) scale(5)'}))
     ])
   ]),
 
   trigger('paintingflyInOut', [
     state('paintingIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(6000, keyframes([
+      animate('6s', keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
@@ -127,7 +127,7 @@ export const artAnimations = [
   trigger('StatementAnimation', [
     state('statementIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(3000, keyframes([
+      animate('3s', keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
@@ -138,7 +138,7 @@ export const artAnimations = [
   trigger('leftrightAnimation', [
     state('left', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(4000, keyframes([
+      animate('4s', keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
@@ -149,7 +149,7 @@ export const artAnimations = [
   trigger('rightleftAnimation', [
     state('right', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate(4000, keyframes([
+      animate('4s', keyframes([
         style({opacity: 0, transform: 'translateX(120%) scale(0.5)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
@@ -167,7 +167,7 @@ export const artAnimations = [
       transform: 'scale(5.2)',
     })),
 
-    transition('small <=> large', animate('1800ms ease-in', keyframes([
+    transition('small <=> large', animate('1.8s ease-in', keyframes([
       style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
       style({opacity: 1, transform: 'translateY(35px)',  offset: 0.3}),
       style({opacity: 1, transform: 'translateX(25%)',     offset: 1.0})
@@ -206,7 +206,7 @@ export const artAnimations = [
     state('in', style({height: '*'})),
     transition('* => void', [
       style({height: '*'}),
-      animate(2500, style({height: 0}))
+      animate('2.5s', style({height: 0}))
     ])
   ]),
 ]
