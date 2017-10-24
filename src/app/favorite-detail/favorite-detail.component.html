@@ -1,0 +1,15 @@
+<div *ngIf="favorite">
+  <h2>{{ favorite.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{favorite.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="favorite.name" placeholder="name"/>
+    </label>
+    <label>material:
+      <input [(ngModel)]="favorite.material" placeholder="material"/>
+    </label>
+    <label>size:
+      <input [(ngModel)]="favorite.size" placeholder="size"/>
+    </label>      
+  </div>
+</div>

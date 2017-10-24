@@ -3,7 +3,8 @@ export const myCeramics = [
 
 	// "ceramic2.jpg",
 	// "ceramic3.jpg",
-	"ceramic4.jpg",	"ceramic1.jpg",
+	"ceramic4.jpg",	
+	"ceramic1.jpg",
 
 	"ceramic5.jpg",
 	"ceramic7.jpg",

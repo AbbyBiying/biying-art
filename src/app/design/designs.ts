@@ -1,0 +1,16 @@
+export const myDesigns = [
+	"black-t-shirt-pyramid-no1.jpg",
+	"protea-man-no2.jpg",
+	"space-shirt.jpg",
+	"black-purple-shirt.jpg",
+	"black-shirt-no2.jpg",
+	"white-t-shirt-pyramid-no1.jpg",
+	"dress-no1.jpg",
+	"dress-no2.jpg",
+	"dress-no3.jpg",		
+	"protea-woman-no1.jpg",
+	"black-hat-no1.jpg",
+	"black-red-hat-no1.jpg",
+	"red-hat-no1.jpg",
+	// "red-hat-no2.jpg", 
+]

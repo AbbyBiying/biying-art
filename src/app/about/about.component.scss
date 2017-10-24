@@ -1,50 +1,47 @@
-.full-width{
-    width: 200px;
-    height: 200px;
-    overflow: auto;
+a {
+  /*background-color: rgba(246,246,246,1);*/
+  color: deeppink;
 }
 
-.double-width{
-    width:400px;
-    height: 100%;
+#about-content {
+  width: 70%;
+  margin-left: 15%;
+  font-weight: 300;
 }
 
-.hello-there {
+.about-section {
   font-family: 'Raleway', sans-serif;
-  padding: 50px;
-  font-size: 17px;
-  color: white;
-  z-index: 0;  
-  position: absolute;
-  left: 330px;
+  line-height: 1.7;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  clear: both;
+}
+
+.aboutimg {
+  height: 580px;
+  display: inline-block; 
+  overflow: hidden;
+}
+
+.bio {
+  padding: 30px 230px;
 }
 
 .bio-img {
-  height: 467px;
+  height: 100%;
+  /*height: 467px;*/
   overflow: hidden;
   z-index: 1;
   width: 100%;
 }
 
 .bioimgbg {
-  background: rgba(27,25,25,0.98);
+  background: rgba(31, 30, 30, 1);
 }
 
-.aboutimg {
-  height: 390px;
-  display: inline-block; 
-  width: 49.4%;
-  overflow: hidden;
-}
-
-#hello-name {
-  left: 50px;
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
-  margin-top: 200px;
-  color:rgba(255,255,255,0.5);
-  font-size: 30px;
-  z-index: 5;
+.bioimg {
+  background: rgba(31, 30, 30, 1);
 }
 
 .bio-name-up {
@@ -61,36 +58,70 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.statement {
+.chinese {
+  font-family: NotoSans;
+}
+
+.CV-language {
+  text-align: center;
+  margin: 20px;
+}
+
+.double-width{
+  width: 400px;
+  height: 100%;
+}
+
+.english-cv, .chinese-cv {
+  background-color: rgba(246,246,246,1);
+}
+ 
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/assets/fonts/NotoSansDisplay-Light.ttf');
+}
+
+.full-width {
+  width: 200px;
+  height: 200px;
+  overflow: auto;
+}
+
+.hello-there {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 120px;
+  font-size: 17px;
+  color: white;
+  z-index: 0;  
+  position: absolute;
+  /*left: 330px;*/
+  left: 50%;
+  margin-right: 25px;
+}
+
+#hello-name {
+  /*text-shadow: 2px 2px 2px black;*/
+  left: 50px;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  margin-top: 200px;
+  color:rgba(255,255,255,0.5);
+  font-size: 50px;
+  z-index: 5;
+}
+
+.mat-radio-button {
+  margin: 9px;
+}
+
+.statement {    
+  padding-top: 3px;    
+  padding-bottom: 10px;
   letter-spacing: 1.5px;
-  padding: 137px 283px;
+  /*padding: 137px 283px;*/
   font-weight: 300;
   line-height: 2;
-  font-size: 23px;
-}
-
-.second-statement {
-  letter-spacing: 1.2px;
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 2;
-}
-
-.bio {
-  padding: 30px 230px;
-}
-
-.about-section {
-  font-family: 'Raleway', sans-serif;
-  line-height: 1.7;
-  margin-top: 40px;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  clear: both;
-}
-
-.section-title, .section-text {
-  float: left;
+  font-size: 16px;
 }
 
 .section-title {
@@ -107,28 +138,56 @@
   margin-left: 30px;
 }
 
-#about-content {
-  width: 70%;
-  margin-left: 15%;
-  font-weight: 300;
+.work {
+  padding-top: 10px;
 }
 
 .year .schools {
 	margin-top: -10px;
 }
 
+@media screen and (min-width: 1600px) {
+  #hello-name {
+    font-size: 64px;
+  }
+
+  .aboutimg{
+    height: 800px !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .aboutimg{
+    height: 530px;
+  }
+
+  .hello-there {
+    font-size: 27px;
+    left: 46%;
+  }
+}
 /*for ipad and ipad pro*/
+
+
+@media screen and (max-width: 1270px){
+  .aboutimg {
+      height: 580px;
+  }
+}
+
 @media screen and (max-width: 1150px) {
+
   .statement{
-    padding:135px;
+    /*padding: 135px;*/
   }
 
   #about-content {
-   	margin-left: 0;
+    margin-left: 0;
   }
 
   .bio-img {
-    height: 250px;
+    /*height: 250px;*/
+    height: 100%;
   }
 
   .bio {
@@ -136,103 +195,257 @@
   }
 
   #hello-name {
+    font-size: 50px;
     margin-top: 50px;
   }
 
   .aboutimg {
-    height:300px;
+    height: 300px;
   }
 }
 
-/*for iphone 6 plus*/
-@media screen and (max-width: 420px) {
-  #hello-name {
-    font-size: 23px; 
-    margin-top: 20px;
-    left: 35px;
-  }
-
+@media screen and (min-width: 1700px){
   .aboutimg {
-    height: 140px;
+    height: 100%;
   }
-
-  .bio-img {
-    height: 150px;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-	.bio {
-    font-size: 13px;
-    margin:0;    
-    overflow: hidden;
- 	}
-
-  .statement {
-    letter-spacing: 1.5px;
-    padding: 50px;
-    font-weight: 300;
-    line-height: 2;
-    font-size: 17px;
-  }
-
-  .second-statement {
-    letter-spacing: 1.2px;
-    font-size: 10px;
-    font-weight: 200;
-    line-height: 2;
-  }
-  
-	.year {
- 	  p {
-	    font-size: 10px;
-	  }
-	}
-
-	.section-text {
-		width:100%;
-    font-size: 10px;
-	}
-
-	.section-title {
-		width: 100%;
-		margin-bottom: 10px;
-  	font-weight: 500;
-	}
-
-	.about-section {
-		margin: 0;
-	}
-
-	#about-content {
-    margin-left: 0;
-    padding: 10px;
-  }
-
-  .hello-there {
-    padding: 50px;
-    font-size: 10px;
-    color: white;
-    z-index: 0;  
-    position: absolute;
-    left: 90px;
- }
 }
 
-@media screen and (min-width: 1300px) {
-  .aboutimg{
-    height:500px;
+@media screen and (max-width: 1130px){
+  .aboutimg {
+    height: 540px;
+  }
+}
+
+@media screen and (max-width: 1030px){
+  .aboutimg {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .aboutimg {
+    height: 480px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .aboutimg {
+    height: 447px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .aboutimg {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 840px){
+  .aboutimg {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 816px){
+  .aboutimg {
+    height: 370px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .aboutimg {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .aboutimg {
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .aboutimg {
+    height: 310px;
   }
 }
 
 @media screen and (max-width: 620px) {
-  #hello-name {
-    font-size: 25px !important;
+  .aboutimg {
+    height: 280px;
   }
 
   .hello-there {
-    font-size: 14px !important;
-    padding-top: 37px !important;
+    font-size: 11px;
+    padding: 95px 0 0 0;
+    /*left: 173px;*/
+  }  
+
+  .statement {
+    letter-spacing: 1.5px;
+    /*padding: 25px;*/
+    font-weight: 300;
+    line-height: 2;
+    font-size: 17px;    
+    margin-left: -32px;
   }
 }
 
+@media screen and (max-width: 600px){
+  .aboutimg {
+    height: 255px;
+  }
+  
+  #hello-name {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 560px){
+  .aboutimg {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .aboutimg {
+    height: 220px;
+  }
+
+  #hello-name {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .aboutimg {
+    height: 180px;
+  }
+} 
+
+@media screen and (max-width: 420px) {
+  .aboutimg {
+    height: 160px;
+  }
+
+  #hello-name {
+    font-size: 18px; 
+    margin-top: 20px;
+    /*left: 35px;*/
+  }
+
+  .bio-img {
+
+    width: 100% !important;
+    height: 100%;
+    overflow: hidden !important;
+ /*   height: 150px;
+    overflow: hidden;
+    z-index: 1;*/
+  }
+
+  .bio {
+    font-size: 13px;
+    margin:0;    
+    overflow: hidden;
+  }
+
+  .skills, .work {
+    letter-spacing: 1.2px;
+    font-size: 10px;
+    line-height: 2;
+  }
+  
+  .year {
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .section-text {
+    width:100%;
+    font-size: 10px;
+  }
+
+  .section-title {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+
+  .hello-there {
+    padding: 50px 0 0 0;
+    font-size: 10px;
+    color: white;
+    z-index: 0;  
+    position: absolute;
+    /*left: 110px;*/
+ }
+
+}
+
+@media screen and (max-width: 384px){
+  .aboutimg {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 370px){
+  .aboutimg {
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 340px){
+  .aboutimg {
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 310px){
+  .aboutimg {
+    height: 110px;
+  }
+
+  .hello-there {    
+    padding: 42px 0 0 0;
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 270px){
+  .aboutimg {
+    width: 100%;
+    height: 100%;
+  }
+  #hello-name{
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 220px){
+  .hello-there {
+    padding: 38px 0 0 0;
+    font-size: 6px;
+  }
+}
+
+.skills, .work {
+  letter-spacing: 1.2px;
+  line-height: 2;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1rem;
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;    
+  }
+  ul li {  
+    padding-left: 0 !important;
+    list-style-type: none;
+  }
+}

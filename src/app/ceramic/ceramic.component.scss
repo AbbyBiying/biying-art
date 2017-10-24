@@ -1,6 +1,6 @@
 .ceramic-img {
 	margin: 100px 2%;
- 	width: 60%;
+	max-height: 80%;
 }
 
 md-grid-tile img {
@@ -8,10 +8,9 @@ md-grid-tile img {
 	max-height: 100%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 820px) {
   .ceramic-img {
-		margin: 10px 2%;
-		width: 80%;
+		margin: 0 2%;
+		max-width: 70%;
 	}
 }
-

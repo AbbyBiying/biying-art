@@ -1,3 +1,17 @@
+ <!-- <img class="logo" src="/assets/design/abz-red.png" alt="Biying Zhang Logo Red">  -->
+<img class="logo" src="/assets/design/darkview.png" alt="exhibition view"> 
+<div class="statement">
+  <p class="art-statement" id="paintingStatement">
+  	My artwork is intended to encourage discussion about
+		the relationship between individuals and their physical environment. 
+	</p>
+
+  <p class="art-statement" id="paintingStatement">
+  	Does our place of habitation shape our state of being? 
+  	<!-- <p>I continually explore the intersection of comfort, despair, place, and purpose.</p>   -->
+  </p> 
+</div>
+
 <div id="art-select">
 	<mat-form-field>
 	  <mat-select #artType placeholder="art">
@@ -7,9 +21,9 @@
 	    <mat-option [artHighlight]="color" defaultColor="gold" value="Ceramic">
 	    	Ceramic
 	    </mat-option>
-	   <!--  <mat-option [artHighlight]="color" defaultColor="gold" value="Video">
-	    	Video
-	    </mat-option> -->
+	    <mat-option [artHighlight]="color" defaultColor="gold" value="Design">
+	    	Design
+	    </mat-option>
 	  </mat-select>
 	</mat-form-field>  
 	
@@ -21,26 +35,75 @@
 				<mat-option [artHighlight]="color" defaultColor="gold" value="ABZ-EXCHANGE">
 		    	ABZ-EXCHANGE
 		  	</mat-option>
-		  </a>
+		  </a>	    
+
+ <!-- 
+		  <a target="_blank" href="https://github.com/AbbyBiying/Abbys-Weather-App">
+				<mat-option [artHighlight]="color" defaultColor="gold" value="Abbys-Weather-App">
+		    	Abbys-Weather-App
+		  	</mat-option>
+		  </a> -->
 		    
-		  <a target="_blank" href="https://github.com/AbbyBiying/pairing">
+<!-- 		  <a target="_blank" href="https://github.com/AbbyBiying/pairing">
 		 	  <mat-option [artHighlight]="color" defaultColor="gold" value="PAIRING">
 		    	Pairing	    
 		    </mat-option>
-		  </a>
+		  </a> -->
 		  
 		  <a target="_blank" href="https://github.com/AbbyBiying/biying-art">
 		    <mat-option [artHighlight]="color" defaultColor="gold" value="BIYING-ART">  
 		    	Biying-Art
 		    </mat-option>
 			</a>
-	  </mat-select>
+
+		  <a target="_blank" href="https://github.com/AbbyBiying/my-favorite-buoy-weather-app">
+				<mat-option [artHighlight]="color" defaultColor="gold" value="my-favorite-buoy-weather-app">
+		    	my-favorite-buoy-weather-app
+		  	</mat-option>
+		  </a>	  
+		</mat-select>
 	</mat-form-field>
 </div> 
 
 <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
 <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
-<app-video *ngIf="artType.value == 'Video'"></app-video>
+<!-- <app-video *ngIf="artType.value == 'Video'"></app-video> -->
+<app-design *ngIf="artType.value == 'Design'"></app-design>
+<!-- 
+<h1>Here are your favorites:</h1>
+<app-favorites></app-favorites>
+<app-messages></app-messages>
+ -->
+
+<div class="chinese-statement chinese">
+
+	<p>我喜欢探讨有关人类生活的经验，我用油画的形式去探索人们在城市的生
+	存经验和情感记忆,例如内心底层的知觉包括有恐惧和暴力，威胁和焦虑。
+	旅居美国的经历，导致我对东西方文化的对立和融合产生浓厚的兴趣, 作品
+	包含现代与传统、艺术与生活的交集。</p>
+
+	<p>作品研究核心是个人与所居环境的相互关系，到底是可有可无，还是不可
+	分离。 我尝试用视觉语言来表现在社会历史与个人回忆的交集。我试图表
+	现人在熟悉的环境里面一种疏离感。人们在日常生活的位移和焦虑。我对
+	媒介和色彩的特性和力量也很有兴趣,有时候我喜欢用明亮暴力的颜色，如
+	霓虹橙,粉红色或血红色,有时候我喜欢黑灰的色调。我画的床垫成为个人记
+	忆和社会历史的代表。 床同时出现在公共和私人的世界。有时被放置在璀
+	璨的现代都市，灯火辉煌的背景下，有时候古老的寺庙，雕塑，机器，公
+	路和污水隧道前。似乎被从一个私人卧室扯出来,仍在冻结夜晚的高速公
+	路。床上凌乱的床单和枕头，好像有人突然站了起来，逃离了现场。我的
+	目标是探索舒适和绝望的交叉点。我希望观众可以根据个人经历和情感与
+	我的作品取得共鸣。</p>
+</div>	
+
+
+<div class="artwork-table">
+	<button mat-raised-button color="warn" (click)="toggle()">Artwork Table</button> 
+</div>
+
+
+<div *ngIf="state == 'active'">
+	<app-artwork-table></app-artwork-table>
+</div>
 
 <!-- <div>	
 	<img class="portfolio-img" src="../assets/painting/exhibitionno1.jpg">

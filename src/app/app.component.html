@@ -1,6 +1,9 @@
 <div class="header-button-container" [hidden]="sidenav.opened">
-  <button mat-button class="menu" (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
+  <button mat-button class="menu" (click)="sidenav.toggle()"> 
+    
+    <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo">
+ 
+    <!-- <mat-icon>menu</mat-icon> -->
   </button>
 </div>
 
@@ -15,18 +18,20 @@
       <li><button mat-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()" >Portfolio</button></li>
       <li><button mat-button routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">About</button></li>
  
-      <!-- <li><button mat-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li> -->
+      <li><button mat-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li>
     </ul>
   </mat-sidenav>
 
   <router-outlet></router-outlet>
 
+  <footer>
+    <div class="footer-section">
+      <!-- <p class="update">Want to get updates on my news?</p> -->
+      <p >
+        <!-- <img src="/assets/design/copyright-32.png" alt="Biying Zhang Copyright"> 2017 Biying Zhang -->
+        <a href="https://github.com/AbbyBiying/biying-art"><img class="copy-right" src="/assets/design/BZ02.png" alt="Biying Zhang Copyright"></a>
+      </p>    
+    </div>
+  </footer>
 </mat-sidenav-container>
 
-<footer>
-  <div class="footer-section">
-    <!-- <p class="update">Want to get updates on my news?</p> -->
-    <p class="copy-right">© 2017 Biying Zhang</p>    
-    <p class="copy-right">abbyzhangnyc@gmail.com</p>
-  </div>
-</footer>

@@ -1,7 +1,17 @@
+.mat-dialog-content, .mat-dialog-title {
+  text-align: center !important;
+}
+  
 .ceramic-img {
 	max-width: 100%;
 }
 
 .mat-dialog-container {
   margin: 0 auto !important;
+}
+ 
+@media screen and (max-width: 420px) {
+  .ceramic-img {
+		margin: 0;
+	}
 }

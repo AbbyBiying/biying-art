@@ -1,0 +1,33 @@
+.mat-dialog-container {
+  margin: 0 auto !important;
+}
+
+.design-img {	
+  max-width: 80%;
+	max-height: 90%;
+	margin: 130px 2%;
+}
+
+md-grid-tile img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .design-img {
+		margin: 0 2%;
+		max-width: 90%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+  .design-img {
+		margin: 0 2%;
+		max-height: 50%;
+		max-width: 80%;
+	}
+}
+
+.mat-dialog-content {
+  text-align: center !important;
+}

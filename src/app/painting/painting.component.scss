@@ -1,7 +1,11 @@
+.mat-dialog-content {
+  text-align: center !important;
+}
+
 .painting-img {
 	margin: 50px 2%;
 	box-shadow: 0px 10px 10px #BEBEBE;
-	width: 40%;
+	max-height: 80%;
 }
 
 md-grid-tile img {
@@ -18,18 +22,29 @@ md-grid-tile img {
   width: 62%;
   margin: 20px auto;
 }
+
 mat-grid-list {
 	/*rowHeight: 100px;*/
 }
+
+@media screen and (max-width: 1120px) {
+  .painting-img {
+		margin: 10px 2%;
+		max-height: 80%;
+		max-width: 50%;
+	}
+}
+
 @media screen and (max-width: 420px) {
   #statement { 
   	width: 95%;
     margin: 10px;
   }
-
+  
   .painting-img {
 		margin: 10px 2%;
-		width: 80%;
-	}
+		max-height: 88%;
+    max-width: 80%;
+  }
 }
 

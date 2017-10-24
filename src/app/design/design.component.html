@@ -1,0 +1,7 @@
+<div>
+  <mat-grid-list cols="5" rowHeight="120px">
+    <mat-grid-tile *ngFor="let design of designs" mat-grid-tile colspan="2" rowspan="4">
+      <img [@artworkflyInOut]='artworkState' (mousein)="artworkActive()" (click)="openDialog(design)" matTooltip="{{design}}" matTooltipPosition="above" class="design-img" src="/assets/design/{{design}}" alt="Biying Zhang design Image"> 
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

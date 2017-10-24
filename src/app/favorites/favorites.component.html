@@ -1,0 +1,11 @@
+<h2>My Favorites</h2>
+<ul class="favorites">
+  <li *ngFor="let favorite of favorites"
+    [class.selected]="favorite === selectedFavorite"
+    (click)="onSelect(favorite)">
+    <span class="badge">{{favorite.id}}</span> {{favorite.name}}
+  </li>
+</ul>
+
+<app-favorite-detail [favorite]="selectedFavorite"></app-favorite-detail>
+

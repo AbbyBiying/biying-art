@@ -7,4 +7,7 @@ a {
   margin: 0 auto !important;
 }
 
-
+.mat-drawer-content {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}

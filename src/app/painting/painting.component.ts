@@ -35,12 +35,12 @@ export class PaintingComponent implements OnInit {
   ngOnInit() {
   }
     
-  paintingState: string = '*';
+  artworkState: string = '*';
   statementState: string = '*'
   paintings: Array<String> = myPaintings;
 
-  paintingActive() {
-    this.paintingState = this.paintingState === '*' ? 'void' : '*';
+  artworkActive() {
+    this.artworkState = this.artworkState === '*' ? 'void' : '*';
   };
 
   statementActive() {

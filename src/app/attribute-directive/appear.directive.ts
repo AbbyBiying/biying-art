@@ -1,11 +1,9 @@
+import {fromEvent as observableFromEvent, Observable, Subscription} from 'rxjs';
+
+import {startWith} from 'rxjs/operators';
 import {
   ElementRef, Output, Directive, AfterViewInit, OnDestroy, EventEmitter
 } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Subscription} from 'rxjs/Subscription';
-import 'rxjs/add/observable/fromEvent';
-import 'rxjs/add/operator/startWith';
-
 
 
 @Directive({
@@ -58,12 +56,12 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   }
 
   subscribe(){
-    this.subscriptionScroll = Observable.fromEvent(window, 'scroll').startWith(null)
+    this.subscriptionScroll = observableFromEvent(window, 'scroll').pipe(startWith(null))
       .subscribe(() => {
         this.saveScrollPos();
         this.checkVisibility();
       });
-    this.subscriptionResize = Observable.fromEvent(window, 'resize').startWith(null)
+    this.subscriptionResize = observableFromEvent(window, 'resize').pipe(startWith(null))
       .subscribe(() => {
         this.saveDimensions();
         this.checkVisibility();

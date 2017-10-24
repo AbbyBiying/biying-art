@@ -1,54 +1,80 @@
 <div id="hello-name">
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
+	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
 		I
-	</div>
+	</strong>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">like
-	</div>
+	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">love
+	</strong>
 
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">to
-	</div>
+	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">to
+	</strong>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">build 
-	</div>
+	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">build 
+	</strong>
 
-	<div [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">fun
-	</div>
+	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">fun
+	</strong>
 
-	<div [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">stuff.
-	</div> 
+	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">stuff.
+	</strong> 
 </div>
 
 <div class="bioimgbg">
 	<div class="hello-there">
-		<p>I make painting, film/video, sound and ceramic.</p>
-		<p>I'm passionate about writing clean code and I am committed to finding solutions to problems. </p>
+		<p>Hey, nice to meet you!</p>
+
+    <p>I'm Abby. I make software, web application and art.</p>
+
+		<!-- <p>A curiosity-driven software engineer with background in art and design based in California</p>  -->
+		 
+		<p>I'm passionate about solving complex problems.</p> 
+		 
 	</div>
-
-	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png">
+ 
+	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image">
 </div>
 
-<div class="statement" (appear)="scrollFire()">
-  <p id="paintingStatement" [@leftrightAnimation]='leftState' 
-  (click)="leftActive()" >
-  	My art work is intended to encourage discussion about
-		the relationship between individuals and their physical environment. 
-	</p>
+<!-- <div class="statement" (appear)="scrollFire()"> -->
 
-  <p class="second-statement" id="paintingStatement" [@rightleftAnimation]='rightState' (click)="rightActive()">
-  	Does our
-		place of habitation shape our state of being? I continually explore the
-		intersection of comfort, despair, place, and purpose.  
-  </p> 
+<div class="statement">
+  <div class="skills" [@leftrightAnimation]='leftState' 
+  (click)="leftActive()">
+  	<h3>Skills</h3>
+		<ul>
+			<li>Ruby on Rails, Angular,</li>
+			<li>SQL, MongoDB, Neo4j, Git,</li>
+  		<li>Adobe Photoshop, Illustrator,</li>
+  		<li>Final Cut Pro, After Effects, Pro Tools</li>
+  	</ul>
+  </div>
+
+  <div class="work" [@rightleftAnimation]='rightState' (click)="rightActive()"> 
+    <h3>Work Experience</h3>
+    <ul>
+    	<li>Software Developer & Project Manager at <a href="http://www.fex.com/">Fulfillment Express, Inc.</a>, CA</li>
+
+	  	<li>Software Engineer at <a href="http://www.tradelegs.com/">Tradelegs LLC</a>, NYC</li>
+	  	<li>Full Stack Developer at <a href="https://openassembly.com/home">Open Assembly</a>, NYC</li>
+	  </ul>
+  </div>
+
 </div>
 
+<div class="bioimg">
 
-<div class="bioimgbg" (appear)="scrollFire()">
-	<img class="aboutimg" [@bioimgAnimation]='imgState' (mousemove)="imgInOut()" src="/assets/painting/detail11.jpg"> 
-	<img class="aboutimg" [@bioimgAnimation]='imgState' (mousemove)="imgInOut()" src="/assets/ceramic/detail3.jpg">
+	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 
+	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.3.png" alt="HTML5"> 
+	 
 </div>
 
-<div>
+<div class="CV-language">
+	<mat-radio-group [(ngModel)]="language">
+	  <mat-radio-button [value]="1">English</mat-radio-button>
+	  <mat-radio-button [value]="2">Chinese</mat-radio-button>
+	</mat-radio-group>
+</div>
+ 
+<div *ngIf="language===1" class="english-cv">
   <section [@cvAnimation]='cvState' (click)="cvActive()" id="about-content">
   	<section class="about-section">
   	  <div class="section-title">Education</div>
@@ -66,12 +92,11 @@
 	  	<div class="section-title">Awards</div>
 		  <div class="section-text">
 		  	<div class="year">
-		  	  <p>Fellow and Artist in Residence, Jentel Artist Residency Program, Banner, Wyoming, 2013 
-		  		<br>Third Prize - Karsh Prize in Photography, 2010
-		  		<br>Mima Weissmann Memorial Fund for the Study of Ceramic Arts, Office for the Arts at Harvard, 2009
-		  		<br>Dean's Discretionary Fund Project Grant SMFA, Boston, 2008, 2009
-		  		<br>First Prize - Student Annual, Central Academy of Fine Arts Beijing, China, 2005
-		  	  </p>
+		  	  <p>Fellow and Artist in Residence, Jentel Artist Residency Program, Banner, Wyoming, 2013</p> 
+		  		<p>Third Prize - Karsh Prize in Photography, 2010</p>
+		  		<p>Mima Weissmann Memorial Fund for the Study of Ceramic Arts, Office for the Arts at Harvard, 2009</p>
+		  		<p>Dean's Discretionary Fund Project Grant SMFA, Boston, 2008, 2009</p>
+		  		<p>First Prize - Student Annual, Central Academy of Fine Arts Beijing, China, 2005</p>
 		  	</div>
 			</div>
   	</section>
@@ -81,15 +106,14 @@
 	  	<div class="section-text">
 	  		<div class="year">
 					<p>2013</p>
-					<p>Alienation. Beyond Art Space, Beijing, China 
-				  <br>Alienation. Acton Memorial Library, Acton, MA, US 
-					<br>Alienation. LaGuardia Community College of New York University, Long Island City, NY, US 
-					</p>
+					<p>Alienation. Beyond Art Space, Beijing, China</p> 
+				  <p>Alienation. Acton Memorial Lipary, Acton, MA, US</p> 
+					<p>Alienation. LaGuardia Community College of New York University, Long Island City, NY, US</p>
 				</div>
 
 	  		<div class="year">
 					<p>2012</p>
-					<p>Alienation. Newton Free Library, Newton, MA, US</p>
+					<p>Alienation. Newton Free Lipary, Newton, MA, US</p>
 				</div>
 			</div>
   	</section>
@@ -99,91 +123,85 @@
 	  	<div class="section-text">
 	  		<div class="year">
 	  	  	<p>2013</p>
-					<p class="shows">Projection 2013. The Longwood Center of the Visual Arts, Farmville, VA, USA
-					<br>Kinetic Conceptions. Kinetic Gallery, SUNY Geneseo, New York, US
-					<br>Urban Jungle. The Other Gallery, Shanghai, China 
-					<br>17 Days, (VOL.6). Gwen Frostic School of Art, Western Michigan University, Kalamazoo, MI, US
-					<br>Print Show. Dows Fine Arts Center, Coe College, Iowa, US
-					<br>Young Artists Group Show. Hi Art Store, Beijing, China
-					</p>
+					<p class="shows">Projection 2013. The Longwood Center of the Visual Arts, Farmville, VA, USA</p>
+					<p>Kinetic Conceptions. Kinetic Gallery, SUNY Geneseo, New York, US</p>
+					<p>Urban Jungle. The Other Gallery, Shanghai, China</p> 
+					<p>17 Days, (VOL.6). Gwen Frostic School of Art, Western Michigan University, Kalamazoo, MI, US</p>
+					<p>Print Show. Dows Fine Arts Center, Coe College, Iowa, US</p>
+					<p>Young Artists Group Show. Hi Art Store, Beijing, China</p>
 				</div>
 
 				<div class="year">
 					<p>2012</p>
-					<p class="shows">The 5th Beijing International Art Biennial. China's National Museum of Fine Arts, Beijing, China
-					<br>Facing East. Mill Fine Art Gallery, Santa Fe, New Mexico, US
-					<br>Innovation. Dowd Gallery, The State University of New York, Cortland, NY, US
-					<br>The Transformative Power of Art. The Doric Hall, The Statehouse, Boston, MA, US 
-					<br>Beijing Art Expo 2012, Beijing, China
-					<br>Human Frames Cycle. Werkstatt der Kulturen, Berlin, Germany 
-					<br>The Artist's Voice. The Resnikoff Gallery, Roxbury Community College, Boston, MA, US
-					</p>
+					<p class="shows">The 5th Beijing International Art Biennial. China's National Museum of Fine Arts, Beijing, China</p>
+					<p>Facing East. Mill Fine Art Gallery, Santa Fe, New Mexico, US</p>
+					<p>Innovation. Dowd Gallery, The State University of New York, Cortland, NY, US</p>
+					<p>The Transformative Power of Art. The Doric Hall, The Statehouse, Boston, MA, US</p> 
+					<p>Beijing Art Expo 2012, Beijing, China</p>
+					<p>Human Frames Cycle. Werkstatt der Kulturen, Berlin, Germany</p> 
+					<p>The Artist's Voice. The Resnikoff Gallery, Roxbury Community College, Boston, MA, US</p>
 				</div>
 
 				<div class="year">
 					<p>2011</p>
-					<p class="shows">The New Media Exhibition. Boston City Hall, Boston, MA, US
-				  <br>Summer Party Silent Art Auction. Museum of Fine Arts, Boston, MA, US
-				  <br>Film and Animation Annual. Remis Auditorium, Museum of Fine Arts Boston, MA, US
-				  <br>The Human Frames Cycle. KIT Kunst-im-Tunnel Museum, Düsseldorf, Germany
-				  <br>Urban Grids. 567 Gallery, West Village, New York City, NY, US
-				  <br>New Talent. Exhibition at Alpha Gallery, Boston, MA, US
-				  <br>Konnektor - Forum für Künste Kötnerholzweg 11, Hannover, Germany
-				  <br>GLOVEBOX Short Film and Animation Festival. Somerville Theatre, MA, US
-				  <br>Looking Both Ways. Eastern Michigan University, MI, US
- 					<br>The CAZ Project. Exchange Gallery, Penzance, Cornwall, UK
- 					<br>Paterson Art Walk. Paterson Arts Council of Paterson, New Jersey, US
- 					<br>JC Fridays. Jersey City, NJ, US
- 					<br>Direct Action. Institut für Alles Mögliche (I-A-M), Berlin, Germany
- 					<br>Trashed. Walsh Gallery, Seton Hall University, South Orange, NJ, US
- 					<br>A Taste of Boston. Boston University, 808 Gallery, Boston, MA, US
- 					<br>Cologne OFF. VAUfest, Ukraine
- 					<br>Film at the Gate. Boston Street Lab in Chinatown, Boston, MA, US
-					</p>
+					<p class="shows">The New Media Exhibition. Boston City Hall, Boston, MA, US</p>
+				  <p>Summer Party Silent Art Auction. Museum of Fine Arts, Boston, MA, US</p>
+				  <p>Film and Animation Annual. Remis Auditorium, Museum of Fine Arts Boston, MA, US</p>
+				  <p>The Human Frames Cycle. KIT Kunst-im-Tunnel Museum, Düsseldorf, Germany</p>
+				  <p>Urban Grids. 567 Gallery, West Village, New York City, NY, US</p>
+				  <p>New Talent. Exhibition at Alpha Gallery, Boston, MA, US</p>
+				  <p>Konnektor - Forum für Künste Kötnerholzweg 11, Hannover, Germany</p>
+				  <p>GLOVEBOX Short Film and Animation Festival. Somerville Theatre, MA, US</p>
+				  <p>Looking Both Ways. Eastern Michigan University, MI, US</p>
+ 					<p>The CAZ Project. Exchange Gallery, Penzance, Cornwall, UK</p>
+ 					<p>Paterson Art Walk. Paterson Arts Council of Paterson, New Jersey, US</p>
+ 					<p>JC Fridays. Jersey City, NJ, US</p>
+ 					<p>Direct Action. Institut für Alles Mögliche (I-A-M), Berlin, Germany</p>
+ 					<p>Trashed. Walsh Gallery, Seton Hall University, South Orange, NJ, US</p>
+ 					<p>A Taste of Boston. Boston University, 808 Gallery, Boston, MA, US</p>
+ 					<p>Cologne OFF. VAUfest, Ukraine</p>
+ 					<p>Film at the Gate. Boston Street Lab in Chinatown, Boston, MA, US</p>
 				</div>
 
 	  		<div class="year">
 					<p>2010</p>
-					<p class="shows">Sanctioned Array. White Box Gallery, NY, US
-					<br>Death Does the Popsicle. GASP Gallery, Brookline, MA, US
-					<br>Process Impact. Eagle Art Gallery, Murray State University, Murray, KY, US
-					<br>Urban Realities. 6th Pixel Pops Digital Art Exhibit. Outdoor locations across the New York/New Jersey metropolitan area, US
-					<br>5th Annual Student Show. Rubin-Frankel Gallery at Boston University Hillel Center, Boston, MA, US
-					<br>The Light Cube Video and Film Festival. Visual Voice Gallery, Montreal, Canada
-					<br>The 23rd Festival Les Instants Video. France, Italia, Czech Republic, Syria, Egypt, Ukraine
-					<br>UN. Sharpness of the Documentary. The Kunstfilmtag, Dusseldorf, Germany
-					<br>Asian Hot Shots Festival. Berlin, Germany
-					<br>The Super 8 Film Festival. Detours. Santorini, Greece
-					<br>Videoholica International Video Art Festival. Varna, Bulgaria
-					<br>Art Student Exhibition. ISE Cultural Foundation, NY, US
-					<br>6th Cologne OFF VI Festival. Cologne, Germany
-					<br>Transfera TV & Madatac Festival. The Open Festival of Contemporary Audio-Visual Art, Madrid, Spain
-					<br>Art Is Not About Communication. Nictoglobe, Vol.14#1, Amsterdam, Netherlands
-					<br>Non Text/Short Film. 5th Issue Itch magazine, Woodstock, South Africa
-					<br>Video Art International Festival. Camaguey, Cuba
-					</p>
+					<p class="shows">Sanctioned Array. White Box Gallery, NY, US</p>
+					<p>Death Does the Popsicle. GASP Gallery, pookline, MA, US</p>
+					<p>Process Impact. Eagle Art Gallery, Murray State University, Murray, KY, US</p>
+					<p>Urban Realities. 6th Pixel Pops Digital Art Exhibit. Outdoor locations across the New York/New Jersey metropolitan area, US</p>
+					<p>5th Annual Student Show. Rubin-Frankel Gallery at Boston University Hillel Center, Boston, MA, US</p>
+					<p>The Light Cube Video and Film Festival. Visual Voice Gallery, Montreal, Canada</p>
+					<p>The 23rd Festival Les Instants Video. France, Italia, Czech Republic, Syria, Egypt, Ukraine</p>
+					<p>UN. Sharpness of the Documentary. The Kunstfilmtag, Dusseldorf, Germany</p>
+					<p>Asian Hot Shots Festival. Berlin, Germany</p>
+					<p>The Super 8 Film Festival. Detours. Santorini, Greece</p>
+					<p>Videoholica International Video Art Festival. Varna, Bulgaria</p>
+					<p>Art Student Exhibition. ISE Cultural Foundation, NY, US</p>
+					<p>6th Cologne OFF VI Festival. Cologne, Germany</p>
+					<p>Transfera TV & Madatac Festival. The Open Festival of Contemporary Audio-Visual Art, Madrid, Spain</p>
+					<p>Art Is Not About Communication. Nictoglobe, Vol.14#1, Amsterdam, Netherlands</p>
+					<p>Non Text/Short Film. 5th Issue Itch magazine, Woodstock, South Africa</p>
+					<p>Video Art International Festival. Camaguey, Cuba</p>
 				</div>
 
 	  		<div class="year">
 					<p>2009</p>
-					<p class="shows">ART In Embassies Program. Ambassador’s Residence, Caracas, Venezuela
-					<br>No Limits Film Festival. c/o Sheffield University Students' Union, Western Bank, Sheffield, UK
-					<br>CONSTELLATIONS Project. The Metro Arts Gallery, City Center of Brisbane, Australia
-					<br>Extinction. The Brush Art Gallery & Studios. Lowell, MA, US
-					<br>Grandma. The Embassy Gallery, Roxy Art House, 2 Roxburgh Pl, Edinburgh, UK
-					<br>December Show. Bukowski Tavern, Cambridge, MA, US
-					<br>The Norfolk NYC Gallery, New York, NY, US
-					<br>The True Art Gallery, Needham, MA, US
-					<br>Mind is a Beautiful Beast. Medicine Wheel Gallery, Boston, MA, US
-					<br>The 4th Student Show. Rubin-Frankel Gallery, Boston University Hillel Center, Boston, MA, US
-					</p>
+					<p class="shows">ART In Embassies Program. Ambassador’s Residence, Caracas, Venezuela</p>
+					<p>No Limits Film Festival. c/o Sheffield University Students' Union, Western Bank, Sheffield, UK</p>
+					<p>CONSTELLATIONS Project. The Metro Arts Gallery, City Center of pisbane, Australia</p>
+					<p>Extinction. The push Art Gallery & Studios. Lowell, MA, US</p>
+					<p>Grandma. The Embassy Gallery, Roxy Art House, 2 Roxburgh Pl, Edinburgh, UK</p>
+					<p>December Show. Bukowski Tavern, Campidge, MA, US</p>
+					<p>The Norfolk NYC Gallery, New York, NY, US</p>
+					<p>The True Art Gallery, Needham, MA, US</p>
+					<p>Mind is a Beautiful Beast. Medicine Wheel Gallery, Boston, MA, US</p>
+					<p>The 4th Student Show. Rubin-Frankel Gallery, Boston University Hillel Center, Boston, MA, US</p>
 				</div>
 
 	  		<div class="year">
 					<p>2008</p>
-					<p class="shows">The Inside Out Sale. School of the Museum of Fine Arts, Boston, MA, US
-					<br>Graduation Show. Central Academy of Fine Arts, Beijing, China
-  				</p> 
+					<p class="shows">The Inside Out Sale. School of the Museum of Fine Arts, Boston, MA, US</p>
+					<p>Graduation Show. Central Academy of Fine Arts, Beijing, China</p>
   			</div>
   		</div>
   	</section>
@@ -193,28 +211,237 @@
   		<div class="section-text">
   			<div class="year">
 					<p class="shows">
-			  		<a href="http://www.wickedlocal.com/acton/features/x273429105/The-Beacon-July-3-2013#axzz2Y20kK06F">Art exhibit coming to Acton library</a> 
-						<br><a href="http://www.boston.com/ae/theater_arts/articles/2011/06/29/sweeping_through_a_century_of_landscapes/">Sweeping through a century of landscapes</a>
-						<br><a href="http://en.cafa.com.cn/beyond-art-space-presents-the-solo-exhibition-of-alienation-by-zhang-biying.html">Beyond Art Space presents the solo exhibition of “Alienation” by Zhang Biying</a>
-						<br><a href="http://newton.wickedlocal.com/x1652301639/At-the-Newton-Free-Library">City Light: Familiar Landscapes with Alienation</a>
-						<!-- <br><a href="http://art.state.gov/artistdetail.aspx?id=103240"></a> -->
-						<br><a href="http://www.smfa.edu/files/Student-Annual-2010-press-release-FINAL.pdf">the 2010 Yousuf Karsh Prize in photography</a>
-						<!-- <br><a href="http://www.nictoglobe.com/new/ainac2010/biying.html"></a> -->
-						<!-- <br><a href="http://gsas.tufts.edu/about/news/newsArchives/Fall2011/studioArtExhibit.htm"></a> -->
-						<!-- <br><a href="http://hframes.wordpress.com/tag/biying-zhang/"></a> -->
-						<!-- <br><a href="http://www.millfineart.com/blog/2012/05/24/alienation-and-interaction-the-art-of-two- -->
+			  		<p>
+			  			<a href="http://www.wickedlocal.com/acton/features/x273429105/The-Beacon-July-3-2013#axzz2Y20kK06F">
+				  		Art exhibit coming to Acton lipary
+				  		</a> 
+			  		</p>
+						<p>
+							<a href="http://www.boston.com/ae/theater_arts/articles/2011/06/29/sweeping_through_a_century_of_landscapes/">      Sweeping through a century of landscapes
+							</a>
+						</p>
+						<p>
+							<a href="http://en.cafa.com.cn/beyond-art-space-presents-the-solo-exhibition-of-alienation-by-zhang-biying.html">Beyond Art Space presents the solo exhibition of “Alienation” by Zhang Biying
+							</a>
+						</p>
+						<p>
+							<a href="http://newton.wickedlocal.com/x1652301639/At-the-Newton-Free-Lipary">City Light: Familiar Landscapes with Alienation
+							</a>
+						</p>
+						<!-- <p><a href="http://art.state.gov/artistdetail.aspx?id=103240"></a> -->
+						<p>
+							<a href="http://www.smfa.edu/files/Student-Annual-2010-press-release-FINAL.pdf">
+							The 2010 Yousuf Karsh Prize in photography
+							</a>
+						</p>
+						<!-- <p><a href="http://www.nictoglobe.com/new/ainac2010/biying.html"></a> -->
+						<!-- <p><a href="http://gsas.tufts.edu/about/news/newsArchives/Fall2011/studioArtExhibit.htm"></a> -->
+						<!-- <p><a href="http://hframes.wordpress.com/tag/biying-zhang/"></a> -->
+						<!-- <p><a href="http://www.millfineart.com/blog/2012/05/24/alienation-and-interaction-the-art-of-two- -->
 						<!-- contemporary-chinese-artists/"></a> -->
-						<!-- <br><a href="http://17days.wordpress.com/2013/02/01/biying-zhang/"></a> -->
-						<br><a href="http://artgallery.tufts.edu/exhibitions/2011/thesisApril.htm">MFA Thesis Exhibition</a>
-						<!-- <br><a href="http://bostonartists.blogspot.com/2011_04_01_archive.html"></a> --> 
-						<!-- <br><a href="http://www.namoc.org/msg/zhanlan/zlzpklr/201211/t20121130_153886.html"></a> -->
-						<br><a href="http://exhibit.artron.net/exhibition-20351.html">“异化”张碧莹个展</a>
-						<br><a href="http://news.99ys.com/news/2013/0115/21_115355_1.shtml">迷城记</a>
-						<br><a href="http://pekin.cervantes.es/FichasCultura/Ficha88283_64_27.htm">MADATAC新媒体艺术节</a>	   
-		 		  </p>
+						<!-- <p><a href="http://17days.wordpress.com/2013/02/01/biying-zhang/"></a> -->
+						<p>
+							<a href="http://artgallery.tufts.edu/exhibitions/2011/thesisApril.htm">
+							MFA Thesis Exhibition
+							</a>
+						</p>
+						<!-- <p><a href="http://bostonartists.blogspot.com/2011_04_01_archive.html"></a> --> 
+						<!-- <p><a href="http://www.namoc.org/msg/zhanlan/zlzpklr/201211/t20121130_153886.html"></a> -->
+						<p class="chinese">
+							<a href="http://exhibit.artron.net/exhibition-20351.html">“异化”张碧莹个展
+							</a>
+						</p>
+
+						<p class="chinese">
+							<a href="http://news.99ys.com/news/2013/0115/21_115355_1.shtml">
+							迷城记
+						  </a>
+					  </p>
+
+						<p class="chinese">
+							<a href="http://pekin.cervantes.es/FichasCultura/Ficha88283_64_27.htm">MADATAC新媒体艺术节
+							</a>
+						</p>  
+		 		</div>
+		  </div>
+		</section>
+	</section>
+</div>
+
+<div *ngIf="language===2" class="chinese-cv">
+  <section [@cvAnimation]='cvState' (click)="cvActive()" id="about-content">
+		<section class="about-section">
+  		<div class="section-title chinese">教育</div>
+  		<div class="section-text">
+  			<div class="year">
+					<p class="shows">						
+						<div class="chinese">
+							<p class="schools">2004年毕业于广州美术学院附中</p>
+							<p class="schools">2008年毕业于中央美术学院学士学位，油画系三画室</p>
+							<p class="schools">2011年毕业于美国波士顿美术馆附设学院/塔夫茨大学艺术硕士学位</p>
+						</div>
+				</div>
+  	  </div>
+  	</section>
+
+  	<section class="about-section">
+	  	<div class="section-title" chinese>获奖</div>
+		  <div class="section-text">
+		  	<div class="year">						
+		  		<div class="chinese">
+			  	  <p>2013年美国怀俄明州Jentel艺术家驻地项目</p>
+						<p>2010年KARSH PRIZE，KARSH摄影三等奖</p>
+						<p>2010年塔夫茨大学艺术研究生旅游奖金</p>
+						<p>2009年哈佛大学陶瓷艺术研究所米马韦斯曼纪念基金</p>
+						<p>2008，2009年波士顿艺术博物馆附设学院院长的自由裁量基金</p>
+						<p>2006年中央美术学院艺术学生年度油画展最佳进步奖</p>
+						<p>2006年中央美术学院艺术学生年度油画展二等奖</p>
+						<p>2005年中国中央美术学院学生优秀作品一等奖</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="about-section chinese">
+	  	<div class="section-title chinese">个人展览</div>
+  	  <div class="section-text">
+  		  <div class="year">
+					<div class="chinese">
+						<p>2013年</p>
+						<p>异化，中国北京别处空间个人展览</p>
+						<p>异化，美国麻州阿克顿纪念图书馆个人展览</p>
+						<p>异化，美国纽约长岛市，拉瓜地学院画廊</p>
+
+						<p>2012年</p>
+						<p>异化，美国麻州牛顿市政图书馆个人展览</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+  	<section class="about-section chinese">
+	  	<div class="section-title chinese">群体展览</div>
+	  	<div class="section-text">
+	  		<div class="year">						 
+					<div class="chinese">
+						<p>2013年</p>
+
+						<p>17天，美国密歇根州西密歇根大学</p>
+						<p>迷城计，中国上海其他画廊</p>
+						<p>版画展，美国爱荷华州，Coe学院辛克莱画廊</p>
+						<p>春光乍泄，中国北京Hi艺术小店</p>
+
+						<p>2012年</p>
+
+						<p>第五届北京国际双年展，中国美术馆</p>
+						<p>Facing East,美国新墨西哥州穆勒美术画廊</p>
+						<p>创新，美国纽约州立大学多德美术馆</p>
+						<p>艺术的变革力量 ，美国麻州州议会波士顿办公大楼</p>
+						<p>人类框架 ，德国柏林Werkstatt DER Kulturen剧院</p>
+						<p>艺术家的声音，美国麻州罗克斯伯里社区学院</p>
+						<p>第十五届北京国际艺术博览会</p>
+						<p>美国TJX总部办公大楼</p>
+
+						<p>2011年</p>
+
+						<p>夏日无声艺术品拍卖会，美国麻州波士顿美术馆</p>
+						<p><p>电影与动画年度展览，美国麻州波士顿美术馆</p>
+						<p>人类框架，德国北莱茵</p>
+						<p>威斯特法伦的州杜塞尔多夫KIT KunstimTunnel美术馆</p>
+						<p>兩邊看：辛亥革命一百周年當代藝術特展，美国东密西根大学</p>
+						<p>新媒体艺术特展，美国波士顿市政府办公楼中心画廊</p>
+						<p>城市框架，美国纽约市西村567画廊</p>
+						<p><p>唐人街牌坊电影节，美国波士顿</p>
+						<p>直接行动视频展览，德国柏林mögliche研究所</p>
+						<p>连接器艺术论坛，德国下萨克森州汉诺威市</p>
+						<p>新天才，美国麻州波士顿ALPHA画廊</p>
+						<p>GLOVEBOX电影节，美国麻州剑桥电影院</p>
+						<p>废墟，新泽西州南橘大学WALSH画廊</p>
+						<p>CAZ机构展览，英国康沃尔市</p>
+						<p>波士顿之味，波士顿大学808画廊展览</p>
+						<p>德国科隆国际Videoart节乌克兰站</p>
+						<p>研究生毕业展览，美国塔夫茨大学/波士顿美术馆附设学院艺术</p>
+						<p>Paterson艺术委员会展览，美国新泽西州</p>
+						<p>JC Fridays，美国新泽西州泽西市</p>
+
+						<p>2010年</p>
+
+						<p>被制裁，美国纽约州纽约市WHITE BOX画廊</p>
+						<p>死亡并非冰棒，美国麻省GASP 艺术中心画廊</p>
+						<p>进程冲击，美国肯塔基州莫瑞州立大学鹰美术馆</p>
+						<p>美国波士顿大学，弗兰克尔希勒尔中心鲁宾画廊第5届学生艺术展览</p>
+						<p>自由火花视频节，加拿大蒙特利尔</p>
+						<p>第23届艺术节LES INSTANTSVIDEO展览，巡回展览国家法国，意大利，捷克共和国，叙利亚 
+						，埃及，乌克兰和阿尔及利亚</p>
+						<p>锐度纪录片电影节，德国杜塞尔多夫</p>
+						<p>亚洲热点电影节德国柏林亚洲，德国柏林</p>
+						<p>Videoart国际艺术节，古巴卡馬威市</p>
+						<p>超八电影节，希腊圣托里尼岛屿</p>
+						<p>国际录像艺术节，保加利亚瓦尔纳</p>
+						<p>学生艺术展，纽约ISE文化基金会</p>
+						<p>CologneOFF电影节，德国科隆</p>
+						<p>Transfera电视及Madatac当代音频与视觉艺术电影，西班牙马德里</p>
+						<p>LightCubeVideo视频和电影节， 纽约视语音画廊</p>
+						<p>NonText/short 南非瘙痒影视杂志第5期</p>
+						<p>艺术是不在交流，荷兰阿姆斯特丹冲突研究杂志第3期，Nictoglobe，2010年第14卷1号</p>
+						<p>研究生年度展览，美国波士顿美术馆附设学院</p>
+
+						<p>2009年</p>
+
+						<p>大使馆艺术计划, 美国国务院，美国驻委内瑞拉首都加拉加斯大使官邸</p>
+						<p>无界限电影节，英国谢菲尔德大学</p>
+						<p>杰出项目，澳大利亚布里斯班城市中心新城艺术画廊</p>
+						<p>绝种，美国麻省风格艺术画廊和工作室</p>
+						<p>祖母，英国爱丁堡使馆艺术画廊罗克斯堡特</p>
+						<p>十二月份展览，美国麻省剑桥市Bukowski Tavern</p>
+						<p>年轻艺术家群展，美国纽约曼哈顿诺福克纽约画廊</p>
+						<p>美国麻省Needham市艺术画廊</p>
+						<p>思想是美丽的野兽，美国国家联盟主办心理研究所梅德辛威尔画廊</p>
+						<p>第4届学生艺术展览，美国波士顿大学弗兰克尔希勒尔中心鲁宾画廊</p>
+						<p>研究生年度展览，美国波士顿美术馆附设学院</p>
+						<p>2008年</p>
+						<p>研究生展览，美国波士顿美术馆附设学院</p>
+						<p>冬季学生展览，美国波士顿美术馆附设学院</p>
+						<p>毕业学生展览，中国中央美术学院本科</p>
+						<p>本科毕业展览，中国中央美术学院</p>
+
+						<p>2005-2007年</p>
+
+						<p>中央美术学院优秀学生展览</p>
+
+						<p>艺术报道及评论</p>
+
+						<p>美国麻州牛顿市图书馆展览报道， 2012年
+						http://www.newtonfreelipary.net/programs/calendar/nav/?year=2012&month=3&content=art</p>
+						<p>美国麻州波士顿环球报，“新天才”, Cate McQuaid 著, 2011年06月23日
+						http://articles.boston.com/20110623/
+						ae/29695350_1_hiphopculturedancecomplexperforme
+						rs/2</p>
+						<p>美国麻州波士顿环球报，“风景新角度”, Cate McQuaid 著, 2011年06月29日
+						http://www.boston.com/ae/theater_arts/articles/2011/06/29/sweeping_through_a_century_of_lan
+						dscapes/</p>
+						<p>美国塔夫斯大学艺术和科学研究生学院报道，2011年
+						http://gsas.tufts.edu/about/news/newsArchives/Fall2011/studioArtExhibit.htm</p>
+						<p>美国国务院大使馆艺术计划报道, 2009年
+						http://art.state.gov/artistdetail.aspx?id=103240</p>
+						<p>法国巴黎Lowave出版报道, 2012年
+						http://hframes.wordpress.com/tag/biyingzhang/</p>
+						<p>美国Ugallery关注艺术家报道, 2012年
+						http://blog.ugallery.com/post/18890385979/artistinfocusbiyingzhang</p>
+						<p>美国影像艺术17天博克第6卷, 2013年
+						http://17days.wordpress.com/2013/02/01/biyingzhang/</p>
+						<p>美国Mill Fine Art画廊报道,2012年
+						http://www.millfineart.com/blog/2012/05/24/alienationandinteractiontheartoftwocontemporar
+						ychineseartists/</p>
+
+						<p>出版物</p>
+
+						<p>法国巴黎Lowave出版Human Frames DVD,2012年</p>
+						<p>中国中央美术学院造型经典训练教学系列</p>
+						<p>石膏像训练素描VCD,2009年</p>
+          </div>
 		 		</div>
 		  </div>
 		</section>
   </section>
-   
 </div>

@@ -34,11 +34,11 @@ export class CeramicComponent implements OnInit {
   ngOnInit() {
   }
 
-  paintingState: string = '*';
+  artworkState: string = '*';
   ceramics: Array<String> = myCeramics;
 
-  paintingActive() {
-  	this.paintingState = this.paintingState === '*' ? 'void' : '*';
+  artworkActive() {
+  	this.artworkState = this.artworkState === '*' ? 'void' : '*';
 	};
 
   openDialog(fileName) {

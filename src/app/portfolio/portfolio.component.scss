@@ -1,23 +1,58 @@
-/*#art-select {
-	top: 300px;
-	
-	position: absolute;
-	color: white;
-	z-index: 999;
-	padding: 50px;
-	display: inline-block;
-	left:100px;
-}
- */
-
 #art-select {
-	text-align: center; 
-	padding: 35px;
+  text-align: center; 
+  padding: 35px;
 }
 
 a[artHighlight]:active {
-	background-color: green;
+  background-color: green;
 }
+
+.artwork-table {
+  text-align: center;
+  margin: 20px;
+}
+
+.art-statement {
+  text-shadow: 2px 2px 2px black;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  line-height: 2;
+  /*font-weight: 300;*/
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/assets/fonts/NotoSansDisplay-Light.ttf');
+  /*src: url('/assets/fonts/SourceHanSerifSC-ExtraLight.otf');*/
+}
+
+.chinese {
+  font-family: NotoSans;
+}
+
+.chinese-statement {
+  width: 60%;
+  margin: 30px auto;
+  /*padding: 5px 150px 10px 150px;*/
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.statement {	
+  margin: 0 auto;
+  margin-top: -160px;
+  width: 50%;
+	/*margin-top: -270px;*/
+  /*padding: 35px; */
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+	width: 100%;
+} 
 
 #portfolio-menu {
 	margin-left: 10px;
@@ -47,15 +82,15 @@ a[artHighlight]:active {
 	width: 90%;
 }
 
-p {
-  color:white;
+/*p {
+  color: white;
   width:200px;
   background:lightgray;
   margin: 100px auto;
-  text-align:center;
-  padding:20px;
-  font-size:1.5em;
-} 
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+} */
 
 .portfolio-img {
 	position:absolute;
@@ -64,10 +99,48 @@ p {
   width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+  .art-statement {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .art-statement {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .statement {	
+		color: black;
+		margin-top: 0;
+  }
+
+  .art-statement {
+    text-shadow: none;
+    opacity: 0.7;
+  }
+}
+
 @media screen and (max-width: 420px) {
 	#art-select {
 		top: 30px;
-	 
-		left:35px;
+		left: 35px;
 	}
+
+	.art-statement {
+    text-shadow: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+	#art-select {
+		top: 30px; 
+		left: 35px;
+	}
+
+	.art-statement {
+    font-size: 9px;	  
+  }
 }
