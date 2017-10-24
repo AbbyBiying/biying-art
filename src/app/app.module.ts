@@ -27,7 +27,8 @@ import {
   MatDialogRef
   // MatDialog
   } from '@angular/material';
-
+  
+import { ScrollerDirective } from './attribute_directive/scroller.directive'
 import { HighlightDirective } from './attribute_directive/highlight.directive'
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';

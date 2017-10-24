@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit {
   cvState: string = "cvbefore";
   bioState: string = "biosmall";
   imgState: string = "imgin"
-  statementState: string = '*'
+  statementState: string = 'void'
 
   imgInOut(){
     this.imgState = this.imgState === 'imgin' ? 'imgout' : 'imgin';

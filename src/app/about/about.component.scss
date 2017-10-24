@@ -1,12 +1,22 @@
+.full-width{
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+}
+
+.double-width{
+    width:400px;
+    height: 100%;
+}
+
 .hello-there {
   font-family: 'Raleway', sans-serif;
-  padding: 100px;
+  padding: 50px;
   font-size: 17px;
   color: white;
   z-index: 0;  
   position: absolute;
   left: 330px;
-  /*background: rgba(27,25,25,0.98);*/
 }
 
 .bio-img {
@@ -28,12 +38,12 @@
 }
 
 #hello-name {
-  left:50px;
+  left: 50px;
   font-family: 'Raleway', sans-serif;
   position: absolute;
   margin-top: 200px;
   color:rgba(255,255,255,0.5);
-  font-size: 26px;
+  font-size: 30px;
   z-index: 5;
 }
 
@@ -126,11 +136,7 @@
   }
 
   #hello-name {
-    margin-top:50px;
-  }
-
-  .hello-there {
-    padding: 20px;
+    margin-top: 50px;
   }
 
   .aboutimg {
@@ -218,3 +224,15 @@
     height:500px;
   }
 }
+
+@media screen and (max-width: 620px) {
+  #hello-name {
+    font-size: 25px !important;
+  }
+
+  .hello-there {
+    font-size: 14px !important;
+    padding-top: 37px !important;
+  }
+}
+

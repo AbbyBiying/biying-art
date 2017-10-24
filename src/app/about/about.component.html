@@ -19,23 +19,31 @@
 	</div> 
 </div>
 
+<!-- <div class="full-width" scroller="()" >
+    <div class="double-width"></div>
+</div> -->
+
 <div class="bioimgbg">
 	<div class="hello-there">
 		<p>I make painting, film/video, sound and ceramic.</p>
 		<p>I'm passionate about writing clean code and I am committed to finding solutions to problems. </p>
 	</div>
+
 	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png">
 </div>
 
 <div class="statement">
-  <p [@leftrightAnimation]='statementState' (click)="statementActive()" id="paintingStatement" [@StatementAnimation]='statementState' on-mouseover="statementActive()" >
+  <span [@StatementAnimation]='statementState'>
+  	<p (click)="statementActive()" id="paintingStatement" [@leftrightAnimation]='statementState' 
+  (click)="statementActive()" >
   	My art work is intended to encourage discussion about
 		the relationship between individuals and their physical environment. </p>
 
-  <p class="second-statement" [@rightleftAnimation]='statementState' (click)="statementActive()" id="paintingStatement">Does our
+  <p class="second-statement" id="paintingStatement"[@rightleftAnimation]='statementState' (click)="statementActive()">Does our
 		place of habitation shape our state of being? I continually explore the
 		intersection of comfort, despair, place, and purpose.  
   </p> 
+</span>
 </div>
 
 

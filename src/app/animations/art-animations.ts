@@ -24,10 +24,10 @@ export const artAnimations = [
   ]),
 
   trigger('bioimgAnimation', [ 
-    state('void',   style({transform: 'translateX(-75%)'})),
+    state('void',   style({transform: 'translateX(-70%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
-    state('imgout',   style({transform: 'translateX(-75%)'})),
-    transition('imgin => imgout', animate('2s ease-in')),
+    state('imgout',   style({transform: 'translateX(-70%)'})),
+    transition('imgin => imgout', animate('2.5s ease-in')),
     transition('imgout => imgin', animate('2s ease-out')),
     transition('void => imgin', animate('2s ease-in')),   
   ]),
@@ -127,9 +127,9 @@ export const artAnimations = [
   trigger('StatementAnimation', [
     state('statementIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate('3s', keyframes([
+      animate('4s 3s', keyframes([
         style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.5}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
       ]))
     ])
@@ -138,9 +138,9 @@ export const artAnimations = [
   trigger('leftrightAnimation', [
     state('left', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate('4s', keyframes([
-        style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+      animate('4s 4s', keyframes([
+        style({  opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.5}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
       ]))
     ])
@@ -149,9 +149,9 @@ export const artAnimations = [
   trigger('rightleftAnimation', [
     state('right', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate('4s', keyframes([
+      animate('4s 4s', keyframes([
         style({opacity: 0, transform: 'translateX(120%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.5}),
         style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
       ]))
     ])
