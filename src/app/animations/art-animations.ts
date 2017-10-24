@@ -123,38 +123,30 @@ export const artAnimations = [
     ])
   ]),
 
-
-  trigger('StatementAnimation', [
-    state('statementIn', style({transform: 'translateX(0)'})),
-    transition('void => *', [
-      animate('4s 3s', keyframes([
-        style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.5}),
-        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
-      ]))
-    ])
-  ]),
-
   trigger('leftrightAnimation', [
-    state('left', style({transform: 'translateX(0)'})),
-    transition('void => *', [
-      animate('4s 4s', keyframes([
-        style({  opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.5}),
-        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
-      ]))
-    ])
+    state('void', style({opacity: 1, transform: 'translateX(-20%) scale(0.5)'})),
+    state('left', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
+    state('right', style({opacity: 1, transform: 'translateX(-20%) scale(1)'})),
+    transition('left => right', animate('3s ease-in')),
+    transition('right => left', animate('3s ease-out')),
+    transition('void => left', animate('3s ease-in')),   
   ]),
+  // trigger('bionameupAnimation', [ 
+  //   state('void',   style({color:'transparent',transform: 'translateY(-200%)'})),
+  //   state('together', style({color:'white',transform: 'translateY(0)'})),
+  //   state('apart',   style({color:'transparent',transform: 'translateY(-200%)'})),
+  //   transition('together => apart', animate('1.5s 1s ease-in')),
+  //   transition('apart => together', animate('1.5s 1s ease-out')),
+  //   transition('void => together', animate('1.5s 1s ease-in')),   
+  // ]),
 
   trigger('rightleftAnimation', [
-    state('right', style({transform: 'translateX(0)'})),
-    transition('void => *', [
-      animate('4s 4s', keyframes([
-        style({opacity: 0, transform: 'translateX(120%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.5}),
-        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
-      ]))
-    ])
+    state('void', style({opacity: 1, transform: 'translateX(20%) scale(0.5)' })),
+    state('right', style({opacity: 1, transform: 'translateX(0) scale(1)' })),
+    state('left', style({opacity: 1, transform: 'translateX(20%) scale(1)'})),
+    transition('right => left', animate('3s ease-in')),
+    transition('left => right', animate('3s ease-out')),
+    transition('void => right', animate('3s ease-in')),   
   ]),
 
   trigger('mySecondAnimation', [

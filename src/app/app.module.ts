@@ -28,8 +28,8 @@ import {
   // MatDialog
   } from '@angular/material';
   
-import { ScrollerDirective } from './attribute_directive/scroller.directive'
-import { HighlightDirective } from './attribute_directive/highlight.directive'
+import { HighlightDirective } from './attribute-directive/highlight.directive'
+import { AppearDirective } from './attribute-directive/appear.directive';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -78,6 +78,7 @@ const appRoutes: Routes = [
     VideoComponent,
     PaintingDialogComponent,
     CeramicDialogComponent,
+    AppearDirective
   ],
 
   imports: [

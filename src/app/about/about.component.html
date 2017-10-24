@@ -19,10 +19,6 @@
 	</div> 
 </div>
 
-<!-- <div class="full-width" scroller="()" >
-    <div class="double-width"></div>
-</div> -->
-
 <div class="bioimgbg">
 	<div class="hello-there">
 		<p>I make painting, film/video, sound and ceramic.</p>
@@ -32,22 +28,22 @@
 	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png">
 </div>
 
-<div class="statement">
-  <span [@StatementAnimation]='statementState'>
-  	<p (click)="statementActive()" id="paintingStatement" [@leftrightAnimation]='statementState' 
-  (click)="statementActive()" >
+<div class="statement" (appear)="scrollFire()">
+  <p id="paintingStatement" [@leftrightAnimation]='leftState' 
+  (click)="leftActive()" >
   	My art work is intended to encourage discussion about
-		the relationship between individuals and their physical environment. </p>
+		the relationship between individuals and their physical environment. 
+	</p>
 
-  <p class="second-statement" id="paintingStatement"[@rightleftAnimation]='statementState' (click)="statementActive()">Does our
+  <p class="second-statement" id="paintingStatement" [@rightleftAnimation]='rightState' (click)="rightActive()">
+  	Does our
 		place of habitation shape our state of being? I continually explore the
 		intersection of comfort, despair, place, and purpose.  
   </p> 
-</span>
 </div>
 
 
-<div class="bioimgbg">
+<div class="bioimgbg" (appear)="scrollFire()">
 	<img class="aboutimg" [@bioimgAnimation]='imgState' (mousemove)="imgInOut()" src="/assets/painting/detail11.jpg"> 
 	<img class="aboutimg" [@bioimgAnimation]='imgState' (mousemove)="imgInOut()" src="/assets/ceramic/detail3.jpg">
 </div>
@@ -121,6 +117,7 @@
 					<br>Beijing Art Expo 2012, Beijing, China
 					<br>Human Frames Cycle. Werkstatt der Kulturen, Berlin, Germany 
 					<br>The Artist's Voice. The Resnikoff Gallery, Roxbury Community College, Boston, MA, US
+					</p>
 				</div>
 
 				<div class="year">

@@ -17,12 +17,14 @@ import {
 } from '@angular/animations';
 
 import { artAnimations } from '../animations/art-animations';
+import { AppearDirective } from '../attribute-directive/appear.directive';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  animations: artAnimations
+  animations: artAnimations,
+
 })
 export class AboutComponent implements OnInit {
 
@@ -35,9 +37,11 @@ export class AboutComponent implements OnInit {
   nameState: string = 'together';
   cvState: string = "cvbefore";
   bioState: string = "biosmall";
-  imgState: string = "imgin"
-  statementState: string = 'void'
-
+  imgState: string = "imgin";
+  leftState: string = "left";
+  rightState: string = "right";
+  scrollState: string = "*";
+  
   imgInOut(){
     this.imgState = this.imgState === 'imgin' ? 'imgout' : 'imgin';
     console.log(this.imgState);  
@@ -58,8 +62,18 @@ export class AboutComponent implements OnInit {
     console.log(this.cvState);
   };
 
-  statementActive() {
-    this.statementState = this.statementState === '*' ? 'void' : '*';
-    console.log(this.statementState);
+  leftActive() {
+    this.leftState = this.leftState === 'left' ? 'right' : 'left';
+    console.log(this.leftState);
   };  
+
+  rightActive() {
+    this.rightState = this.rightState === 'right' ? 'left' : 'right';
+    console.log(this.rightState);
+  };  
+
+  // scrollFire() {
+  //   this.scrollState = this.scrollState === '*' ? 'void' : '*';
+  //   console.log("appeared");
+  // }
 }
