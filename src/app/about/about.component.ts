@@ -72,4 +72,6 @@ export class AboutComponent implements OnInit {
   //   this.scrollState = this.scrollState === '*' ? 'void' : '*';
   //   console.log("appeared");
   // }
+
+
 }

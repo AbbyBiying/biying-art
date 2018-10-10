@@ -6,3 +6,4 @@ interface NodeModule {
 
 declare var Processing: any;
 declare var Browser: any;
+declare var d3: any;
