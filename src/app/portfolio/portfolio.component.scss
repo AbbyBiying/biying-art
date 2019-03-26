@@ -1,6 +1,7 @@
 #art-select {
-  text-align: center; 
-  padding: 35px;
+  text-align: center;
+  //padding: 35px;
+  margin-top: 100px;
 }
 
 a[artHighlight]:active {
@@ -12,17 +13,9 @@ a[artHighlight]:active {
   margin: 20px;
 }
 
-.art-statement {
-  text-shadow: 2px 2px 2px black;
-  letter-spacing: 1.5px;
-  font-size: 16px;
-  line-height: 2;
-  /*font-weight: 300;*/
-}
-
 @font-face {
-  font-family: 'NotoSans';
-  src: url('/assets/fonts/NotoSansDisplay-Light.ttf');
+  font-family: "NotoSans";
+  src: url("/assets/fonts/NotoSansDisplay-Light.ttf");
   /*src: url('/assets/fonts/SourceHanSerifSC-ExtraLight.otf');*/
 }
 
@@ -40,46 +33,46 @@ a[artHighlight]:active {
   font-size: 16px;
 }
 
-.statement {	
+.statement {
   margin: 0 auto;
   margin-top: -160px;
   width: 50%;
-	/*margin-top: -270px;*/
+  /*margin-top: -270px;*/
   /*padding: 35px; */
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .logo {
-	width: 100%;
-} 
+  width: 100%;
+}
 
 #portfolio-menu {
-	margin-left: 10px;
-	a {
-		color: rgba(0, 0, 0, 0.87);
+  margin-left: 10px;
+  a {
+    color: rgba(0, 0, 0, 0.87);
   }
-	position: fixed;
-	bottom: 10px;
-	left: 10px;
-	width: 33%;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 33%;
 
   li {
-  	list-style-type: none;
-  	cursor: pointer;	
-  	font-size: 24px;
-	  font-family: 'Raleway', sans-serif;
-	  margin-bottom: 30px;
-	  font-weight: 300;
-	  letter-spacing: 3.5px;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 3.5px;
   }
 }
 
 #portfolio-container {
-	margin: 40px 0; 
-	padding: 10px 5%;
-	/*position: absolute;*/
-	width: 90%;
+  margin: 40px 0;
+  padding: 10px 5%;
+  /*position: absolute;*/
+  width: 90%;
 }
 
 /*p {
@@ -93,10 +86,57 @@ a[artHighlight]:active {
 } */
 
 .portfolio-img {
-	position:absolute;
+  position: absolute;
   overflow: hidden;
   z-index: 1;
   width: 100%;
+}
+
+.web-app-group {
+  .title {
+    text-align: center;
+  }
+}
+
+.apps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 10%;
+
+  .app-title {
+    margin: 0 5%;
+    width: 100%;
+  }
+}
+
+img.web-img {
+  // .imgBox { /* now a container for the image */
+  // overflow: hidden; /* hide the excess */
+  flex: 0 0 auto;
+  margin: 2% auto;
+  // }
+  width: 400px;
+  height: 800px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+img.web-img-ET {
+  margin: 2% auto;
+  width: 80%;
+  height: 80%;
+}
+
+.form,
+.mat-form-field {
+  text-align: center;
+  width: 220px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1200px) {
@@ -112,35 +152,47 @@ a[artHighlight]:active {
 }
 
 @media screen and (max-width: 600px) {
-  .statement {	
-		color: black;
-		margin-top: 0;
+  .statement {
+    color: black;
+    margin-top: 0;
   }
 
   .art-statement {
     text-shadow: none;
     opacity: 0.7;
   }
+
+  .apps {
+    .app-title {
+      margin: 0 10%;
+    }
+    img.web-img {
+      flex: 0 0 auto;
+      margin: 2% auto;
+      width: 80%;
+      height: 80%;
+    }
+  }
 }
 
 @media screen and (max-width: 420px) {
-	#art-select {
-		top: 30px;
-		left: 35px;
-	}
+  #art-select {
+    top: 30px;
+    left: 35px;
+  }
 
-	.art-statement {
+  .art-statement {
     text-shadow: none;
   }
 }
 
 @media screen and (max-width: 320px) {
-	#art-select {
-		top: 30px; 
-		left: 35px;
-	}
+  #art-select {
+    top: 30px;
+    left: 35px;
+  }
 
-	.art-statement {
-    font-size: 9px;	  
+  .art-statement {
+    font-size: 9px;
   }
 }

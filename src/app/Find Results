@@ -1,0 +1,271 @@
+Searching 75 files for "MAT-ICON"
+
+/Users/biying/Documents/dev/biying-art/src/app/app.component.html:
+    1  <div class="header-button-container" [hidden]="sidenav.opened">
+    2    <button mat-button class="menu" (click)="sidenav.toggle()">  
+    3:     <mat-icon class="menu-icon">menu</mat-icon>
+    4    </button>
+    5  </div>
+    .
+    9    <mat-sidenav #sidenav class="sidenav">
+   10      <button mat-button class="close-button" (click)="sidenav.toggle()">
+   11:       <mat-icon>clear</mat-icon>    
+   12        <!-- <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo"> -->
+   13  
+
+4 matches in 1 file
+
+
+Searching 75 files for "height: 24px;"
+
+0 matches
+
+Searching 75 files for "ceramic"
+
+/Users/biying/Documents/dev/biying-art/src/app/about/about.component.html:
+   97  		  	  <p>Fellow and Artist in Residence, Jentel Artist Residency Program, Banner, Wyoming, 2013</p> 
+   98  		  		<p>Third Prize - Karsh Prize in Photography, 2010</p>
+   99: 		  		<p>Mima Weissmann Memorial Fund for the Study of Ceramic Arts, Office for the Arts at Harvard, 2009</p>
+  100  		  		<p>Dean's Discretionary Fund Project Grant SMFA, Boston, 2008, 2009</p>
+  101  		  		<p>First Prize - Student Annual, Central Academy of Fine Arts Beijing, China, 2005</p>
+
+/Users/biying/Documents/dev/biying-art/src/app/app.module.ts:
+   44  import { ContactComponent } from './contact/contact.component';
+   45  import { PaintingComponent } from './painting/painting.component';
+   46: import { CeramicComponent } from './ceramic/ceramic.component';
+   47  import { VideoComponent } from './video/video.component';
+   48  import { PaintingDialogComponent } from './painting/painting-dialog/painting-dialog.component';
+   49: import { CeramicDialogComponent } from './ceramic/ceramic-dialog/ceramic-dialog.component';
+   50  import { DesignComponent } from './design/design.component';
+   51  import { DesignDialogComponent } from './design/design-dialog/design-dialog.component';
+   ..
+   66      //   }, 
+   67      //   {
+   68:     //     path: 'ceramic',
+   69:     //     component: CeramicComponent,
+   70      //   },
+   71      //   {
+   ..
+   90      ContactComponent,
+   91      PaintingComponent,
+   92:     CeramicComponent,
+   93      VideoComponent,
+   94      PaintingDialogComponent,
+   95:     CeramicDialogComponent,
+   96      AppearDirective,
+   97      DesignComponent,
+   ..
+  136    entryComponents:[
+  137      PaintingDialogComponent,
+  138:     CeramicDialogComponent,
+  139      DesignDialogComponent,
+  140    ],
+
+/Users/biying/Documents/dev/biying-art/src/app/artwork-table/artwork-table-datasource.ts:
+   67    {id: 51, name: 'Head', material: 'oil on canvas', size: ''},
+   68  
+   69:   {id: 52, name: 'Ceramic No.1', material: '', size: ''},
+   70:   {id: 53, name: 'Ceramic No.4', material: '', size: ''},
+   71:   {id: 54, name: 'Ceramic No.5', material: '', size: ''},
+   72:   {id: 55, name: 'Ceramic No.6', material: '', size: ''},
+   73:   {id: 56, name: 'Ceramic No.7', material: '', size: ''},
+   74:   {id: 57, name: 'Ceramic No.9', material: '', size: ''},
+   75:   {id: 58, name: 'Ceramic No.10', material: '', size: ''},
+   76:   {id: 59, name: 'Ceramic No.13', material: '', size: ''},
+   77:   {id: 60, name: 'Ceramic No.14', material: '', size: ''},
+   78:   {id: 61, name: 'Ceramic No.15', material: '', size: ''},
+   79:   {id: 62, name: 'Ceramic No.16', material: '', size: ''},
+   80    {id: 63, name: 'Black T Shirt Pyramid No.1', material: '', size: ''},
+   81    {id: 64, name: 'Protea Man No.2', material: '', size: ''},
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic-dialog/ceramic-dialog.component.html:
+    1  <h1 mat-dialog-title>{{data.fileName}}</h1>
+    2  <mat-dialog-content>
+    3: 	<img matTooltip="{{data.fileName}}" matTooltipPosition="above" class="ceramic-img" src="/assets/ceramic/{{data.fileName}}">
+    4  
+    5  	<mat-dialog-actions>
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic-dialog/ceramic-dialog.component.scss:
+    3  }
+    4    
+    5: .ceramic-img {
+    6  	max-width: 100%;
+    7  }
+    .
+   12   
+   13  @media screen and (max-width: 420px) {
+   14:   .ceramic-img {
+   15  		margin: 0;
+   16  	}
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic-dialog/ceramic-dialog.component.spec.ts:
+    1  import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+    2  
+    3: import { CeramicDialogComponent } from './ceramic-dialog.component';
+    4  
+    5: describe('CeramicDialogComponent', () => {
+    6:   let component: CeramicDialogComponent;
+    7:   let fixture: ComponentFixture<CeramicDialogComponent>;
+    8  
+    9    beforeEach(async(() => {
+   10      TestBed.configureTestingModule({
+   11:       declarations: [ CeramicDialogComponent ]
+   12      })
+   13      .compileComponents();
+   ..
+   15  
+   16    beforeEach(() => {
+   17:     fixture = TestBed.createComponent(CeramicDialogComponent);
+   18      component = fixture.componentInstance;
+   19      fixture.detectChanges();
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic-dialog/ceramic-dialog.component.ts:
+    3  
+    4  @Component({
+    5:   selector: 'app-ceramic-dialog',
+    6:   templateUrl: './ceramic-dialog.component.html',
+    7:   styleUrls: ['./ceramic-dialog.component.scss']
+    8  })
+    9  
+   10: export class CeramicDialogComponent implements OnInit {
+   11    constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+   12  
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic.component.html:
+    1  <div>
+    2    <mat-grid-list cols="5" rowHeight="100px">
+    3:     <mat-grid-tile *ngFor="let ceramic of ceramics" mat-grid-tile colspan="2" rowspan="3">
+    4:       <img [@artworkflyInOut]='artworkState' (mousein)="artworkActive()" (click)="openDialog(ceramic)" class="ceramic-img" src="/assets/ceramic/{{ceramic}}" alt="Biying Zhang Ceramic Image"> 
+    5      </mat-grid-tile>
+    6    </mat-grid-list>
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic.component.scss:
+    1: .ceramic-img {
+    2  	margin: 100px 2%;
+    3  	max-height: 80%;
+    .
+   10  
+   11  @media screen and (max-width: 820px) {
+   12:   .ceramic-img {
+   13  		margin: 0 2%;
+   14  		max-width: 70%;
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic.component.spec.ts:
+    1  import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+    2  
+    3: import { CeramicComponent } from './ceramic.component';
+    4  
+    5: describe('CeramicComponent', () => {
+    6:   let component: CeramicComponent;
+    7:   let fixture: ComponentFixture<CeramicComponent>;
+    8  
+    9    beforeEach(async(() => {
+   10      TestBed.configureTestingModule({
+   11:       declarations: [ CeramicComponent ]
+   12      })
+   13      .compileComponents();
+   ..
+   15  
+   16    beforeEach(() => {
+   17:     fixture = TestBed.createComponent(CeramicComponent);
+   18      component = fixture.componentInstance;
+   19      fixture.detectChanges();
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramic.component.ts:
+    1  import { Component, OnInit } from '@angular/core';
+    2: import { myCeramics } from './ceramics';
+    3  import { MatDialog } from '@angular/material';
+    4  import {
+    .
+   21  import { artAnimations } from '../animations/art-animations';
+   22  
+   23: import { CeramicDialogComponent } from './ceramic-dialog/ceramic-dialog.component';
+   24  
+   25  @Component({
+   26:   selector: 'app-ceramic',
+   27:   templateUrl: './ceramic.component.html',
+   28:   styleUrls: ['./ceramic.component.scss'],
+   29    animations: artAnimations
+   30  })
+   31: export class CeramicComponent implements OnInit {
+   32  
+   33  	constructor(public dialog: MatDialog) {}
+   ..
+   36  
+   37    artworkState: string = '*';
+   38:   ceramics: Array<String> = myCeramics;
+   39  
+   40    artworkActive() {
+   ..
+   43  
+   44    openDialog(fileName) {
+   45:     this.dialog.open(CeramicDialogComponent, {
+   46        height: '95%',
+   47        width: '95%',
+
+/Users/biying/Documents/dev/biying-art/src/app/ceramic/ceramics.ts:
+    1: export const myCeramics = [
+    2: 	"ceramic8.jpg",
+    3  
+    4: 	// "ceramic2.jpg",
+    5: 	// "ceramic3.jpg",
+    6: 	"ceramic4.jpg",	
+    7: 	"ceramic1.jpg",
+    8  
+    9: 	"ceramic5.jpg",
+   10: 	"ceramic7.jpg",
+   11  
+   12: 	"ceramic9.jpg",
+   13: 	"ceramic10.jpg",
+   14: 	"ceramic13.jpg",
+   15: 	"ceramic14.jpg",
+   16: 	"ceramic6.jpg",
+   17  
+   18: 	"ceramic15.jpg",	
+   19: 	"ceramic16.jpg"
+   20  ];
+
+/Users/biying/Documents/dev/biying-art/src/app/favorites/favorite-list.ts:
+   56    {id: 51, name: 'Head', material: 'oil on canvas', size: ''},
+   57  
+   58:   {id: 52, name: 'Ceramic No.1', material: '', size: ''},
+   59:   {id: 53, name: 'Ceramic No.4', material: '', size: ''},
+   60:   {id: 54, name: 'Ceramic No.5', material: '', size: ''},
+   61:   {id: 55, name: 'Ceramic No.6', material: '', size: ''},
+   62:   {id: 56, name: 'Ceramic No.7', material: '', size: ''},
+   63:   {id: 57, name: 'Ceramic No.9', material: '', size: ''},
+   64:   {id: 58, name: 'Ceramic No.10', material: '', size: ''},
+   65:   {id: 59, name: 'Ceramic No.13', material: '', size: ''},
+   66:   {id: 60, name: 'Ceramic No.14', material: '', size: ''},
+   67:   {id: 61, name: 'Ceramic No.15', material: '', size: ''},
+   68:   {id: 62, name: 'Ceramic No.16', material: '', size: ''},
+   69    {id: 63, name: 'Black T Shirt Pyramid No.1', material: '', size: ''},
+   70    {id: 64, name: 'Protea Man No.2', material: '', size: ''},
+
+/Users/biying/Documents/dev/biying-art/src/app/portfolio/portfolio.component.html:
+   19  	    	Painting
+   20  	    </mat-option>
+   21: 	    <mat-option [artHighlight]="color" defaultColor="gold" value="Ceramic">
+   22: 	    	Ceramic
+   23  	    </mat-option>
+   24  	    <mat-option [artHighlight]="color" defaultColor="gold" value="Design">
+   ..
+   70  
+   71  <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
+   72: <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
+   73  <!-- <app-video *ngIf="artType.value == 'Video'"></app-video> -->
+   74  <app-design *ngIf="artType.value == 'Design'"></app-design>
+
+98 matches across 14 files
+
+
+Searching 75 files for "2017"
+
+/Users/biying/Documents/dev/biying-art/src/app/app.component.html:
+   33        <!-- <p class="update">Want to get updates on my news?</p> -->
+   34        <p >
+   35:         <!-- <img src="/assets/design/copyright-32.png" alt="Biying Zhang Copyright"> 2019 Biying Zhang -->
+   36          <a href="https://github.com/AbbyBiying/biying-art"><img class="copy-right" src="/assets/design/BZ02.png" alt="Biying Zhang Copyright"></a>
+   37        </p>    
+
+1 match in 1 file

@@ -34,30 +34,30 @@ export const artAnimations = [
 
 
   trigger('bioimgAnimation', [ 
-    state('void',   style({transform: 'translateX(-80%)'})),
+    state('void',   style({transform: 'translateX(-10%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
-    state('imgout',   style({transform: 'translateX(-80%)'})),
-    transition('imgin => imgout', animate('10s ease-in')),
-    transition('imgout => imgin', animate('10s ease-out')),
-    transition('void => imgin', animate('10s ease-in')),   
+    // state('imgout',   style({transform: 'translateX(-80%)'})),
+    transition('imgin => imgout', animate('1s ease-in')),
+    // transition('imgout => imgin', animate('1s ease-out')),
+    // transition('void => imgin', animate('1s ease-in')),   
   ]),
 
   trigger('bionameupAnimation', [ 
     state('void',   style({color:'transparent',transform: 'translateY(-200%)'})),
     state('together', style({color:'white',transform: 'translateY(0)'})),
     state('apart',   style({color:'transparent',transform: 'translateY(-200%)'})),
-    transition('together => apart', animate('1.5s 3s ease-in')),
-    transition('apart => together', animate('1.5s 3s ease-out')),
-    transition('void => together', animate('1.5s 3s ease-in')),   
+    transition('together => apart', animate('1.5s 0.5s ease-in')),
+    transition('apart => together', animate('1.5s 0.5s ease-out')),
+    transition('void => together', animate('1.5s 0.5s ease-in')),   
   ]),
 
   trigger('bionamedownAnimation', [ 
     state('void',   style({color:'transparent', transform: 'translateY(200%)'})),
     state('together', style({color:'white',transform: 'translateY(0)'})),
     state('apart',   style({color:'transparent',transform: 'translateY(200%)'})),
-    transition('together => apart', animate('1.5s 3s ease-in')),
-    transition('apart => together', animate('1.5s 3s ease-out')),
-    transition('void => together', animate('1.5s 3s ease-in')),   
+    transition('together => apart', animate('1.5s 0.5s ease-in')),
+    transition('apart => together', animate('1.5s 0.5s ease-out')),
+    transition('void => together', animate('1.5s 0.5s ease-in')),   
   ]),   
 
   trigger('bioAnimation', [
@@ -125,31 +125,42 @@ export const artAnimations = [
   trigger('artworkflyInOut', [
     state('artworkIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate('6s', keyframes([
-        style({opacity: 0, transform: 'translateX(-120%) scale(0.5)', offset: 0}),
+      animate('3s', keyframes([
+        style({opacity: 0, transform: 'translateX(-20%) scale(1)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
-        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
+        style({opacity: 1, transform: 'translateX(0) scale(1)',  offset: 1.0})
+      ]))
+    ])
+  ]),
+
+  trigger('appimgflyInOut', [
+    state('artworkIn', style({transform: 'translateX(0)'})),
+    transition('void => *', [
+      animate('3s', keyframes([
+        style({opacity: 0, transform: 'translateX(-30%) scale(1)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(5px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0) scale(1)',  offset: 1.0})
       ]))
     ])
   ]),
 
   trigger('leftrightAnimation', [
-    state('void', style({opacity: 0, transform: 'translateX(-30%) scale(0.5)'})),
+    state('void', style({opacity: 0, transform: 'translateX(0) scale(1)'})),
     state('left', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
-    state('right', style({opacity: 1, transform: 'translateX(-30%) scale(1)'})),
-    transition('left => right', animate('0.02s 4s ease-in')),
-    transition('right => left', animate('0.02s 4s ease-out')),
-    transition('void => left', animate('0.05s 4s ease-in')),   
+    state('right', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
+    transition('left => right', animate('0.02s 1s ease-in')),
+    transition('right => left', animate('0.02s 1s ease-out')),
+    transition('void => left', animate('0.05s 1s ease-in')),   
   ]),
  
 
   trigger('rightleftAnimation', [
-    state('void', style({opacity: 0, transform: 'translateX(30%) scale(0.5)' })),
+    state('void', style({opacity: 0, transform: 'translateX(0) scale(1)' })),
     state('right', style({opacity: 1, transform: 'translateX(0) scale(1)' })),
-    state('left', style({opacity: 1, transform: 'translateX(30%) scale(1)'})),
-    transition('right => left', animate('0.02s 4s ease-in')),
-    transition('left => right', animate('0.02s 4s ease-out')),
-    transition('void => right', animate('0.05s 4s ease-in')),   
+    state('left', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
+    transition('right => left', animate('0.02s 1s ease-in')),
+    transition('left => right', animate('0.02s 1s ease-out')),
+    transition('void => right', animate('0.05s 1s ease-in')),   
   ]),
 
   trigger('mySecondAnimation', [

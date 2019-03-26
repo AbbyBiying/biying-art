@@ -1,0 +1,273 @@
+.art-statement {
+  text-shadow: 2px 2px 2px black;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  line-height: 2;
+  color: white;
+  opacity: 0.8;
+}
+
+.mat-form-field {
+  top: 80%;
+  color: white;
+  text-align: center;
+}
+
+#art-select {
+  margin-bottom: -50px;
+  min-height: 50%;
+}
+
+#art-select > mat-form-field {
+  text-align: center;
+  width: 220px;
+  margin: 0 auto;
+}
+
+#art-select > mat-form-field {
+  margin-left: 40%;
+  width: 250px;
+}
+
+.logo {
+  height: 50%;
+  width: 100%;
+}
+
+.form {
+  text-align: center;
+}
+.mat-option-text {
+  font-size: 1em;
+}
+
+.statement-wrap {
+  text-align: center;
+
+  margin-left: 5%;
+  .statement {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+
+    p {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .statement-wrap {
+    margin-left: 10%;
+    text-align: center;
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1366px) {
+  .statement-wrap {
+    text-align: center;
+    font-size: 1.2em;
+    margin-left: 14%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .statement-wrap {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .statement-wrap {
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 11%;
+    .statement {
+      top: 15%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .statement-wrap {
+    margin-left: 10%;
+    padding: 19px;
+    .statement {
+      top: 8%;
+    }
+  }
+  .logo {
+    height: 30%;
+  }
+
+  #paintingStatement {
+    font-size: 1.4em;
+  }
+
+  #art-select {
+    margin-bottom: -50px;
+    min-height: 70%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .statement-wrap {
+    margin-left: 0%;
+    text-align: center;
+    font-size: 1em;
+    .statement {
+      top: 3%;
+    }
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .statement-wrap {
+    margin-left: 10%;
+    .statement {
+      top: 5%;
+    }
+  }
+
+  #paintingStatement {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .statement-wrap {
+    margin-left: 10%;
+    .statement {
+      top: 3%;
+    }
+  }
+
+  #paintingStatement {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .statement-wrap {
+    margin-left: 0%;
+    .statement {
+      top: 5%;
+    }
+  }
+  #paintingStatement {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .statement-wrap {
+    margin-left: 8%;
+    .statement {
+      top: 2%;
+    }
+    #paintingStatement {
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .statement-wrap {
+    margin-left: 8%;
+    .statement {
+      top: 2%;
+    }
+    #paintingStatement {
+      font-size: 0.85em;
+    }
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .statement-wrap {
+    margin-left: 8%;
+    .statement {
+      top: 2%;
+    }
+    #paintingStatement {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .statement-wrap {
+    margin-left: 6%;
+    .statement {
+      top: 5%;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .art-statement {
+    text-shadow: none;
+  }
+  .statement-wrap {
+    padding: 1em;
+    margin-left: 0;
+    .statement {
+      top: 5%;
+    }
+  }
+  #paintingStatement {
+    font-size: 1em;
+  }
+  .web-app-group {
+    .apps {
+      .app-title {
+        margin: 0 10%;
+      }
+
+      img {
+        flex: 0 0 auto;
+        margin: 2% auto;
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  #art-select {
+    top: 30px;
+    left: 35px;
+  }
+  #art-select > mat-form-field {
+    margin-left: 20%;
+  }
+  .art-statement {
+    text-shadow: none;
+  }
+
+  .statement-wrap {
+    margin-left: 0;
+  }
+  #paintingStatement {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #art-select {
+    top: 30px;
+    left: 35px;
+  }
+
+  .art-statement {
+    font-size: 9px;
+    .statement {
+      top: 0;
+    }
+  }
+
+  #paintingStatement {
+    font-size: 0.8em;
+  }
+}

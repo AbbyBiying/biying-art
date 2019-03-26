@@ -1,73 +1,215 @@
-<div id="hello-name">
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
-		I
-	</strong>
+<div class="about-container">
+  <div class="bio-group">
+    <div id="hello-name">
+      <div class="my-name">
+        <strong><h1>Abby Zhang</h1></strong>
+      </div>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">love
-	</strong>
+      <div class="short-bio">
+        <span
+          [@bionameupAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="nihao"
+        >
+          A curiosity-driven, creative problem solver<br />with a background in
+          art
+        </span>
+      </div>
 
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">to
-	</strong>
+      <div class="love">
+        <span
+          [@bionameupAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="nihao"
+        >
+          I&nbsp;
+        </span>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">build 
-	</strong>
+        <span
+          [@bionamedownAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="wo"
+          >love&nbsp;
+        </span>
 
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">fun
-	</strong>
+        <span
+          [@bionameupAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="shi"
+          >building&nbsp;
+        </span>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">stuff.
-	</strong> 
-</div>
+        <span
+          [@bionamedownAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="zhang"
+          >cool&nbsp;
+        </span>
 
-<div class="bioimgbg">
-	<div class="hello-there">
+        <span
+          [@bionameupAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="bi"
+          >products&nbsp;
+        </span>
+
+        <span
+          [@bionamedownAnimation]="nameState"
+          (click)="nameUpDown()"
+          class="bio-name-up-down"
+          id="ying"
+          >and learning new technologies
+        </span>
+      </div>
+    </div>
+    <!-- 	<div class="hello-there">
 		<p>Hey, nice to meet you!</p>
 
     <p>I'm Abby. I make software, web application and art.</p>
 
-		<!-- <p>A curiosity-driven software engineer with background in art and design based in California</p>  -->
+		<p>A curiosity-driven software engineer with background in art and design based in California</p> 
 		 
 		<p>I'm passionate about solving complex problems.</p> 
 		 
-	</div>
- 
-	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image">
-</div>
+	</div> -->
 
-<!-- <div class="statement" (appear)="scrollFire()"> -->
-
-<div class="statement">
-  <div class="skills" [@leftrightAnimation]='leftState' 
-  (click)="leftActive()">
-  	<h3>Skills</h3>
-		<ul>
-			<li>Ruby on Rails, Node.js, Angular, Vue.js, Vuex, D3.js</li>
-			<li>SQL, MongoDB, Neo4j, Git,</li>
-  		<li>Adobe Photoshop, Illustrator,</li>
-  		<li>Final Cut Pro, After Effects, Pro Tools</li>
-  	</ul>
-  </div>
-<div id="donut"></div>
-  <div class="work" [@rightleftAnimation]='rightState' (click)="rightActive()"> 
-    <h3>Work Experience</h3>
-    <ul>
-    	<li>Software Developer at <a href="https://www.sosolimited.com/">Sosolimited</a>, CA</li>
-
-    	<li>Software Developer & Project Manager at <a href="http://www.fex.com/">Fulfillment Express, Inc.</a>, CA</li>
-
-	  	<li>Software Engineer at <a href="http://www.tradelegs.com/">Tradelegs LLC</a>, NYC</li>
-	  	<li>Full Stack Developer at <a href="https://openassembly.com/home">Open Assembly</a>, NYC</li>
-	  </ul>
+    <!-- <img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image"> -->
+    <div class="bioimgbg">
+      <img
+        class="bio-img"
+        [@bioimgAnimation]="imgState"
+        src="/assets/painting/detail9.png"
+        alt="Biying Zhang Painting Detail Image"
+      />
+    </div>
   </div>
 
+  <div class="statement">
+    <div class="skills" [@leftrightAnimation]="leftState">
+      <h3>Skills</h3>
+      <p><span>Languages:</span> JavaScript/ES6/TypeScript, Python 3, Ruby</p>
+      <p>
+        <span>Framework/Libraries:</span> Angular 10, Angular Material, Vue.js,
+        Vuex, Flask, Starlette, Rails, Sinatra, D3.js, Highcharts JS, jQuery
+      </p>
+      <p><span>Database:</span> PostgreSQL, MySQL, MongoDB, Neo4j</p>
+
+      <p>
+        <span>Testing:</span> Jasmine, Protractor, pytest, RSpec, Capybara,
+        Cucumber
+      </p>
+      <p>
+        <span>Cloud:</span> Azure, AWS Lambda, API Gateway, Cognito, RDS, S3,
+        Elastic Beanstalk
+      </p>
+
+      <p>
+        <span>Web:</span> Web-scraping with BeautifulSoup and Scrapy, HTML5,
+        CSS3, Sass, CSS grid, Pure CSS, Flexbox, Postman
+      </p>
+    </div>
+
+    <div class="work">
+      <h3>Hobby Projects</h3>
+      <div>
+        <strong>ABZ Exchange:</strong>
+        A social platform for exchanging personal items and services.
+      </div>
+      <p>
+        <a target="_blank" href="https://github.com/AbbyBiying/ABZ_EXCHANGE"
+          >ABZ EXCHANGE Backend app</a
+        >
+      </p>
+
+      <p class="app-info">
+        Built with Ruby on Rails, PostgreSQL, FactoryBot, RSpec, Capybara and
+        Cucumber, deployed on Heroku
+      </p>
+
+      <a target="_blank" href="https://github.com/AbbyBiying/ABZ"
+        >ABZ EXCHANGE Frontend app</a
+      >
+      <p class="app-info">
+        Built with Angular 8, Angular Material, Angular Flex-Layout
+      </p>
+
+      <a target="_blank" href="https://github.com/AbbyBiying/Tea-Time"
+        >Tea Time</a
+      >
+      <p class="app-info">
+        Built with Python 3, Flask, SQLite, BeautifulSoup and Bootstrap
+      </p>
+
+      <a target="_blank" href="https://github.com/AbbyBiying/biying-art"
+        >Biying Zhang Site</a
+      >
+      <p class="app-info">
+        Built with Angular 10, Angular Material, deployed on AWS S3
+      </p>
+    </div>
+
+    <div class="work" [@rightleftAnimation]="rightState">
+      <h3>Work Experience</h3>
+
+      <p>
+        Software Developer at
+        <a target="_blank" href="https://www.mulliganfunding.com/"
+          >Mulligan Funding, LLC</a
+        >
+      </p>
+
+      <p>
+        Software Developer at
+        <a target="_blank" href="https://sourcemolecular.com/"
+          >Source Molecular Corporation</a
+        >
+      </p>
+
+      <p>
+        Software Developer at
+        <a target="_blank" href="https://www.sosolimited.com/">Sosolimited</a>
+      </p>
+
+      <p>
+        Software Developer & Project Manager at
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/company/fulfillment-express-inc./about/"
+          >Fulfillment Express, Inc.</a
+        >
+      </p>
+
+      <p>
+        Software Developer at
+        <a target="_blank" href="http://www.tradelegs.com/">Tradelegs LLC</a>
+      </p>
+
+      <p>
+        Software Developer at
+        <a target="_blank" href="https://openassembly.com/home"
+          >Open Assembly</a
+        >
+      </p>
+    </div>
+  </div>
 </div>
+<!-- <div class="bioimg"> -->
 
-<div class="bioimg">
-
-	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 
+<!-- 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 
 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.3.png" alt="HTML5"> 
-	 
-</div>
+ -->
+<!-- 	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.4.png" alt="HTML5"> 
+	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.3.png" alt="HTML5"> 
+	  -->
+<!-- </div> -->
+
+<!-- 
 
 <div class="CV-language">
 	<mat-radio-group [(ngModel)]="language">
@@ -214,54 +356,54 @@
   			<div class="year">
 					<p class="shows">
 			  		<p>
-			  			<a href="http://www.wickedlocal.com/acton/features/x273429105/The-Beacon-July-3-2013#axzz2Y20kK06F">
+			  			<a target="_blank" href="http://www.wickedlocal.com/acton/features/x273429105/The-Beacon-July-3-2013#axzz2Y20kK06F">
 				  		Art exhibit coming to Acton lipary
 				  		</a> 
 			  		</p>
 						<p>
-							<a href="http://www.boston.com/ae/theater_arts/articles/2011/06/29/sweeping_through_a_century_of_landscapes/">      Sweeping through a century of landscapes
+							<a target="_blank" href="http://www.boston.com/ae/theater_arts/articles/2011/06/29/sweeping_through_a_century_of_landscapes/">      Sweeping through a century of landscapes
 							</a>
 						</p>
 						<p>
-							<a href="http://en.cafa.com.cn/beyond-art-space-presents-the-solo-exhibition-of-alienation-by-zhang-biying.html">Beyond Art Space presents the solo exhibition of “Alienation” by Zhang Biying
+							<a target="_blank" href="http://en.cafa.com.cn/beyond-art-space-presents-the-solo-exhibition-of-alienation-by-zhang-biying.html">Beyond Art Space presents the solo exhibition of “Alienation” by Zhang Biying
 							</a>
 						</p>
 						<p>
-							<a href="http://newton.wickedlocal.com/x1652301639/At-the-Newton-Free-Lipary">City Light: Familiar Landscapes with Alienation
+							<a target="_blank" href="http://newton.wickedlocal.com/x1652301639/At-the-Newton-Free-Lipary">City Light: Familiar Landscapes with Alienation
 							</a>
 						</p>
-						<!-- <p><a href="http://art.state.gov/artistdetail.aspx?id=103240"></a> -->
-						<p>
-							<a href="http://www.smfa.edu/files/Student-Annual-2010-press-release-FINAL.pdf">
+						<p><a target="_blank" href="http://art.state.gov/artistdetail.aspx?id=103240"></a> -->
+<!-- 	<p>
+							<a target="_blank" href="http://www.smfa.edu/files/Student-Annual-2010-press-release-FINAL.pdf">
 							The 2010 Yousuf Karsh Prize in photography
 							</a>
-						</p>
-						<!-- <p><a href="http://www.nictoglobe.com/new/ainac2010/biying.html"></a> -->
-						<!-- <p><a href="http://gsas.tufts.edu/about/news/newsArchives/Fall2011/studioArtExhibit.htm"></a> -->
-						<!-- <p><a href="http://hframes.wordpress.com/tag/biying-zhang/"></a> -->
-						<!-- <p><a href="http://www.millfineart.com/blog/2012/05/24/alienation-and-interaction-the-art-of-two- -->
-						<!-- contemporary-chinese-artists/"></a> -->
-						<!-- <p><a href="http://17days.wordpress.com/2013/02/01/biying-zhang/"></a> -->
-						<p>
-							<a href="http://artgallery.tufts.edu/exhibitions/2011/thesisApril.htm">
+						</p> -->
+<!-- <p><a target="_blank" href="http://www.nictoglobe.com/new/ainac2010/biying.html"></a> -->
+<!-- <p><a target="_blank" href="http://gsas.tufts.edu/about/news/newsArchives/Fall2011/studioArtExhibit.htm"></a> -->
+<!-- <p><a target="_blank" href="http://hframes.wordpress.com/tag/biying-zhang/"></a> -->
+<!-- <p><a target="_blank"  href="http://www.millfineart.com/blog/2012/05/24/alienation-and-interaction-the-art-of-two- -->
+<!-- contemporary-chinese-artists/"></atarget="_blank"> -->
+<!-- <p><a target="_blank" href="http://17days.wordpress.com/2013/02/01/biying-zhang/"></a> -->
+<!-- <p>
+							<a target="_blank" href="http://artgallery.tufts.edu/exhibitions/2011/thesisApril.htm">
 							MFA Thesis Exhibition
 							</a>
-						</p>
-						<!-- <p><a href="http://bostonartists.blogspot.com/2011_04_01_archive.html"></a> --> 
-						<!-- <p><a href="http://www.namoc.org/msg/zhanlan/zlzpklr/201211/t20121130_153886.html"></a> -->
-						<p class="chinese">
-							<a href="http://exhibit.artron.net/exhibition-20351.html">“异化”张碧莹个展
+						</p> -->
+<!-- <p><a target="_blank" href="http://bostonartists.blogspot.com/2011_04_01_archive.html"></a> -->
+<!-- <p><a target="_blank" href="http://www.namoc.org/msg/zhanlan/zlzpklr/201211/t20121130_153886.html"></a> -->
+<!-- <p class="chinese">
+							<a target="_blank" href="http://exhibit.artron.net/exhibition-20351.html">“异化”张碧莹个展
 							</a>
 						</p>
 
 						<p class="chinese">
-							<a href="http://news.99ys.com/news/2013/0115/21_115355_1.shtml">
+							<a target="_blank" href="http://news.99ys.com/news/2013/0115/21_115355_1.shtml">
 							迷城记
 						  </a>
 					  </p>
 
 						<p class="chinese">
-							<a href="http://pekin.cervantes.es/FichasCultura/Ficha88283_64_27.htm">MADATAC新媒体艺术节
+							<a target="_blank" href="http://pekin.cervantes.es/FichasCultura/Ficha88283_64_27.htm">MADATAC新媒体艺术节
 							</a>
 						</p>  
 		 		</div>
@@ -445,5 +587,5 @@
 		 		</div>
 		  </div>
 		</section>
-  </section>
-</div>
+  </section>  
+</div> -->

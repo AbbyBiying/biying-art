@@ -1,37 +1,71 @@
-<div class="header-button-container" [hidden]="sidenav.opened">
-  <button mat-button class="menu" (click)="sidenav.toggle()"> 
-    
-    <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo">
- 
-    <!-- <mat-icon>menu</mat-icon> -->
-  </button>
-</div>
-
-<mat-sidenav-container class="container">
-
-  <mat-sidenav #sidenav class="sidenav">
-    <button mat-button class="close-button" (click)="sidenav.toggle()">
-      <mat-icon>clear</mat-icon>
+<div class="wrapper">
+  <div class="header-container" [hidden]="sidenav.opened">
+    <button mat-button class="menu" (click)="sidenav.toggle()">
+      <mat-icon class="menu-icon">menu</mat-icon>
     </button>
-    <ul class="menu-button">
+  </div>
 
-      <li><button mat-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()" >Portfolio</button></li>
-      <li><button mat-button routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">About</button></li>
- 
-      <li><button mat-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li>
-    </ul>
-  </mat-sidenav>
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav class="sidenav">
+      <button mat-button class="close-button" (click)="sidenav.toggle()">
+        <mat-icon>clear</mat-icon>
+      </button>
 
-  <router-outlet></router-outlet>
+      <ul class="menu-button">
+        <li>
+          <button
+            mat-button
+            routerLink="/portfolio"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            Portfolio
+          </button>
+        </li>
+        <!-- <li>
+          <button mat-button>
+            <a target="_blank"
+              href="/assets/files/Abby_Zhang_Resume_Software_Developer.pdf"
+              download="Abby_Zhang_Resume.pdf"
+              routerLinkActive="active"
+              (click)="sidenav.toggle()"
+              >Resume</a
+            >
+          </button>
+        </li> -->
+        <li>
+          <button
+            mat-button
+            routerLink="/art"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            Art
+          </button>
+        </li>
+        <li>
+          <button
+            mat-button
+            routerLink="/about"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            About
+          </button>
+        </li>
+      </ul>
+    </mat-sidenav>
 
-  <footer>
-    <div class="footer-section">
-      <!-- <p class="update">Want to get updates on my news?</p> -->
-      <p >
-        <!-- <img src="/assets/design/copyright-32.png" alt="Biying Zhang Copyright"> 2017 Biying Zhang -->
-        <a href="https://github.com/AbbyBiying/biying-art"><img class="copy-right" src="/assets/design/BZ02.png" alt="Biying Zhang Copyright"></a>
-      </p>    
-    </div>
-  </footer>
-</mat-sidenav-container>
+    <router-outlet></router-outlet>
 
+    <footer>
+      <div class="footer-section">
+        <p>
+          <a target="_blank" href="https://github.com/AbbyBiying/biying-art"
+            >All Rights Reserved © Biying Zhang</a
+          >
+        </p>
+      </div>
+    </footer>
+  </mat-sidenav-container>
+</div>
