@@ -2,11 +2,6 @@ a {
   color: white;
 }
 
-.header-button-container {
-  background: rgb(250, 250, 250);
-  height: 64px;
-}
-
 .mat-button {
   background-color: rgb(28, 27, 27);
 
@@ -29,23 +24,6 @@ a {
   margin-left: 20px;
   height: 35px;
   width: 60px;
-}
-
-.header-button-container {
-  position: fixed;
-  z-index: 999999;
-  width: 100%;
-}
-
-@media only screen and (min-width:320px){
-/*  .logo {
-    float:left;
-  }*/
-}
-
-.container {
-  min-height: 100vh;
-  padding-top: 44px; 
 }
 
 .menu-button {
@@ -79,7 +57,7 @@ footer {
 /*  margin-bottom: -20px;
   margin-top: -18px;*/ 
   margin-top: -5px !important;
-  background-color: #1f1e1e;
+  /*background-color: #1f1e1e;*/
   font-family: 'Raleway', sans-serif;
 }
 
@@ -112,7 +90,28 @@ footer {
   font-weight: 300;
   img {
     height: 14px;
-  }*/}
+  }*/
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .header-container {
+    background: rgb(250, 250, 250);
+    height: 64px;    
+    flex: 1 0 auto;  
+    /*position: fixed;*/
+    z-index: 9;
+    width: 100%;
+  }
+ 
+  .container{
+    flex: 1 1 auto;  
+    min-height: 100vh;
+    height: 100%;
+  }
+}
 
 @media screen and (max-width: 420px) {
   .copy-right {

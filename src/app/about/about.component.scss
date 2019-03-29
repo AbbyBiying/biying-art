@@ -30,7 +30,6 @@ a {
 
 .bio-img {
   height: 100%;
-  /*height: 467px;*/
   overflow: hidden;
   z-index: 1;
   width: 100%;
@@ -55,7 +54,8 @@ a {
 .bio, .statement {
   background: rgba(27,25,25,0.98);
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;    
+  height: 100%;    
 }
 
 .chinese {
@@ -99,15 +99,19 @@ a {
   margin-right: 25px;
 }
 
-#hello-name {
-  /*text-shadow: 2px 2px 2px black;*/
-  left: 50px;
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
-  margin-top: 200px;
-  color:rgba(255,255,255,0.5);
-  font-size: 50px;
-  z-index: 5;
+.about-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+ 
+  #hello-name {
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    color:rgba(255,255,255,0.5);
+    z-index: 5;    
+    padding: 3%;
+  }
 }
 
 .mat-radio-button {
@@ -146,47 +150,49 @@ a {
 	margin-top: -10px;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1300px) {  
   #hello-name {
-    font-size: 64px;
+    font-size: 170px;
   }
 
-  .aboutimg{
-    height: 800px !important;
-  }
-}
-
-@media screen and (min-width: 1300px) {
   .aboutimg{
     height: 530px;
   }
 
   .hello-there {
-    font-size: 27px;
     left: 46%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .aboutimg{
+    height: 800px !important;
+  }  
+
+  #hello-name {
+    font-size: 230px;
+  }
+}
+
+@media screen and (max-width: 1300px) {  
+  #hello-name {
+    font-size: 110px;
   }
 }
 /*for ipad and ipad pro*/
 
-
 @media screen and (max-width: 1270px){
   .aboutimg {
-      height: 580px;
+    height: 580px;
   }
 }
 
 @media screen and (max-width: 1150px) {
-
-  .statement{
-    /*padding: 135px;*/
-  }
-
   #about-content {
     margin-left: 0;
   }
 
   .bio-img {
-    /*height: 250px;*/
     height: 100%;
   }
 
@@ -195,18 +201,11 @@ a {
   }
 
   #hello-name {
-    font-size: 50px;
-    margin-top: 50px;
+    font-size: 120px;  
   }
 
   .aboutimg {
     height: 300px;
-  }
-}
-
-@media screen and (min-width: 1700px){
-  .aboutimg {
-    height: 100%;
   }
 }
 
@@ -244,6 +243,10 @@ a {
   .aboutimg {
     height: 400px;
   }
+
+  #hello-name {
+    font-size: 100px;  
+  }
 }
 
 @media screen and (max-width: 816px){
@@ -255,6 +258,9 @@ a {
 @media screen and (max-width: 800px){
   .aboutimg {
     height: 350px;
+  }  
+  #hello-name {
+    font-size: 80px;  
   }
 }
 
@@ -283,21 +289,20 @@ a {
 
   .statement {
     letter-spacing: 1.5px;
-    /*padding: 25px;*/
     font-weight: 300;
     line-height: 2;
     font-size: 17px;    
     margin-left: -32px;
+  }
+
+  #hello-name {
+    font-size: 60px;  
   }
 }
 
 @media screen and (max-width: 600px){
   .aboutimg {
     height: 255px;
-  }
-  
-  #hello-name {
-    font-size: 40px;
   }
 }
 
@@ -311,15 +316,15 @@ a {
   .aboutimg {
     height: 220px;
   }
-
-  #hello-name {
-    font-size: 32px;
-  }
 }
 
 @media screen and (max-width: 460px){
   .aboutimg {
     height: 180px;
+  }
+
+  #hello-name {
+    font-size: 50px;  
   }
 } 
 
@@ -328,20 +333,9 @@ a {
     height: 160px;
   }
 
-  #hello-name {
-    font-size: 18px; 
-    margin-top: 20px;
-    /*left: 35px;*/
-  }
-
   .bio-img {
-
     width: 100% !important;
-    height: 100%;
     overflow: hidden !important;
- /*   height: 150px;
-    overflow: hidden;
-    z-index: 1;*/
   }
 
   .bio {
@@ -373,7 +367,6 @@ a {
     font-weight: 500;
   }
 
-
   .hello-there {
     padding: 50px 0 0 0;
     font-size: 10px;
@@ -401,9 +394,13 @@ a {
   .aboutimg {
     height: 130px;
   }
+
+  #hello-name {
+    font-size: 40px;  
+  }
 }
 
-@media screen and (max-width: 310px){
+@media screen and (max-width: 325px){
   .aboutimg {
     height: 110px;
   }
@@ -418,9 +415,6 @@ a {
   .aboutimg {
     width: 100%;
     height: 100%;
-  }
-  #hello-name{
-    font-size: 13px;
   }
 }
 

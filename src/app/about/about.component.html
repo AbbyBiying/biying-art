@@ -1,80 +1,83 @@
-<div id="hello-name">
+<div class="about-container">
+	<div id="hello-name">
 	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
-		I
+		I&nbsp;
 	</strong>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">love
+	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">love&nbsp;
 	</strong>
 
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">to
+	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">to&nbsp;
 	</strong>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">build 
+	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">build&nbsp; 
 	</strong>
 
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">fun
+	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">cool&nbsp;
 	</strong>
 
 	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">stuff.
 	</strong> 
 </div>
-
-<div class="bioimgbg">
-	<div class="hello-there">
+<!-- 	<div class="hello-there">
 		<p>Hey, nice to meet you!</p>
 
     <p>I'm Abby. I make software, web application and art.</p>
 
-		<!-- <p>A curiosity-driven software engineer with background in art and design based in California</p>  -->
+		<p>A curiosity-driven software engineer with background in art and design based in California</p> 
 		 
 		<p>I'm passionate about solving complex problems.</p> 
 		 
-	</div>
+	</div> -->
  
-	<img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image">
+	<!-- <img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image"> -->
+	<div class="bioimgbg">
+
+		<img class="bio-img" [@bioimgAnimation]='imgState' src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image">
+	</div>
+
 </div>
-
-<!-- <div class="statement" (appear)="scrollFire()"> -->
-
 <div class="statement">
   <!-- <div class="skills" [@leftrightAnimation]='leftState'  -->
   <!-- (click)="leftActive()"> -->
-   <div class="skills" [@leftrightAnimation]='leftState' 
+    <div class="skills" [@leftrightAnimation]='leftState' 
    >
-  	<h3>Skills</h3>
-		<ul>
-			<li>Ruby on Rails, Node.js, Angular 7, Vue.js, Vuex, D3.js</li>
-			<li>SQL, MongoDB, Neo4j, Git,</li>
-  		<li>Adobe Photoshop, Illustrator,</li>
-  		<li>Final Cut Pro, After Effects, Pro Tools</li>
-  	</ul>
-  </div>
-<div id="donut"></div>
-  <div class="work" 
-  [@rightleftAnimation]='rightState'>
-  <!-- (click)="rightActive()">  -->
-    <h3>Work Experience</h3>
-    <ul>
-    	<li>Software Developer at <a href="https://www.sosolimited.com/">Sosolimited</a>, CA</li>
+	  	<!-- <h3>Skills</h3> -->
+			<ul>
+				<li>Ruby on Rails, Node.js, Angular7, Vue.js, D3.js</li>
+				<li>SQL, MongoDB, Neo4j, Git,</li>
+	  		<li>Adobe Photoshop, Illustrator,</li>
+	  		<li>Final Cut Pro, After Effects, Pro Tools</li>
+	  	</ul>
+	  </div>
+	<div id="donut"></div>
+	  <div class="work" 
+	  [@rightleftAnimation]='rightState'>
+	  <!-- (click)="rightActive()">  -->
+	    <!-- <h3>Work Experience</h3> -->
+	    <ul>
+	    	<li>Software Developer at <a href="https://www.sosolimited.com/">Sosolimited</a></li>
 
-    	<li>Software Developer & Project Manager at <a href="http://www.fex.com/">Fulfillment Express, Inc.</a>, CA</li>
+	    	<li>Software Developer & Project Manager at <a href="http://www.fex.com/">Fulfillment Express, Inc.</a></li>
 
-	  	<li>Software Engineer at <a href="http://www.tradelegs.com/">Tradelegs LLC</a>, NYC</li>
-	  	<li>Full Stack Developer at <a href="https://openassembly.com/home">Open Assembly</a>, NYC</li>
-	  </ul>
-  </div>
+		  	<li>Software Engineer at <a href="http://www.tradelegs.com/">Tradelegs LLC</a></li>
+		  	<li>Full Stack Developer at <a href="https://openassembly.com/home">Open Assembly</a></li>
+		  </ul>
+	  </div>
 
-</div>
-
-<div class="bioimg">
+	</div>
+ 
+<!-- <div class="bioimg"> -->
 
 <!-- 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 
 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.3.png" alt="HTML5"> 
  -->
-	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.4.png" alt="HTML5"> 
+<!-- 	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.4.png" alt="HTML5"> 
 	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.3.png" alt="HTML5"> 
-	 
-</div>
+	  -->
+<!-- </div> -->
+
+<!-- 
 
 <div class="CV-language">
 	<mat-radio-group [(ngModel)]="language">
@@ -237,26 +240,26 @@
 							<a href="http://newton.wickedlocal.com/x1652301639/At-the-Newton-Free-Lipary">City Light: Familiar Landscapes with Alienation
 							</a>
 						</p>
-						<!-- <p><a href="http://art.state.gov/artistdetail.aspx?id=103240"></a> -->
-						<p>
+						<p><a href="http://art.state.gov/artistdetail.aspx?id=103240"></a> -->
+					<!-- 	<p>
 							<a href="http://www.smfa.edu/files/Student-Annual-2010-press-release-FINAL.pdf">
 							The 2010 Yousuf Karsh Prize in photography
 							</a>
-						</p>
+						</p> -->
 						<!-- <p><a href="http://www.nictoglobe.com/new/ainac2010/biying.html"></a> -->
 						<!-- <p><a href="http://gsas.tufts.edu/about/news/newsArchives/Fall2011/studioArtExhibit.htm"></a> -->
 						<!-- <p><a href="http://hframes.wordpress.com/tag/biying-zhang/"></a> -->
 						<!-- <p><a href="http://www.millfineart.com/blog/2012/05/24/alienation-and-interaction-the-art-of-two- -->
 						<!-- contemporary-chinese-artists/"></a> -->
 						<!-- <p><a href="http://17days.wordpress.com/2013/02/01/biying-zhang/"></a> -->
-						<p>
+						<!-- <p>
 							<a href="http://artgallery.tufts.edu/exhibitions/2011/thesisApril.htm">
 							MFA Thesis Exhibition
 							</a>
-						</p>
+						</p> -->
 						<!-- <p><a href="http://bostonartists.blogspot.com/2011_04_01_archive.html"></a> --> 
 						<!-- <p><a href="http://www.namoc.org/msg/zhanlan/zlzpklr/201211/t20121130_153886.html"></a> -->
-						<p class="chinese">
+						<!-- <p class="chinese">
 							<a href="http://exhibit.artron.net/exhibition-20351.html">“异化”张碧莹个展
 							</a>
 						</p>
@@ -452,5 +455,5 @@
 		 		</div>
 		  </div>
 		</section>
-  </section>
-</div>
+  </section>  
+</div> -->
