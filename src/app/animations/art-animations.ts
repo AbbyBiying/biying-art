@@ -37,9 +37,9 @@ export const artAnimations = [
     state('void',   style({transform: 'translateX(-80%)'})),
     state('imgin', style({transform: 'translateX(0)'})),
     state('imgout',   style({transform: 'translateX(-80%)'})),
-    transition('imgin => imgout', animate('10s ease-in')),
-    transition('imgout => imgin', animate('10s ease-out')),
-    transition('void => imgin', animate('10s ease-in')),   
+    transition('imgin => imgout', animate('1s ease-in')),
+    // transition('imgout => imgin', animate('1s ease-out')),
+    // transition('void => imgin', animate('1s ease-in')),   
   ]),
 
   trigger('bionameupAnimation', [ 
@@ -134,22 +134,22 @@ export const artAnimations = [
   ]),
 
   trigger('leftrightAnimation', [
-    state('void', style({opacity: 0, transform: 'translateX(-30%) scale(0.5)'})),
+    state('void', style({opacity: 0, transform: 'translateX(0) scale(1)'})),
     state('left', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
-    state('right', style({opacity: 1, transform: 'translateX(-30%) scale(1)'})),
-    transition('left => right', animate('0.02s 4s ease-in')),
-    transition('right => left', animate('0.02s 4s ease-out')),
-    transition('void => left', animate('0.05s 4s ease-in')),   
+    state('right', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
+    transition('left => right', animate('0.02s 1s ease-in')),
+    transition('right => left', animate('0.02s 1s ease-out')),
+    transition('void => left', animate('0.05s 1s ease-in')),   
   ]),
  
 
   trigger('rightleftAnimation', [
-    state('void', style({opacity: 0, transform: 'translateX(30%) scale(0.5)' })),
+    state('void', style({opacity: 0, transform: 'translateX(0) scale(1)' })),
     state('right', style({opacity: 1, transform: 'translateX(0) scale(1)' })),
-    state('left', style({opacity: 1, transform: 'translateX(30%) scale(1)'})),
-    transition('right => left', animate('0.02s 4s ease-in')),
-    transition('left => right', animate('0.02s 4s ease-out')),
-    transition('void => right', animate('0.05s 4s ease-in')),   
+    state('left', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
+    transition('right => left', animate('0.02s 1s ease-in')),
+    transition('left => right', animate('0.02s 1s ease-out')),
+    transition('void => right', animate('0.05s 1s ease-in')),   
   ]),
 
   trigger('mySecondAnimation', [

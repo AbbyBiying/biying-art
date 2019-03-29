@@ -37,8 +37,10 @@
 <!-- <div class="statement" (appear)="scrollFire()"> -->
 
 <div class="statement">
-  <div class="skills" [@leftrightAnimation]='leftState' 
-  (click)="leftActive()">
+  <!-- <div class="skills" [@leftrightAnimation]='leftState'  -->
+  <!-- (click)="leftActive()"> -->
+   <div class="skills" [@leftrightAnimation]='leftState' 
+   >
   	<h3>Skills</h3>
 		<ul>
 			<li>Ruby on Rails, Node.js, Angular 7, Vue.js, Vuex, D3.js</li>
@@ -48,7 +50,9 @@
   	</ul>
   </div>
 <div id="donut"></div>
-  <div class="work" [@rightleftAnimation]='rightState' (click)="rightActive()"> 
+  <div class="work" 
+  [@rightleftAnimation]='rightState'>
+  <!-- (click)="rightActive()">  -->
     <h3>Work Experience</h3>
     <ul>
     	<li>Software Developer at <a href="https://www.sosolimited.com/">Sosolimited</a>, CA</li>
@@ -64,8 +68,11 @@
 
 <div class="bioimg">
 
-	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 
+<!-- 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 
 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.3.png" alt="HTML5"> 
+ -->
+	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.4.png" alt="HTML5"> 
+	<img class="aboutimg" [@bioimgAnimation]='imgState' src="/assets/design/circle_no.3.png" alt="HTML5"> 
 	 
 </div>
 

@@ -1,9 +1,8 @@
 <div class="header-button-container" [hidden]="sidenav.opened">
-  <button mat-button class="menu" (click)="sidenav.toggle()"> 
-    
+  <button mat-button class="menu" (click)="sidenav.toggle()">  
+    <mat-icon class="menu-icon">menu</mat-icon>      
     <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo">
- 
-    <!-- <mat-icon>menu</mat-icon> -->
+
   </button>
 </div>
 
@@ -11,14 +10,18 @@
 
   <mat-sidenav #sidenav class="sidenav">
     <button mat-button class="close-button" (click)="sidenav.toggle()">
-      <mat-icon>clear</mat-icon>
-    </button>
-    <ul class="menu-button">
+      <mat-icon>clear</mat-icon>    
+      <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo">
 
-      <li><button mat-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()" >Portfolio</button></li>
+    </button>
+
+    <ul class="menu-button">
+      <li><button mat-button routerLink="/portfolio" routerLinkActive="active" (click)="sidenav.toggle()">Portfolio</button></li>
+      <li><button mat-button >
+        <a href="/assets/files/Abby_Zhang_Resume_Software_Developer.pdf" download="Abby_Zhang_Resume.pdf" routerLinkActive="active" (click)="sidenav.toggle()">Resume</a></button></li>
+
       <li><button mat-button routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">About</button></li>
- 
-      <li><button mat-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li>
+      <!-- <li><button mat-button routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">Contact</button></li> -->
     </ul>
   </mat-sidenav>
 
@@ -26,10 +29,8 @@
 
   <footer>
     <div class="footer-section">
-      <!-- <p class="update">Want to get updates on my news?</p> -->
       <p >
-        <!-- <img src="/assets/design/copyright-32.png" alt="Biying Zhang Copyright"> 2017 Biying Zhang -->
-        <a href="https://github.com/AbbyBiying/biying-art"><img class="copy-right" src="/assets/design/BZ02.png" alt="Biying Zhang Copyright"></a>
+        <a href="https://github.com/AbbyBiying/biying-art">All Rights Reserved © Biying Zhang</a>
       </p>    
     </div>
   </footer>
