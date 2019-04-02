@@ -1,24 +1,37 @@
 <div class="about-container">
-	<div id="hello-name">
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="nihao">
-		I&nbsp;
-	</strong>
+	<div class="bio-group">
+		<div id="hello-name">		
+			<div class="my-name">
+				<strong><h1>Abby Zhang</h1></strong>
+			</div>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="wo">love&nbsp;
-	</strong>
+			<div class="short-bio">
+				<span [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="nihao">
+				A curiosity-driven, creative problem solver<br>with background in art 
+				</span>
+			</div>
 
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="shi">building&nbsp;
-	</strong>
+			<div class="love">
+				<span [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="nihao">
+					I&nbsp;
+				</span>
 
-	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="zhang">cool&nbsp; 
-	</strong>
+				<span [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="wo">love&nbsp;
+				</span>
 
-	<strong [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up" id="bi">stuff&nbsp;
-	</strong>
+				<span [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="shi">building&nbsp;
+				</span>
 
-<!-- 	<strong [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-down" id="ying">
-	</strong>  -->
-</div>
+				<span [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="zhang">cool&nbsp; 
+				</span>
+
+				<span [@bionameupAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="bi">products&nbsp;
+				</span>
+
+				<span [@bionamedownAnimation]='nameState' (click)="nameUpDown()" class="bio-name-up-down" id="ying">and learning new technologies
+				</span> 
+			</div>
+		</div> 
 <!-- 	<div class="hello-there">
 		<p>Hey, nice to meet you!</p>
 
@@ -31,42 +44,34 @@
 	</div> -->
  
 	<!-- <img class="bio-img" [@bioimgAnimation]='imgState' (mouseover)="imgInOut()" src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image"> -->
-	<div class="bioimgbg">
-
-		<img class="bio-img" [@bioimgAnimation]='imgState' src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image">
-	</div>
-
-</div>
-<div class="statement">
-  <!-- <div class="skills" [@leftrightAnimation]='leftState'  -->
-  <!-- (click)="leftActive()"> -->
-    <div class="skills" [@leftrightAnimation]='leftState' 
-   >
-	  	<!-- <h3>Skills</h3> -->
-			<ul>
-				<li>Ruby on Rails, Node.js, Angular7, Vue.js, D3.js</li>
-				<li>SQL, MongoDB, Neo4j, Git,</li>
-	  		<li>Adobe Photoshop, Illustrator,</li>
-	  		<li>Final Cut Pro, After Effects, Pro Tools</li>
-	  	</ul>
-	  </div>
-	<div id="donut"></div>
-	  <div class="work" 
-	  [@rightleftAnimation]='rightState'>
-	  <!-- (click)="rightActive()">  -->
-	    <!-- <h3>Work Experience</h3> -->
-	    <ul>
-	    	<li>Software Developer at <a href="https://www.sosolimited.com/">Sosolimited</a></li>
-
-	    	<li>Software Developer & Project Manager at <a href="http://www.fex.com/">Fulfillment Express, Inc.</a></li>
-
-		  	<li>Software Engineer at <a href="http://www.tradelegs.com/">Tradelegs LLC</a></li>
-		  	<li>Full Stack Developer at <a href="https://openassembly.com/home">Open Assembly</a></li>
-		  </ul>
-	  </div>
-
+		<div class="bioimgbg">
+			<img class="bio-img" [@bioimgAnimation]='imgState' src="/assets/painting/detail9.png" alt="Biying Zhang Painting Detail Image">
+		</div>
 	</div>
  
+	<div class="statement">
+    <div class="skills" [@leftrightAnimation]='leftState'>
+	  	<h3>Skills</h3>
+	  	<p><span class="skills-type">Languages​: </span>JavaScript, ES6/TypeScript, Ruby, Python 3</p>
+			<p><span class="skills-type">Database​: </span>PostgreSQL, MySQL, MongoDB, Neo4j</p>
+			<p><span class="skills-type">Framework​: </span>Angular 7, Angular Material 2, Angular Flex Layout, Vue.js, Vuex, Rails, Sinatra, jQuery</p> 
+			<p><span class="skills-type">Visualization and mapping libraries:​ </span>D3.js, Highcharts JS, Google Maps, Mapbox</p>
+			<p><span class="skills-type">AWS: </span>S3, Aurora, Elastic Beanstalk</p>	
+			<p><span class="skills-type">Web​: </span>HTML5, CSS3, Sass, LESS, Flexbox, Postman</p>
+  		<p>Adobe Photoshop, Illustrator, Final Cut Pro, After Effects, Pro Tools</p>
+	  </div>
+
+	  <div class="work" [@rightleftAnimation]='rightState'> 
+	    <h3>Work Experience</h3>
+	    <p>Software Developer at <a href="https://www.sosolimited.com/">Sosolimited</a></p>
+
+    	<p>Software Developer & Project Manager at <a href="http://www.fex.com/">Fulfillment Express, Inc.</a></p>
+
+	  	<p>Software Engineer at <a href="http://www.tradelegs.com/">Tradelegs LLC</a></p>
+	  	<p>Full Stack Developer at <a href="https://openassembly.com/home">Open Assembly</a></p>
+	  </div>
+	</div>
+ </div>
 <!-- <div class="bioimg"> -->
 
 <!-- 	<img class="aboutimg" [@bioimgAnimation]='imgState' (click)="imgInOut()" src="/assets/design/circle_no.4.png" alt="HTML5"> 

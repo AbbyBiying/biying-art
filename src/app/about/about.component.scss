@@ -24,38 +24,31 @@ a {
   overflow: hidden;
 }
 
-.bio {
+/*.bio {
   padding: 30px 230px;
-}
+}*/
 
 .bio-img {
   height: 100%;
   overflow: hidden;
   z-index: 1;
   width: 100%;
+  opacity: 0.55;
 }
 
-.bioimgbg {
+.bioimgbg, .bioimg {
   background: rgba(31, 30, 30, 1);
 }
 
-.bioimg {
-  background: rgba(31, 30, 30, 1);
-}
-
-.bio-name-up {
+.bio-name-up-down {
   display: inline-block; 
 }
-
-.bio-name-down {
-  display: inline-block;  
-}
  
-.bio, .statement {
-  background: rgba(27,25,25,0.98);
+.bio, .statement, .about-container {
+  background: black;
   color: white;
   font-family: 'Raleway', sans-serif;    
-  height: 100%;    
+  min-height: 100%;    
 }
 
 .chinese {
@@ -100,17 +93,28 @@ a {
 }
 
 .about-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
- 
+  letter-spacing: 1px;
+
+  .bio-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
   #hello-name {
+    text-shadow: 2px 2px 65px black;
     font-family: 'Raleway', sans-serif;
     position: absolute;
     color:rgba(255,255,255,0.5);
     z-index: 5;    
-    padding: 3%;
+    margin: 0 10%;
+    .my-name {
+      color: white;
+    }
+    .short-bio {
+      margin: 3% 0;
+    }
   }
 }
 
@@ -122,7 +126,6 @@ a {
   padding-top: 3px;    
   padding-bottom: 10px;
   letter-spacing: 1.5px;
-  /*padding: 137px 283px;*/
   font-weight: 300;
   line-height: 2;
   font-size: 16px;
@@ -150,9 +153,26 @@ a {
 	margin-top: -10px;
 }
 
+.skills {
+  .skills-type {
+    opacity: 0.4;
+  }
+}
+
+.skills, .work {
+  letter-spacing: 1.2px;
+  line-height: 2;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 10%;
+  h3 {
+    font-weight: 500;
+  }
+}
+
 @media screen and (min-width: 1300px) {  
-  #hello-name {
-    font-size: 170px;
+  #hello-name, .skills, .work {
+    font-size: 30px;
   }
 
   .aboutimg{
@@ -169,14 +189,34 @@ a {
     height: 800px !important;
   }  
 
+  #hello-name, .skills, .work {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
   #hello-name {
-    font-size: 230px;
+    font-size: 60px;
+  }
+
+  .skills, .work {
+    font-size: 40px;
+  }
+}
+
+@media (max-width:2000px) and (min-width:1800px) {
+  #hello-name {
+    font-size: 50px;
+  }
+
+  .skills, .work {
+    font-size: 40px;
   }
 }
 
 @media screen and (max-width: 1300px) {  
   #hello-name {
-    font-size: 110px;
+    font-size: 25px;
   }
 }
 /*for ipad and ipad pro*/
@@ -195,13 +235,13 @@ a {
   .bio-img {
     height: 100%;
   }
-
+/*
   .bio {
     padding: 30px 20px;
   }
-
+*/
   #hello-name {
-    font-size: 120px;  
+    font-size: 30px;  
   }
 
   .aboutimg {
@@ -245,7 +285,7 @@ a {
   }
 
   #hello-name {
-    font-size: 100px;  
+    font-size: 20px;  
   }
 }
 
@@ -259,8 +299,9 @@ a {
   .aboutimg {
     height: 350px;
   }  
-  #hello-name {
-    font-size: 80px;  
+
+  #hello-name, {
+    font-size: 20px;  
   }
 }
 
@@ -292,11 +333,6 @@ a {
     font-weight: 300;
     line-height: 2;
     font-size: 17px;    
-    margin-left: -32px;
-  }
-
-  #hello-name {
-    font-size: 60px;  
   }
 }
 
@@ -309,6 +345,10 @@ a {
 @media screen and (max-width: 560px){
   .aboutimg {
     height: 250px;
+  }
+
+  #hello-name, .skills, .work {
+    font-size: 15px;  
   }
 }
 
@@ -323,8 +363,8 @@ a {
     height: 180px;
   }
 
-  #hello-name {
-    font-size: 50px;  
+  #hello-name, .skills, .work {
+    font-size: 10px;  
   }
 } 
 
@@ -338,11 +378,11 @@ a {
     overflow: hidden !important;
   }
 
-  .bio {
+/*  .bio {
     font-size: 13px;
     margin:0;    
     overflow: hidden;
-  }
+  }*/
 
   .skills, .work {
     letter-spacing: 1.2px;
@@ -394,10 +434,6 @@ a {
   .aboutimg {
     height: 130px;
   }
-
-  #hello-name {
-    font-size: 40px;  
-  }
 }
 
 @media screen and (max-width: 325px){
@@ -409,6 +445,10 @@ a {
     padding: 42px 0 0 0;
     font-size: 7px;
   }
+
+  #hello-name, .skills {
+    font-size: 9px;
+  }
 }
 
 @media screen and (max-width: 270px){
@@ -416,8 +456,11 @@ a {
     width: 100%;
     height: 100%;
   }
-}
 
+  #hello-name, .skills {
+    font-size: 7px;
+  }
+}
 
 @media screen and (max-width: 220px){
   .hello-there {
@@ -426,20 +469,4 @@ a {
   }
 }
 
-.skills, .work {
-  letter-spacing: 1.2px;
-  line-height: 2;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 1rem;
-  h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 0;    
-  }
-  ul li {  
-    padding-left: 0 !important;
-    list-style-type: none;
-  }
-}
+

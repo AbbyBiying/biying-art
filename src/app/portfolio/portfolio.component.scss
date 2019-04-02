@@ -101,19 +101,36 @@ a[artHighlight]:active {
 }
 
 .web-app-group {
-  .msft {
+  .title {
+    text-align: center;
+  }
+
+  .apps {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;      
-    .msft-title {
+    margin: 10%;    
+    
+    .app-title {
       margin: 0 5%;
+      width: 100%;
     }
+
     img {
       flex: 0 0 auto;
       margin: 2% auto;
-      width: 500px;
-    }   
+      width: 400px;
+      height: 800px;
+    } 
+
+    img.web-img-ET {
+      margin: 2% auto;    
+      width: 80%;
+      height: 80%;
+    /*  width: 800px;
+      height: 480px;*/
+    }     
   }
 }
 
@@ -141,8 +158,8 @@ a[artHighlight]:active {
   }
 
   .web-app-group {
-    .msft {
-      .msft-title {
+    .apps {
+      .app-title {
         margin: 0 10%;
       }
 
