@@ -6,7 +6,7 @@ import 'hammerjs';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+// import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { RouterModule, Routes } from '@angular/router';
 //import { InMemoryDataService }  from './in-memory-data.service';
 
@@ -20,8 +20,8 @@ import {
   MatButtonModule, 
   MatCheckboxModule, 
   MatGridListModule, 
-  MatDatepickerModule, 
-  MatNativeDateModule, 
+  // MatDatepickerModule, 
+  // MatNativeDateModule, 
   MatToolbarModule,
   MatDialogModule,
   MatDialogRef, 

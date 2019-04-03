@@ -1,23 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  AnimationBuilder,
-  AnimationAnimateMetadata,
-  AnimationFactory,
-  AnimationMetadata, 
-  AnimationMetadataType, 
-  AnimationPlayer,
-  useAnimation, 
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  keyframes,
-  group
-} from '@angular/animations';
 
 import { artAnimations } from '../animations/art-animations';
-import { AppearDirective } from '../attribute-directive/appear.directive';
+// import { AppearDirective } from '../attribute-directive/appear.directive';
 import { ArtService } from '../animations/art.service';
 
 @Component({
@@ -27,14 +11,8 @@ import { ArtService } from '../animations/art.service';
   animations: artAnimations,
 })
 
-export class AboutComponent implements OnInit {
-  language: number = 1;
-  
-  ngOnInit() {
-  }
-
+export class AboutComponent implements OnInit {  
   constructor(private artService: ArtService) { }
-  
   state: string = "inactive";
   nameState: string = "together";
   cvState: string = "cvbefore";
@@ -43,7 +21,11 @@ export class AboutComponent implements OnInit {
   leftState: string = "left";
   rightState: string = "right";
   scrollState: string = "*";
+  language: number = 1;
   
+  ngOnInit() {
+  }  
+
   imgInOut(){
     this.imgState = this.imgState === 'imgin' ? 'imgout' : 'imgin';
   }
@@ -72,6 +54,4 @@ export class AboutComponent implements OnInit {
   //   this.scrollState = this.scrollState === '*' ? 'void' : '*';
   //   console.log("appeared");
   // }
-
-
 }

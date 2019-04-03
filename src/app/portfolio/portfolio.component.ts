@@ -2,9 +2,9 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { artAnimations } from '../animations/art-animations'; 
 import { ArtService } from '../animations/art.service';
 import { Favorite } from '../favorites/favorite';
-import { FAVORITE } from '../favorites/favorite-list';
+// import { FAVORITE } from '../favorites/favorite-list';
 import { Subscription } from 'rxjs';
-
+ 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -12,20 +12,19 @@ import { Subscription } from 'rxjs';
   animations: artAnimations,
 })
 
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit {  
+  constructor(private artService: ArtService) {
+    this.collapsed = true;
+  }
   color: string;
   selectedCodeValue: string;
   state: string = 'inactive';
   collapsed: boolean;
   favorites: Favorite[];
   searchField: string;
-
-  @Output() onInput: EventEmitter<any> = new EventEmitter();
   onConfigChanged: Subscription;
 
-  constructor(private artService: ArtService) {
-    this.collapsed = true;
- }
+  @Output() onInput: EventEmitter<any> = new EventEmitter();
   
   ngOnInit() {
   }

@@ -11,7 +11,7 @@
   	 <p>I continually explore the intersection of comfort, despair, place, and purpose.</p>   
   </p>  -->
 <!-- </div> -->
-
+<!-- 
 <div id="art-select">
 	<mat-form-field>
 	  <mat-select #artType placeholder="art">
@@ -28,10 +28,10 @@
 	</mat-form-field>  
 	
 	<mat-form-field>
-		<mat-select #codeType placeholder="code"> 
+		<mat-select #codeType placeholder="code">  -->
 <!--<mat-select (change)="openLink()" #codeType placeholder="code" 
 	  [(ngModel)]="selectedCodeValue"> -->
-	    <a target="_blank" href="https://github.com/AbbyBiying/ABZ_EXCHANGE">
+	    <!-- <a target="_blank" href="https://github.com/AbbyBiying/ABZ_EXCHANGE">
 				<mat-option [artHighlight]="color" defaultColor="gold" value="ABZ-EXCHANGE">
 		    	ABZ-EXCHANGE Backend App 
 		  	</mat-option>
@@ -40,7 +40,8 @@
 				<mat-option [artHighlight]="color" defaultColor="gold" value="ABZ-EXCHANGE">
 		    	ABZ-EXCHANGE Frontend App 
 		  	</mat-option>
-		  </a>	   <!-- 
+		  </a>	    -->
+		  <!-- 
 		  <a target="_blank" href="https://github.com/AbbyBiying/Abbys-Weather-App">
 				<mat-option [artHighlight]="color" defaultColor="gold" value="Abbys-Weather-App">
 		    	Abbys-Weather-App
@@ -53,26 +54,26 @@
 		    </mat-option>
 		  </a> -->
 		  
-		  <a target="_blank" href="https://github.com/AbbyBiying/biying-art">
+		  <!-- <a target="_blank" href="https://github.com/AbbyBiying/biying-art">
 		    <mat-option [artHighlight]="color" defaultColor="gold" value="BIYING-ART">  
 		    	Biying-Art
-		    </mat-option>
-			</a>
+		    </mat-option> 
+			</a> -->
 
 <!-- 		  <a target="_blank" href="https://github.com/AbbyBiying/my-favorite-buoy-weather-app">
 				<mat-option [artHighlight]="color" defaultColor="gold" value="my-favorite-buoy-weather-app">
 		    	my-favorite-buoy-weather-app
 		  	</mat-option>
 		  </a>	  --> 
-		</mat-select>
+		<!-- </mat-select>
 	</mat-form-field>
-</div> 
+</div>  -->
 
-<app-painting *ngIf="artType.value == 'Painting'"></app-painting>
+<!-- <app-painting *ngIf="artType.value == 'Painting'"></app-painting>
 <app-ceramic *ngIf="artType.value == 'Ceramic'"></app-ceramic>
-<!-- <app-video *ngIf="artType.value == 'Video'"></app-video> -->
+ <app-video *ngIf="artType.value == 'Video'"></app-video>  
 <app-design *ngIf="artType.value == 'Design'"></app-design>
-
+ -->
 
 
 <!-- 
@@ -113,10 +114,10 @@
 			<p>This site was made with webpack, Node.js, MongoDB, Vue.js, Vuex and D3.js, running on Heroku.</p>
 		</div> 
  
-		<img class="web-img" src="/assets/web-app/Make-Style-Happen-6.png">
-		<img class="web-img" src="/assets/web-app/Make-Style-Happen-7.png">
-		<img class="web-img" src="/assets/web-app/Make-Style-Happen-15.png">
-		<img class="web-img" src="/assets/web-app/Make-Style-Happen-21.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img" src="/assets/web-app/Make-Style-Happen-6.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img" src="/assets/web-app/Make-Style-Happen-7.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img" src="/assets/web-app/Make-Style-Happen-15.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img" src="/assets/web-app/Make-Style-Happen-21.png">
 	</div>
 
 	<div class="apps"> 
@@ -126,7 +127,10 @@
 			<p>Helps users understand the benefit of ET (Envelope tracking) over APT (Average power tracking), including allowing for more efficient communication</p>
 			<p>This site was made with D3.js, Vue.js, Vue CLI 3, Vuex and Electron.</p>
 		</div>
-		<img class="web-img-ET" src="/assets/web-app/ET.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img-ET" src="/assets/web-app/et-4.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img-ET" src="/assets/web-app/et-2.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img-ET" src="/assets/web-app/et-3.png">
+		<img [@appimgflyInOut]='artworkState' class="web-img-ET" src="/assets/web-app/et-1.png">
 	</div>	
 
 	<div class="apps"> 

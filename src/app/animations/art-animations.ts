@@ -125,10 +125,21 @@ export const artAnimations = [
   trigger('artworkflyInOut', [
     state('artworkIn', style({transform: 'translateX(0)'})),
     transition('void => *', [
-      animate('6s', keyframes([
-        style({opacity: 0, transform: 'translateX(-20%) scale(0.8)', offset: 0}),
+      animate('3s', keyframes([
+        style({opacity: 0, transform: 'translateX(-20%) scale(1)', offset: 0}),
         style({opacity: 1, transform: 'translateX(15px) scale(1)',  offset: 0.3}),
-        // style({opacity: 1, transform: 'translateX(0) scale(1)',  offset: 1.0})
+        style({opacity: 1, transform: 'translateX(0) scale(1)',  offset: 1.0})
+      ]))
+    ])
+  ]),
+
+  trigger('appimgflyInOut', [
+    state('artworkIn', style({transform: 'translateX(0)'})),
+    transition('void => *', [
+      animate('3s', keyframes([
+        style({opacity: 0, transform: 'translateX(-30%) scale(1)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(5px) scale(1)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0) scale(1)',  offset: 1.0})
       ]))
     ])
   ]),

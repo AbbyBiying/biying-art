@@ -1,22 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import {
-  AnimationBuilder,
-  AnimationAnimateMetadata,
-  AnimationFactory,
-  AnimationMetadata, 
-  AnimationMetadataType, 
-  AnimationPlayer,
-  useAnimation, 
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  keyframes,
-  group
-} from '@angular/animations';
-
 import { MatDialog } from '@angular/material';
 
 import { artAnimations } from '../animations/art-animations';
@@ -35,17 +17,7 @@ export class PaintingComponent implements OnInit {
   ngOnInit() {
   }
     
-  artworkState: string = '*';
-  statementState: string = '*'
   paintings: Array<String> = myPaintings;
-
-  artworkActive() {
-    this.artworkState = this.artworkState === '*' ? 'void' : '*';
-  };
-
-  statementActive() {
-    this.statementState = this.statementState === '*' ? 'void' : '*';
-  };
 
   openDialog(fileName) {
     this.dialog.open(PaintingDialogComponent, {

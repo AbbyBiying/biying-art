@@ -4,7 +4,7 @@ export const myPaintings = [
 	"Alienation_No.2.jpg",
 	"Alienation_No.1.jpg",  
 	"Alienation_No.3.jpg",
-  "Alienation_No.4.jpg",
+  	"Alienation_No.4.jpg",
 	"Alienation_No.6.jpg",
 	"Alienation_No.5.jpg",
 	"Alienation_No.31.jpg",
@@ -37,12 +37,10 @@ export const myPaintings = [
 	"SmallDream.jpg",
 	"TheHarderYouFall.jpg",
 	"Tunnel.jpg",
-
 	"BigDream.jpg",
  	"Black.jpg",
 	"Chandeliers.jpg",
-
-	"WhiteBed.jpg",
+	//"WhiteBed.jpg",
 	"Parked.jpg",
 	// "detail1.png",
 	// "detail2.png",
@@ -54,17 +52,13 @@ export const myPaintings = [
 	// "detail8.png",
 	// "detail9.png",
 	// "detail11.png",
-
-
 	"Pink.jpg",
 	"Light.jpg",
 	// "openning.jpg",
-
 	"Face.jpg",
 	"WishYouWereHere.jpg",
 	"Crack.jpg",
 	"Beard.jpg",
 	"Eye.jpg",
-
 	"Head.jpg",
 ];
