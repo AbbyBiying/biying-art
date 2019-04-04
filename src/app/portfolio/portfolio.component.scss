@@ -117,22 +117,20 @@ a[artHighlight]:active {
       width: 100%;
     }
 
-    .imgBox { /* now a container for the image */
-      overflow: hidden; /* hide the excess */      
+    // .imgBox { /* now a container for the image */
+      // overflow: hidden; /* hide the excess */      
+    img {
       flex: 0 0 auto;      
       margin: 2% auto;
-
-    }
-
-    .imgBox img {
+    // }
       width: 400px;
       height: 800px;
       transition: transform .3s ease-in-out;
+    
+      &:hover {
+          transform: scale(1.02); 
+      } 
     }
-    .imgBox:hover img{
-        transform: scale(1.02); 
-    } 
-
     img.web-img-ET {
       margin: 2% auto;    
       width: 80%;
