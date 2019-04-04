@@ -2,9 +2,13 @@
   <div class="header-container" [hidden]="sidenav.opened">
     <button mat-button class="menu" (click)="sidenav.toggle()">  
       <mat-icon class="menu-icon">menu</mat-icon>      
-      <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo">
-
     </button>
+     <!-- <span class="header-button-group">     -->
+      <!-- <a routerLink="/about"><img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo"></a> -->
+        <!-- <a class="portfolio" routerLink="/portfolio">Portfolio</a> -->
+        <!-- <a class="portfolio" href="/assets/files/Abby_Zhang_Resume_Software_Developer.pdf" download="Abby_Zhang_Resume.pdf">Resume</a>  -->
+    <!-- </span>   -->
+
   </div>
 
   <mat-sidenav-container class="container">
@@ -12,7 +16,7 @@
     <mat-sidenav #sidenav class="sidenav">
       <button mat-button class="close-button" (click)="sidenav.toggle()">
         <mat-icon>clear</mat-icon>    
-        <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo">
+        <!-- <img class="logo" src="/assets/design/ABZ04.png" alt="Biying Zhang Logo"> -->
 
       </button>
 
