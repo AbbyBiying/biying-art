@@ -170,9 +170,17 @@ a {
   }
 }
 
+.app-info {
+  font-size: 14px;
+}
+
 @media screen and (min-width: 1300px) {  
   #hello-name, .skills, .work {
     font-size: 30px;
+  }
+
+  .app-info {
+    font-size: 25px;
   }
 
   .aboutimg{
@@ -209,7 +217,7 @@ a {
     font-size: 40px;
   }
 
-  .skills, .work {
+  .skills, .work, .app-info {
     font-size: 20px;
   }
 }
@@ -384,7 +392,7 @@ a {
     overflow: hidden;
   }*/
 
-  .skills, .work {
+  .skills, .work, .app-info {
     letter-spacing: 1.2px;
     font-size: 10px;
     line-height: 2;

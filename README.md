@@ -1,11 +1,11 @@
 # Abby Biying Zhang 
 
-This is an Angular 7 app to display my art work and links to my github repo page. 
+This is an Angular 8 app to display my art work and links to my github repo page. 
 You can demo this application on [Amazon S3](http://www.biyingzhang.com)
 
 ## Implementation
  
-The app is implemented with [Angular 7](https://angular.io) and [Angular Material](https://material.angular.io/), Material Design components for Angular.
+The app is implemented with [Angular 8](https://angular.io) and [Angular Material](https://material.angular.io/), Material Design components for Angular.
 
 
 ## Running locally

@@ -11,8 +11,8 @@ import { map, filter, scan } from 'rxjs/operators';
 })
 
 export class ArtworkTableComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
 
   displayedColumns: string[] = ['id', 'name', 'material', 'size'];
   dataSource = new MatTableDataSource(ARTWORK_DATA);
