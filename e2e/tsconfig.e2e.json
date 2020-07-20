@@ -1,12 +1,11 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowJs": true,
     "outDir": "../out-tsc/e2e",
     "module": "commonjs",
     "target": "es5",
-    "types": [
-      "jasmine",
-      "node"
-    ]
+    "types": ["jasmine", "node"]
   }
 }
