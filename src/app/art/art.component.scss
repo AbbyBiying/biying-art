@@ -14,7 +14,6 @@
 }
 
 #art-select {
-  margin-bottom: -50px;
   min-height: 50%;
 }
 
@@ -103,11 +102,6 @@
 
   #paintingStatement {
     font-size: 1.4em;
-  }
-
-  #art-select {
-    margin-bottom: -50px;
-    min-height: 70%;
   }
 }
 
@@ -239,9 +233,7 @@
     top: 30px;
     left: 35px;
   }
-  #art-select > mat-form-field {
-    margin-left: 20%;
-  }
+
   .art-statement {
     text-shadow: none;
   }
