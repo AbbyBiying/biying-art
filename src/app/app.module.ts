@@ -2,7 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import "hammerjs";
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
@@ -10,29 +9,28 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
 //import { InMemoryDataService }  from './in-memory-data.service';
 
-import {
-  MatTooltipModule,
-  MatSelectModule,
-  MatIconModule,
-  MatTabsModule,
-  MatSidenavModule,
-  MatMenuModule,
-  MatButtonModule,
-  MatCheckboxModule,
-  MatGridListModule,
-  // MatDatepickerModule,
-  // MatNativeDateModule,
-  MatToolbarModule,
-  MatDialogModule,
-  MatDialogRef,
-  MatTableModule,
-  MatPaginatorModule,
-  MatSortModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatRippleModule
-  // MatDialog
-} from "@angular/material";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatRippleModule
+// MatDialog
+ } from "@angular/material/core";
+import { MatDialogModule, MatDialogRef } from "@angular/material/dialog";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSelectModule } from "@angular/material/select";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSortModule } from "@angular/material/sort";
+import { MatTableModule } from "@angular/material/table";
+import { MatTabsModule } from "@angular/material/tabs";
+import { 
+// MatDatepickerModule,
+// MatNativeDateModule,
+MatToolbarModule } from "@angular/material/toolbar";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatRadioModule } from "@angular/material/radio";

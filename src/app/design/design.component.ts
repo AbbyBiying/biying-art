@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 
 import { artAnimations } from '../animations/art-animations';
 import { DesignDialogComponent } from './design-dialog/design-dialog.component';

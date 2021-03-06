@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { myCeramics } from "./ceramics";
-import { MatDialog } from "@angular/material";
+import { MatDialog } from "@angular/material/dialog";
 import { artAnimations } from "../../animations/art-animations";
 import { CeramicDialogComponent } from "./ceramic-dialog/ceramic-dialog.component";
 
