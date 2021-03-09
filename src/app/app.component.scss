@@ -10,6 +10,11 @@ a {
   }
 }
 
+.mat-flat-button {
+  color: deeppink;
+  background: transparent;
+}
+
 .menu {
   background-color: transparent;
   height: 64px;
@@ -121,5 +126,8 @@ footer {
 @media screen and (max-width: 420px) {
   .copy-right {
     width: 64%;
+  }
+  .mat-flat-button {
+    display: none;
   }
 }
