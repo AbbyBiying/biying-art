@@ -3,9 +3,17 @@
     <button mat-button class="menu" (click)="sidenav.toggle()">
       <mat-icon class="menu-icon">menu</mat-icon>
     </button>
+    <a href="mailto:someone@example.com">
+      <button mat-flat-button routerLink="/portfolio">
+          Contact</button>
+      </a>
+      <button mat-flat-button routerLink="/art">
+      Art
+    </button>
     <button mat-flat-button routerLink="/portfolio">
       Portfolio
     </button>
+ 
   </div>
 
   <mat-sidenav-container class="container">

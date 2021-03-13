@@ -2,24 +2,38 @@
   <div class="title"><h1>PROJECTS PORTFOLIO</h1></div>
   <div class="form">
     <mat-form-field>
-      <mat-select (change)="openLink()" #codeType placeholder="code">
-        <a target="_blank" href="https://github.com/AbbyBiying/ABZ_EXCHANGE">
+      <mat-select (change)="openLink()" #codeType placeholder="Loan Check-Out">
+        <a href="/portfolio/#LOAN-CHECKOUT-OUT">
           <mat-option
             [artHighlight]="color"
             defaultColor="gold"
-            value="ABZ-EXCHANGE"
+            value="Loan Check-Out"
           >
-            ABZ-EXCHANGE Backend App
+            Loan Check-Out
           </mat-option>
         </a>
 
-        <a target="_blank" href="https://github.com/AbbyBiying/ABZ">
+        <a href="/portfolio/#MSFT">
           <mat-option
             [artHighlight]="color"
             defaultColor="gold"
-            value="ABZ-EXCHANGE"
+            value="Make Style Happen"
           >
-            ABZ-EXCHANGE Frontend App
+            Make Style Happen
+          </mat-option>
+        </a>
+
+        <a href="/portfolio/#QET">
+          <mat-option [artHighlight]="color" defaultColor="gold"             
+          value="Envelope Tracking">
+            Envelope Tracking
+          </mat-option>
+        </a>
+
+        <a href="/portfolio/#OA">
+          <mat-option [artHighlight]="color" defaultColor="gold"          
+          value="Open Assembly">
+            Open Assembly
           </mat-option>
         </a>
       </mat-select>
@@ -27,7 +41,7 @@
   </div>
 </div>
 
-<div class="doc-checkout">
+<div class="doc-checkout" id="LOAN-CHECKOUT-OUT">
   <div class="doc-checkout-title">
     <h2> 
       <a class="mflink" href="https://dev-mulliganfunding.pantheonsite.io/onlinecheckout/" target="_blank">Mulligan Funding Online Checkout, 2021</a>
@@ -58,7 +72,7 @@
     </div>
 </div>
 
-<div class="apps">
+<div class="apps" id="MSFT">
   <div class="app-title">
     <h2>Microsoft Surface + NFL: Make Style Happen, 2019</h2>
     <p>
@@ -96,7 +110,7 @@
   />
 </div>
 
-<div class="apps">
+<div class="apps" id="QET">
   <div class="app-title">
     <h2>Qualcomm Envelope Tracking, 2019</h2>
     <p>Data visualization for 2019 Mobile World Congress</p>
@@ -132,7 +146,7 @@
   />
 </div>
 
-<div class="apps">
+<div class="apps" id="OA">
   <div class="app-title">
     <h2>Open Assembly, 2015</h2>
     <p>
