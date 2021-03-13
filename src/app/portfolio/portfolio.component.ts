@@ -28,7 +28,9 @@ export class PortfolioComponent implements OnInit {
   toggle() {
     this.state = this.artService.toggle(this.state);
   }
-
+  scroll(el: HTMLElement) {
+      el.scrollIntoView();
+  }
   openLink() {
     if (this.selectedCodeValue == "ABZ-EXCHANGE") {
       window.open("https://github.com/AbbyBiying/ABZ_EXCHANGE", "ABZ-EXCHANGE");
