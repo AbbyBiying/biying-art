@@ -28,7 +28,7 @@
     "@angular/platform-server": "^11.2.4",
     "@angular/router": "^11.2.4",
     "core-js": "^2.5.7",
-    "d3": "^5.7.0",
+    "d3": "^7.6.1",
     "latest-version": "^3.1.0",
     "node-sass": "^5.0.0",
     "normalize.css": "^7.0.0",
